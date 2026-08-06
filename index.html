@@ -15,19 +15,29 @@
 </head>
 <body>
 
+    <!-- Top Notice Bar -->
+    <div class="top-notice">
+        <div class="container notice-inner">
+            <span class="notice-badge">PPDB 2025-2026</span>
+            <span class="notice-text">Pendaftaran Angkatan Ke-2 (Gelombang 1: 8 Jan – 28 Mar 2025)</span>
+            <a href="#ppdb" class="notice-link">Daftar Sekarang &rarr;</a>
+        </div>
+    </div>
+
     <!-- Floating Sevenoaks-Style Header Nav -->
     <header class="sevenoaks-header" id="header">
         <div class="container header-container">
             <a href="#" class="school-logo">
-                <div class="logo-box">SDTQ</div>
+                <img src="images/logo.png" alt="Logo SDTQ ATTAMAM" class="header-logo-img">
                 <div class="logo-name">
-                    <span class="l-title">ATTAMAM</span>
+                    <span class="l-title">SDTQ ATTAMAM</span>
                     <span class="l-sub">Sekolah Dasar Tahfidz Qur'an</span>
                 </div>
             </a>
             
             <nav class="main-nav" id="main-nav">
                 <a href="#about">Tentang Kami</a>
+                <a href="#galeri">Kegiatan</a>
                 <a href="#program">Program & SKL</a>
                 <a href="#pengajar">Pengajar</a>
                 <a href="#ppdb" class="btn-nav-ppdb">PPDB 2025-2026</a>
@@ -91,21 +101,31 @@
         </div>
     </section>
 
-    <!-- Classroom Environment (Photo Integration) -->
-    <section class="section bg-subtle">
-        <div class="container grid-2 align-center">
-            <div class="classroom-photo-box">
-                <img src="images/classroom1.jpg" alt="Ruang Kelas SDTQ ATTAMAM Garut" class="rounded-img">
-            </div>
-            <div class="classroom-text-box">
+    <!-- Classroom Environment Gallery (Picture1.jpg & Picture2.jpg) -->
+    <section class="section bg-subtle" id="galeri">
+        <div class="container">
+            <div class="section-head">
                 <span class="label">Suasana Belajar</span>
                 <h2>Kelas Kondusif & Pembimbingan Personal</h2>
-                <p>SDTQ ATTAMAM menjaga rasio siswa per kelas tetap kondusif. Setiap guru mengenal nama, karakter, dan perkembangan hafalan serta adab santri secara mendalam dan sabar.</p>
-                <ul class="clean-list">
-                    <li><i class="fas fa-check"></i> Lingkungan sejuk di kawasan wisata Cipanas Garut</li>
-                    <li><i class="fas fa-check"></i> Pembiasaan ibadah harian & sholat berjamaah</li>
-                    <li><i class="fas fa-check"></i> Penyeimbangan Fardhu 'Ain (PAI) & Fardhu Kifayah (Umum)</li>
-                </ul>
+                <p>Pembelajaran di kelas kecil agar setiap siswa dibimbing dengan penuh perhatian dan kasih sayang.</p>
+            </div>
+
+            <div class="grid-2 gallery-grid">
+                <div class="photo-card">
+                    <img src="images/picture1.jpg" alt="Suasana Belajar Siswa SDTQ ATTAMAM 1" class="gallery-img">
+                    <div class="card-body-sm">
+                        <h3>Interaksi Sehat & Pembiasaan Adab</h3>
+                        <p>Pembiasaan menjawab salam, adab kepada teman & guru, serta wudhu dan ibadah harian.</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/picture2.jpg" alt="Suasana Belajar Siswa SDTQ ATTAMAM 2" class="gallery-img">
+                    <div class="card-body-sm">
+                        <h3>Fasilitas Nyaman & Fokus Belajar</h3>
+                        <p>Meja belajar mandiri, ruang kelas terang & sejuk di objek wisata Cipanas Garut.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -292,7 +312,10 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-left">
-                <div class="footer-brand">SDTQ ATTAMAM</div>
+                <div class="footer-brand-wrap">
+                    <img src="images/logo.png" alt="Logo SDTQ ATTAMAM" class="footer-logo-img">
+                    <span class="footer-brand">SDTQ ATTAMAM</span>
+                </div>
                 <p>Sekolah Dasar Tahfidz Qur'an Garut. Motto: <em>Iman, Adab, Ilmu</em></p>
             </div>
             <div class="footer-right">
