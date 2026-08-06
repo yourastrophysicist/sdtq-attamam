@@ -1,34 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Korowa Style Hero Typewriter Animation
-    const typewriterTarget = document.getElementById('typewriter-target');
-    const quoteText = `"Saya takut anak saya pintar tapi tak punya adab. Saya takut dia sukses, tapi kosong jiwanya. Karena itu saya cari sekolah yang pertama-tama ngajarin dia jadi manusia yang tahu arah."`;
-    
-    let charIndex = 0;
-    const typingSpeed = 35; // ms per character
+    // 1. Brightness / Contrast Slider Control
+    const controlSlider = document.querySelector('.control-slider');
+    const heroSection = document.querySelector('.korowa-crimson-hero');
 
-    function typeWriter() {
-        if (typewriterTarget && charIndex < quoteText.length) {
-            typewriterTarget.textContent += quoteText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeWriter, typingSpeed);
-        }
-    }
-
-    if (typewriterTarget) {
-        setTimeout(typeWriter, 600);
-    }
-
-    // 2. Mobile Header Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('show');
+    if (controlSlider && heroSection) {
+        controlSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            // Adjust lightness slightly based on slider value
+            const lightness = 62 + ((val - 50) * 0.2); // 52% to 72%
+            heroSection.style.backgroundColor = `hsl(349, 71%, ${lightness}%)`;
         });
     }
 
-    // 3. Smooth Scroll for Anchor Links
+    // 2. Smooth Scroll for Navigation Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -40,9 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    if (mainNav && mainNav.classList.contains('show')) {
-                        mainNav.classList.remove('show');
-                    }
                 }
             }
         });
