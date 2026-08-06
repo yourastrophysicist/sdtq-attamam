@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Korowa All-Navy Theme dengan Stiker Whimsical & Fun
+   SDTQ ATTAMAM — Korowa All-Navy Theme dengan Stiker Alat Tulis y.jpg
    Latar Belakang: All-Navy Blue (#0B1C38 & #061124)
    ========================================================================== */
 
@@ -32,7 +32,6 @@
     --radius-lg: 24px;
     
     --shadow-navy: 0 12px 36px rgba(0, 0, 0, 0.35);
-    --shadow-sticker: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 3px #FFFFFF;
 }
 
 * {
@@ -96,7 +95,7 @@ h1 em, h2 em, h3 em, p em {
 }
 
 /* ==========================================================================
-   WHIMSICAL STICKER BADGES & ANIMATIONS
+   STIKER ALAT TULIS IMUT (DARI Y.JPG: GUNTING, STAPLER, KRAYON, PENGGARIS, DLL)
    ========================================================================== */
 
 .whimsy-sticker {
@@ -108,7 +107,7 @@ h1 em, h2 em, h3 em, p em {
 }
 
 .whimsy-sticker:hover {
-    transform: scale(1.15) rotate(0deg) !important;
+    transform: scale(1.18) rotate(0deg) !important;
     z-index: 20;
 }
 
@@ -116,160 +115,123 @@ h1 em, h2 em, h3 em, p em {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 14px;
+    padding: 7px 15px;
     border-radius: 50px;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 800;
     border: 3px solid #FFFFFF;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
     background: #FFFFFF;
     color: var(--navy-bg-deep);
 }
 
-/* Sticker Variations */
-.star-sticker {
+/* Variasi Warna Stiker Alat Tulis */
+.white-sticker {
+    background: #FFFFFF;
+    color: #1E293B;
+}
+
+.red-sticker {
+    background: #FCA5A5;
+    color: #991B1B;
+}
+
+.wood-sticker {
     background: #FEF08A;
     color: #854D0E;
-    border-color: #FFFFFF;
 }
 
-.plane-sticker {
-    background: #BFDBFE;
-    color: #1E40AF;
-}
-
-.ribbon-sticker {
+.pink-sticker {
     background: #FBCFE8;
     color: #9D174D;
 }
 
-.stamp-sticker {
-    background: #FDE68A;
-    color: #92400E;
+.button-sticker {
+    background: #EF4444;
+    color: #FFFFFF;
     border-radius: 50px;
-    padding: 8px 16px;
 }
 
-.quran-sticker {
-    background: #D1FAE5;
-    color: #065F46;
+.pen-sticker {
+    background: #1E293B;
+    color: #FDE047;
 }
 
-.spark-sticker {
-    background: #FEE2E2;
-    color: #991B1B;
+.purple-sticker {
+    background: #DDD6FE;
+    color: #5B21B6;
 }
 
-.tape-sticker {
-    background: #FEF3C7;
-    color: #78350F;
+.clip-sticker {
+    background: #F472B6;
+    color: #FFFFFF;
 }
 
-.smile-sticker {
-    background: #E0E7FF;
-    color: #3730A3;
-}
-
-.mentor-sticker {
-    background: #F3E8FF;
-    color: #6B21A8;
-}
-
-.pin-sticker {
-    background: #FFEDD5;
-    color: #9A3412;
-}
-
-.chat-sticker {
-    background: #DCFCE7;
-    color: #166534;
-}
-
-/* Individual Sticker Placements across sections */
-.sticker-hero-star {
+/* Posisi Stiker Alat Tulis Per Seksi */
+.sticker-scissors {
     top: 15%;
-    left: 4%;
+    left: 3%;
     transform: rotate(-12deg);
 }
 
-.sticker-hero-plane {
+.sticker-crayola {
     top: 25%;
-    right: 5%;
+    right: 4%;
     transform: rotate(15deg);
 }
 
-.sticker-hero-sparkle {
+.sticker-ruler {
     bottom: 12%;
-    left: 8%;
-    font-size: 1.6rem;
-    color: var(--gold-primary);
-}
-
-.sticker-quote-ribbon {
-    top: 10%;
-    right: 6%;
-    transform: rotate(-8deg);
-}
-
-.sticker-quote-crescent {
-    bottom: 15%;
-    left: 5%;
-    font-size: 2rem;
-    color: var(--gold-primary);
-}
-
-.sticker-stamp-4juz {
-    top: 8%;
-    right: 4%;
-    transform: rotate(10deg);
-}
-
-.sticker-pilar-quran {
-    top: 12%;
-    left: 3%;
-    transform: rotate(-10deg);
-}
-
-.sticker-pilar-spark {
-    bottom: 15%;
-    right: 5%;
-    transform: rotate(8deg);
-}
-
-.sticker-photo-tape {
-    top: 10%;
-    right: 6%;
+    left: 6%;
     transform: rotate(-6deg);
 }
 
-.sticker-photo-smile {
-    bottom: 10%;
+.sticker-tape-measure {
+    top: 10%;
+    right: 5%;
+    transform: rotate(-10deg);
+}
+
+.sticker-button-red {
+    bottom: 15%;
     left: 4%;
     transform: rotate(12deg);
 }
 
-.sticker-mentor-badge {
+.sticker-pen {
+    top: 8%;
+    right: 4%;
+    transform: rotate(8deg);
+}
+
+.sticker-stapler {
+    top: 12%;
+    left: 3%;
+    transform: rotate(-14deg);
+}
+
+.sticker-paperclip {
+    bottom: 15%;
+    right: 5%;
+    transform: rotate(10deg);
+}
+
+.sticker-pencil {
     top: 8%;
     right: 5%;
     transform: rotate(-8deg);
 }
 
-.sticker-ppdb-pin {
+.sticker-whiteout {
     top: 10%;
     left: 4%;
-    transform: rotate(14deg);
+    transform: rotate(12deg);
 }
 
-.sticker-ppdb-chat {
-    bottom: 12%;
-    right: 5%;
-    transform: rotate(-10deg);
-}
-
-/* Animations */
+/* Animasi Stiker Floating & Wobble */
 @keyframes floatAnim {
     0%, 100% { transform: translateY(0) rotate(-8deg); }
-    50% { transform: translateY(-10px) rotate(-4deg); }
+    50% { transform: translateY(-10px) rotate(-3deg); }
 }
 
 @keyframes wobbleAnim {
@@ -279,18 +241,58 @@ h1 em, h2 em, h3 em, p em {
 
 @keyframes pulseAnim {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-}
-
-@keyframes spinSlow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    50% { transform: scale(1.12); }
 }
 
 .float-anim { animation: floatAnim 4s ease-in-out infinite; }
 .wobble-anim { animation: wobbleAnim 5s ease-in-out infinite; }
 .pulse-anim { animation: pulseAnim 3s ease-in-out infinite; }
-.spin-slow { animation: spinSlow 20s linear infinite; }
+
+/* ==========================================================================
+   POLAROID STICKER CARD (Y.JPG INTEGRATION)
+   ========================================================================== */
+
+.photo-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.sticker-card-highlight {
+    border-color: var(--gold-primary) !important;
+}
+
+.sticker-polaroid-frame {
+    position: relative;
+    background: #FFFFFF;
+    padding: 12px 12px 0 12px;
+    border-radius: 8px 8px 0 0;
+}
+
+.photo-img-contain {
+    width: 100%;
+    height: 316px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.polaroid-pin {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold-primary);
+    color: var(--navy-bg-deep);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    font-size: 0.9rem;
+}
 
 /* ==========================================================================
    KOROWA NAVY COMPONENT STYLES
@@ -680,13 +682,7 @@ h1 em, h2 em, h3 em, p em {
     color: var(--text-light-sub);
 }
 
-/* FOTO SANTRI (PICTURE1 & PICTURE2) */
-.photo-grid-korowa {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-}
-
+/* FOTO SANTRI (PICTURE1, PICTURE2 & Y.JPG) */
 .photo-card-navy {
     background: var(--navy-card);
     border: 1px solid var(--border-navy);
@@ -1022,9 +1018,9 @@ h1 em, h2 em, h3 em, p em {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 990px) {
     .header-inner-wrap { padding: 0.8rem 1rem; }
     .nav-text-link { display: none; }
-    .stats-grid-korowa, .cards-grid-3, .photo-grid-korowa, .grid-2-equal, .ppdb-split-grid { grid-template-columns: 1fr; }
-    .whimsy-sticker { display: none; } /* Hide stickers on mobile to avoid overlapping */
+    .stats-grid-korowa, .cards-grid-3, .photo-grid-3, .grid-2-equal, .ppdb-split-grid { grid-template-columns: 1fr; }
+    .whimsy-sticker { display: none; }
 }
