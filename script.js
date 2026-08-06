@@ -1,18 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Brightness / Contrast Slider Control
-    const controlSlider = document.querySelector('.control-slider');
-    const heroSection = document.querySelector('.korowa-crimson-hero');
+    // 1. Westbourne Interactive Content Shaper Bar Logic
+    const shaperGoBtn = document.getElementById('shaper-go-btn');
+    const topicSelect = document.getElementById('topic-select');
 
-    if (controlSlider && heroSection) {
-        controlSlider.addEventListener('input', (e) => {
-            const val = e.target.value;
-            // Adjust lightness slightly based on slider value
-            const lightness = 62 + ((val - 50) * 0.2); // 52% to 72%
-            heroSection.style.backgroundColor = `hsl(349, 71%, ${lightness}%)`;
+    if (shaperGoBtn && topicSelect) {
+        shaperGoBtn.addEventListener('click', () => {
+            const selectedTopic = topicSelect.value;
+            let targetId = '#ppdb';
+
+            if (selectedTopic === 'ppdb') targetId = '#ppdb';
+            else if (selectedTopic === 'tahfidz') targetId = '#program';
+            else if (selectedTopic === 'adab') targetId = '#kisah';
+            else if (selectedTopic === 'lokasi') targetId = '#about';
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     }
 
-    // 2. Smooth Scroll for Navigation Anchors
+    // 2. Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            alert('Navigasi SDTQ ATTAMAM:\n- Tentang Kami\n- Program & SKL\n- Galeri Kegiatan\n- PPDB 2025-2026');
+        });
+    }
+
+    // 3. Smooth Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

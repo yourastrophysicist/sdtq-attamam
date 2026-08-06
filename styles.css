@@ -1,37 +1,38 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Editorial Storytelling Design System (Navy & Gold)
+   SDTQ ATTAMAM — Westbourne Grammar School Design System Edition
    ========================================================================== */
 
 :root {
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
     --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     
-    /* Official Navy & Gold Color Palette */
-    --color-navy-primary: #0B1C38;
-    --color-navy-dark: #061124;
-    --color-navy-light: #162B54;
+    /* Westbourne Grammar Navy & Gold Tokens */
+    --wb-navy: #0F254C;
+    --wb-navy-dark: #07152E;
+    --wb-navy-light: #1A376B;
     
-    --color-gold: #F1A21F;
-    --color-gold-dark: #D97706;
-    --color-gold-bg: rgba(241, 162, 31, 0.12);
+    --wb-gold: #EAA720;
+    --wb-gold-dark: #C88A10;
+    --wb-gold-bg: rgba(234, 167, 32, 0.12);
     
     --color-green: #10B981;
     
-    --bg-page: #F8F9FC;
+    --bg-page: #F4F6F9;
     --bg-card: #FFFFFF;
-    --bg-subtle: #F1F4F9;
+    --bg-subtle: #EBF0F6;
     
-    --border-light: #E2E8F0;
-    --text-dark: #0F172A;
+    --border-light: #DCE3ED;
+    --text-dark: #0F254C;
     --text-body: #334155;
     --text-muted: #64748B;
     
-    --radius-sm: 8px;
-    --radius-md: 16px;
+    --radius-sm: 6px;
+    --radius-md: 14px;
     --radius-lg: 24px;
     
-    --shadow-sm: 0 4px 12px rgba(11, 28, 56, 0.05);
-    --shadow-md: 0 12px 32px rgba(11, 28, 56, 0.08);
+    --shadow-sm: 0 4px 14px rgba(15, 37, 76, 0.06);
+    --shadow-md: 0 12px 36px rgba(15, 37, 76, 0.1);
+    --shadow-lg: 0 20px 48px rgba(15, 37, 76, 0.14);
 }
 
 * {
@@ -45,11 +46,11 @@ html {
     font-size: 16px;
 }
 
-body {
+body.westbourne-theme {
     font-family: var(--font-sans-body);
     background-color: var(--bg-page);
     color: var(--text-dark);
-    line-height: 1.65;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -59,7 +60,11 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Story Chapter Badges & Typography */
+.container-narrow {
+    max-width: 880px;
+}
+
+/* Westbourne Eyebrows & Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-sans-body);
     font-weight: 800;
@@ -72,28 +77,32 @@ h1 em, h2 em, h3 em, p em {
     font-style: italic;
     font-weight: 400;
     font-size: 1.15em;
-    color: var(--color-gold-dark);
+    color: var(--wb-gold);
 }
 
-.chapter-number {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+.wb-eyebrow {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-navy-primary);
-    margin-bottom: 0.8rem;
+    color: var(--wb-navy);
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-.chapter-number.justify-center {
-    justify-content: center;
+.wb-eyebrow-gold {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--wb-gold);
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 /* Top Notice Bar */
 .top-notice {
-    background: var(--color-navy-dark);
+    background: var(--wb-navy-dark);
     color: #FFFFFF;
     padding: 0.6rem 0;
     font-size: 0.85rem;
@@ -114,8 +123,8 @@ h1 em, h2 em, h3 em, p em {
 }
 
 .notice-badge {
-    background: var(--color-gold);
-    color: var(--color-navy-primary);
+    background: var(--wb-gold);
+    color: var(--wb-navy);
     font-size: 0.72rem;
     font-weight: 800;
     padding: 2px 10px;
@@ -128,458 +137,533 @@ h1 em, h2 em, h3 em, p em {
     font-weight: 600;
 }
 
-/* Top Header Bar */
-.korowa-top-bar {
+/* Westbourne Header Bar */
+.westbourne-header {
     background: #FFFFFF;
     border-bottom: 1px solid var(--border-light);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 12px rgba(15, 37, 76, 0.04);
 }
 
-.header-inner-wrap {
+.header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 2rem;
+    padding: 0.85rem 2rem;
     max-width: 1360px;
     margin: 0 auto;
 }
 
-.korowa-brand {
+.wb-logo-group {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     text-decoration: none;
 }
 
-.korowa-logo-img {
-    height: 46px;
+.wb-logo-img {
+    height: 48px;
     width: auto;
 }
 
-.korowa-brand-title {
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: var(--color-navy-primary);
-    letter-spacing: 0.06em;
+.wb-brand-text {
+    display: flex;
+    flex-direction: column;
 }
 
-.korowa-nav-right {
+.wb-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--wb-navy);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.wb-sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.wb-nav-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.6rem;
 }
 
-.nav-text-link {
+.wb-nav-link {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.06em;
+    font-size: 0.88rem;
+    transition: color 0.2s;
 }
 
-.btn-enquire {
+.wb-nav-link:hover {
+    color: var(--wb-gold-dark);
+}
+
+.btn-wb-enrol {
     background: #E2E8F0;
     color: var(--text-dark);
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.82rem;
-    padding: 0.6rem 1.3rem;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.4rem;
     border-radius: 4px;
+    transition: background 0.2s;
 }
 
-.btn-korowa-menu {
-    background: var(--color-navy-primary);
+.btn-wb-enrol:hover {
+    background: #CBD5E1;
+}
+
+.btn-wb-menu {
+    background: var(--wb-navy);
     color: #FFFFFF;
     border: none;
-    padding: 0.65rem 1.4rem;
+    padding: 0.65rem 1.5rem;
     font-weight: 800;
     font-size: 0.85rem;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
 }
 
-/* PROLOGUE HERO SECTION — Story Hook */
-.story-hero-section {
-    background-color: var(--color-navy-primary);
-    color: #FFFFFF;
-    padding: 6rem 1.5rem 7rem;
-    text-align: center;
+.btn-wb-menu:hover {
+    background: var(--wb-navy-light);
+}
+
+/* WESTBOURNE CINEMATIC HERO SECTION */
+.wb-hero-section {
     position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 7rem 0 6rem;
+    overflow: hidden;
+    background: var(--wb-navy-dark);
 }
 
-.story-hero-container {
+.wb-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+    transition: transform 8s ease;
+    z-index: 1;
+}
+
+.wb-hero-section:hover .wb-hero-bg {
+    transform: scale(1);
+}
+
+.wb-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(7, 21, 46, 0.94) 0%, rgba(15, 37, 76, 0.76) 60%, rgba(7, 21, 46, 0.9) 100%);
+    z-index: 2;
+}
+
+.wb-hero-content {
+    position: relative;
+    z-index: 3;
     max-width: 960px;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.chapter-badge {
+.wb-hero-tag {
     display: inline-block;
-    background: rgba(241, 162, 31, 0.2);
-    border: 1px solid var(--color-gold);
-    color: var(--color-gold);
-    font-size: 0.78rem;
+    background: rgba(234, 167, 32, 0.2);
+    border: 1px solid var(--wb-gold);
+    color: var(--wb-gold);
+    font-size: 0.8rem;
     font-weight: 800;
-    padding: 4px 14px;
+    padding: 4px 16px;
     border-radius: 50px;
     margin-bottom: 1.8rem;
     letter-spacing: 0.08em;
 }
 
-.story-hero-title {
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1.18;
-    color: #FFFFFF;
-    margin-bottom: 2.2rem;
-}
-
-.story-hero-title em {
-    color: var(--color-gold);
-}
-
-.story-hero-sub {
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    max-width: 820px;
-    margin: 0 auto 2.5rem;
-}
-
-.story-quote-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-md);
-    padding: 2rem 2.5rem;
-    margin: 0 auto 3rem;
-    max-width: 840px;
-    box-shadow: var(--shadow-md);
-}
-
-.story-quote-text {
-    font-family: var(--font-serif-italic);
-    font-style: italic;
-    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-    color: #FFFFFF;
-    line-height: 1.45;
-    margin-bottom: 1.2rem;
-}
-
-.story-author-tag {
-    font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.85);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 0.8rem;
-}
-
-.story-author-tag strong {
-    color: var(--color-gold);
-}
-
-.btn-scroll-story {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--color-gold);
-    color: var(--color-navy-primary);
-    padding: 0.9rem 1.8rem;
-    border-radius: 8px;
+.wb-hero-headline {
+    font-size: clamp(2.5rem, 5.8vw, 4.6rem);
     font-weight: 800;
-    text-decoration: none;
-    transition: transform 0.2s, background 0.2s;
-}
-
-.btn-scroll-story:hover {
-    background: #FFFFFF;
-    transform: translateY(-2px);
-}
-
-/* CHAPTER SECTIONS */
-.story-chapter-section {
-    padding: 6rem 0;
-}
-
-.bg-subtle {
-    background: var(--bg-subtle);
-}
-
-.chapter-grid-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.chapter-image-box {
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-}
-
-.story-img-main {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    display: block;
-}
-
-.story-img-badge {
-    position: absolute;
-    bottom: 1.2rem;
-    left: 1.2rem;
-    background: rgba(6, 17, 36, 0.85);
-    backdrop-filter: blur(8px);
+    line-height: 1.12;
     color: #FFFFFF;
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 50px;
-}
-
-.chapter-text-box h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
     margin-bottom: 1.5rem;
 }
 
-.story-paragraph {
-    font-size: 1.08rem;
-    color: var(--text-body);
-    margin-bottom: 1.2rem;
+.wb-hero-subtext {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 780px;
+    margin: 0 auto 3rem;
 }
 
-.story-stats-row {
+/* Westbourne Interactive Content Shaper Bar */
+.wb-content-shaper-bar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    border-radius: 50px;
+    padding: 8px 12px 8px 24px;
     display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    border-top: 1px solid var(--border-light);
-    padding-top: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 820px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.s-stat strong {
+.shaper-col {
+    display: flex;
+    align-items: center;
+}
+
+.shaper-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--wb-navy);
+    white-space: nowrap;
+}
+
+.shaper-select {
+    border: none;
+    background: transparent;
+    font-family: var(--font-sans-body);
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--wb-gold-dark);
+    cursor: pointer;
+    outline: none;
+}
+
+.shaper-divider {
+    width: 1px;
+    height: 28px;
+    background: var(--border-light);
+}
+
+.btn-shaper-action {
+    background: var(--wb-navy);
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.6rem;
+    border-radius: 40px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-shaper-action:hover {
+    background: var(--wb-gold-dark);
+    transform: translateX(2px);
+}
+
+/* SECTIONS */
+.wb-section {
+    padding: 6rem 0;
+}
+
+.bg-white { background: #FFFFFF; }
+.bg-subtle { background: var(--bg-subtle); }
+
+.wb-quote-box {
+    text-align: center;
+    padding: 2rem;
+}
+
+.wb-quote-mark {
+    font-family: var(--font-serif-italic);
+    font-size: 6rem;
+    color: var(--wb-gold);
+    line-height: 1;
+    margin-bottom: -1.5rem;
+}
+
+.wb-quote-body {
+    font-family: var(--font-serif-italic);
+    font-style: italic;
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    color: var(--wb-navy);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.wb-quote-meta strong {
     display: block;
-    font-size: 1.2rem;
-    color: var(--color-navy-primary);
+    font-size: 1.1rem;
+    color: var(--wb-navy);
 }
 
-.s-stat span {
-    font-size: 0.8rem;
+.wb-quote-meta span {
+    font-size: 0.88rem;
     color: var(--text-muted);
 }
 
-/* Timeline Cards (Chapter 03) */
-.chapter-head-center {
+/* Westbourne Stagger Stats */
+.wb-section-intro {
     text-align: center;
     max-width: 720px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 3.5rem;
 }
 
-.chapter-head-center h2 {
+.wb-section-intro h2 {
     font-size: 2.5rem;
-    margin-bottom: 0.6rem;
+    line-height: 1.2;
 }
 
-.story-timeline-grid {
+.wb-stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
-.timeline-card {
+.wb-stat-card {
     background: #FFFFFF;
     border: 1px solid var(--border-light);
     border-radius: var(--radius-md);
     padding: 2rem 1.5rem;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
-.timeline-card:hover {
-    transform: translateY(-5px);
+.wb-stat-card:hover {
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
-.time-badge {
-    background: var(--color-gold-bg);
-    color: var(--color-gold-dark);
-    font-size: 0.78rem;
-    font-weight: 800;
-    padding: 4px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 1rem;
+.wb-stat-val {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--wb-navy);
+    line-height: 1;
 }
 
-.timeline-card h3 {
-    font-size: 1.15rem;
-    margin-bottom: 0.6rem;
+.wb-stat-val small {
+    font-size: 1.2rem;
+    color: var(--wb-gold-dark);
 }
 
-.timeline-card p {
-    font-size: 0.9rem;
+.wb-line {
+    width: 100%;
+    height: 1px;
+    background: var(--border-light);
+    margin: 1rem 0;
+}
+
+.wb-stat-card p {
+    font-size: 0.88rem;
     color: var(--text-body);
+    font-weight: 600;
 }
 
-/* Story Cards Grid (Chapter 04) */
-.story-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.story-pillar-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-md);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s;
-}
-
-.story-pillar-card.active {
-    border-color: var(--color-gold);
-    box-shadow: var(--shadow-md);
-}
-
-.story-pillar-card:hover {
-    transform: translateY(-6px);
-}
-
-.p-icon {
-    width: 54px;
-    height: 54px;
-    background: var(--color-gold-bg);
-    color: var(--color-gold-dark);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-}
-
-.p-tag {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--color-gold-dark);
-}
-
-.story-pillar-card h3 {
-    font-size: 1.3rem;
-    margin: 0.4rem 0 0.8rem;
-}
-
-.story-pillar-card p {
-    font-size: 0.95rem;
-    color: var(--text-body);
-}
-
-/* Photo Story Gallery (Chapter 05) */
-.story-gallery-split {
+/* Photo Cards Grid */
+.wb-photo-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
 }
 
-.story-photo-box {
-    position: relative;
+.wb-photo-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
+}
+
+.wb-photo-card:hover {
+    transform: translateY(-6px);
     box-shadow: var(--shadow-md);
 }
 
-.story-photo {
+.wb-img {
     width: 100%;
-    height: 380px;
+    height: 340px;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s;
 }
 
-.story-photo-box:hover .story-photo {
-    transform: scale(1.04);
+.wb-photo-info {
+    padding: 2rem;
 }
 
-.photo-overlay-story {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.8rem;
-    background: linear-gradient(to top, rgba(6, 17, 36, 0.95) 0%, rgba(6, 17, 36, 0) 100%);
-    color: #FFFFFF;
+.wb-card-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--wb-gold-dark);
+    letter-spacing: 0.08em;
 }
 
-.photo-overlay-story strong {
-    display: block;
-    font-size: 1.2rem;
-    color: var(--color-gold);
+.wb-photo-info h3 {
+    font-size: 1.25rem;
+    margin: 0.3rem 0 0.6rem;
 }
 
-.photo-overlay-story span {
-    font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.85);
+.wb-photo-info p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
 }
 
-/* Mentor Story Box (Chapter 06) */
-.leader-story-box {
-    background: var(--color-navy-primary);
-    color: #FFFFFF;
-    padding: 3rem;
+/* Grid Components */
+.wb-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.wb-card-white {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
-    margin-bottom: 2.5rem;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.wb-card-white h2 em {
+    color: var(--wb-gold-dark);
+}
+
+.wb-card-navy {
+    background: var(--wb-navy);
+    color: #FFFFFF;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
     box-shadow: var(--shadow-md);
 }
 
-.l-tag {
-    color: var(--color-gold);
+.wb-visi-text {
+    font-family: var(--font-serif-italic);
+    font-style: italic;
+    font-size: 1.55rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 1rem 0 1.5rem;
+}
+
+.wb-motto-strip {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.wb-card-subtle {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 2.2rem;
+}
+
+.wb-checklist {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.wb-checklist li {
+    padding: 0.45rem 0;
+    font-size: 0.95rem;
+    color: var(--text-body);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wb-checklist li i {
+    color: var(--color-green);
+}
+
+.wb-skl-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.wb-skl-pill {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Faculty */
+.wb-yayasan-card {
+    background: var(--wb-navy);
+    color: #FFFFFF;
+    padding: 2.2rem 2.8rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.wb-y-role {
     font-size: 0.78rem;
     font-weight: 800;
     text-transform: uppercase;
+    color: var(--wb-gold);
 }
 
-.leader-story-box h3 {
+.wb-yayasan-card h3 {
     color: #FFFFFF;
-    font-size: 1.8rem;
-    margin: 0.4rem 0 0.8rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.4rem;
 }
 
-.leader-story-box p {
-    font-family: var(--font-serif-italic);
-    font-style: italic;
-    font-size: 1.35rem;
-    color: rgba(255, 255, 255, 0.92);
+.wb-yayasan-card p {
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.faculty-story-grid {
+.wb-faculty-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.2rem;
 }
 
-.f-story-card {
+.wb-faculty-card {
     background: #FFFFFF;
     border: 1px solid var(--border-light);
     border-radius: var(--radius-sm);
     padding: 1.4rem;
 }
 
-.f-story-card h4 {
+.wb-faculty-card h4 {
     font-size: 1rem;
     margin-bottom: 0.2rem;
 }
 
-.f-story-card span {
+.wb-faculty-card span {
     font-size: 0.8rem;
     color: var(--text-muted);
 }
 
-/* PPDB Story Container (Chapter 07) */
-.ppdb-story-container {
+/* PPDB Section */
+.wb-ppdb-card {
     background: var(--bg-subtle);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
@@ -587,71 +671,42 @@ h1 em, h2 em, h3 em, p em {
     box-shadow: var(--shadow-md);
 }
 
-.ppdb-story-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.4rem;
+.wb-ppdb-card h2 em {
+    color: var(--wb-gold-dark);
 }
 
-.ppdb-intro-text {
+.wb-ppdb-sub {
     font-size: 1.05rem;
     color: var(--text-muted);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
-.ppdb-story-split {
+.wb-ppdb-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-bottom: 2.5rem;
 }
 
-.ppdb-card-story {
+.wb-wave-box {
     background: #FFFFFF;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-md);
-    padding: 2rem;
-}
-
-.ppdb-card-story.highlight {
-    border-color: var(--color-gold);
-    box-shadow: var(--shadow-sm);
-}
-
-.wave-item {
-    background: var(--bg-subtle);
-    border-left: 4px solid var(--color-navy-primary);
-    padding: 0.9rem 1.2rem;
+    border-left: 4px solid var(--wb-navy);
+    padding: 1rem 1.2rem;
     border-radius: 0 6px 6px 0;
     margin-top: 1rem;
 }
 
-.wave-item.muted {
+.wb-wave-box.muted {
     border-left-color: var(--text-muted);
 }
 
-.story-check-list {
-    list-style: none;
-    margin-top: 1rem;
-}
+.mt-4 { margin-top: 1.5rem; }
 
-.story-check-list li {
-    padding: 0.4rem 0;
-    font-size: 0.92rem;
-    color: var(--text-body);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.story-check-list li i {
-    color: var(--color-green);
-}
-
-.fee-story-list {
+.wb-fee-table {
     margin: 1.2rem 0;
 }
 
-.fee-story-row {
+.wb-fee-row {
     display: flex;
     justify-content: space-between;
     padding: 0.6rem 0;
@@ -659,11 +714,11 @@ h1 em, h2 em, h3 em, p em {
     font-size: 0.92rem;
 }
 
-.total-story-box {
+.wb-total-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--color-navy-primary);
+    background: var(--wb-navy);
     color: #FFFFFF;
     padding: 1.1rem 1.5rem;
     border-radius: var(--radius-sm);
@@ -671,12 +726,12 @@ h1 em, h2 em, h3 em, p em {
     font-weight: 800;
 }
 
-.total-val-story {
+.wb-total-price {
     font-size: 1.35rem;
-    color: var(--color-gold);
+    color: var(--wb-gold);
 }
 
-.btn-wa-story {
+.btn-wb-wa {
     display: block;
     text-align: center;
     background: var(--color-green);
@@ -688,7 +743,7 @@ h1 em, h2 em, h3 em, p em {
     font-size: 1rem;
 }
 
-.location-story-bar {
+.wb-location-strip {
     background: #FFFFFF;
     border: 1px solid var(--border-light);
     padding: 1.2rem 1.5rem;
@@ -699,50 +754,90 @@ h1 em, h2 em, h3 em, p em {
     font-size: 0.9rem;
 }
 
-.location-story-bar i {
+.wb-location-strip i {
     font-size: 1.4rem;
-    color: var(--color-navy-primary);
+    color: var(--wb-navy);
 }
 
-/* Footer */
-.korowa-footer {
-    background: var(--color-navy-dark);
+/* WESTBOURNE 3-CELL FOOTER GRID */
+.wb-footer {
+    background: var(--wb-navy-dark);
     color: rgba(255, 255, 255, 0.8);
-    padding: 3rem 0;
+    padding: 5rem 0 3rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.88rem;
 }
 
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+.wb-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
-.footer-brand-group {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+.wb-footer-cell {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    padding: 2.2rem;
+    transition: transform 0.3s, border-color 0.3s;
 }
 
-.footer-logo {
-    height: 38px;
+.wb-footer-cell:hover {
+    transform: translateY(-4px);
+    border-color: var(--wb-gold);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand-logo {
+    height: 48px;
     background: #FFFFFF;
-    padding: 2px;
-    border-radius: 4px;
+    padding: 3px;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
 }
 
-.footer-title {
-    font-size: 1.15rem;
+.cell-inner h3 {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.cell-inner p {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1.8rem;
+    line-height: 1.55;
+}
+
+.wb-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--wb-gold);
+    text-decoration: none;
     font-weight: 800;
+    font-size: 0.95rem;
+    transition: gap 0.2s;
+}
+
+.wb-cta-link:hover {
+    gap: 15px;
     color: #FFFFFF;
 }
 
+.wb-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
 /* Responsive */
-@media (max-width: 900px) {
-    .header-inner-wrap { padding: 0.8rem 1rem; }
-    .nav-text-link { display: none; }
-    .chapter-grid-split, .story-timeline-grid, .story-cards-grid, .story-gallery-split, .ppdb-story-split { grid-template-columns: 1fr; }
+@media (max-width: 990px) {
+    .header-inner { padding: 0.8rem 1rem; }
+    .wb-nav-link { display: none; }
+    .wb-content-shaper-bar { flex-direction: column; border-radius: 20px; padding: 1.2rem; gap: 1rem; }
+    .shaper-divider { display: none; }
+    .wb-stats-grid, .wb-photo-grid-2, .wb-grid-2, .wb-ppdb-grid, .wb-footer-grid { grid-template-columns: 1fr; }
 }
