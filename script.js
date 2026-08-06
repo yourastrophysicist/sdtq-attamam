@@ -1,14 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Tombol Menu Navigasi
-    const menuToggle = document.getElementById('menu-toggle');
+    // 1. Highlight Active Nav Item on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.v-nav-item');
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            alert('Menu Navigasi SDTQ ATTAMAM:\n- Tentang Kami\n- 3 Pilar Utama\n- Dokumentasi Kegiatan\n- Mentor & Pendidik\n- PPDB 2025-2026');
+    window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute('id');
+            }
         });
-    }
 
-    // 2. Navigasi Halus (Smooth Scroll) untuk Tautan Jangkar
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${currentSectionId}`) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // 2. Navigasi Halus (Smooth Scroll)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

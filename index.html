@@ -3,273 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDTQ ATTAMAM — Sekolah Dasar Tahfidz Qur’an Garut</title>
-    <meta name="description" content="Sekolah Dasar Tahfidz Qur’an (SDTQ) ATTAMAM Garut. Pendidikan unggulan berbasis Aqidah Sohihah, Adab Hasanah, dan Hafalan Al-Qur'an. Full Day School T.A. 2025-2026.">
+    <title>SDTQ ATTAMAM — Interactive Viewbook Edition</title>
+    <meta name="description" content="Digital Viewbook SDTQ ATTAMAM Garut. Jurnal Interaktif Pendidikan Tahfidz Qur'an & Character Building T.A. 2025-2026.">
     
-    <!-- Google Fonts: Instrument Serif (Italic) + Plus Jakarta Sans -->
+    <!-- Typography: Instrument Serif (Italic) + Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="korowa-navy-theme">
+<body class="tilton-viewbook-theme">
 
-    <!-- Bilah Pengumuman Atas -->
-    <div class="top-notice">
-        <div class="container notice-inner">
-            <div class="notice-left">
-                <span class="notice-badge">PPDB 2025-2026</span>
-                <span class="notice-text">Pendaftaran Angkatan Ke-2 (Gelombang 1: 8 Jan – 28 Mar 2025)</span>
-            </div>
-            <a href="#ppdb" class="notice-link">Daftar Sekarang &nbsp;<i class="fas fa-arrow-right"></i></a>
-        </div>
-    </div>
-
-    <!-- Header Gaya Korowa -->
-    <header class="korowa-top-bar" id="header">
-        <div class="header-inner-wrap">
-            <a href="#" class="korowa-brand">
-                <img src="images/logo.png" alt="Logo SDTQ ATTAMAM" class="korowa-logo-img">
-                <div class="korowa-brand-title-group">
-                    <span class="korowa-brand-title">SDTQ ATTAMAM</span>
-                    <span class="korowa-brand-sub">Sekolah Dasar Tahfidz Qur'an Garut</span>
+    <!-- Bilah Navigasi Viewbook Melayang (Floating Header) -->
+    <header class="viewbook-header" id="header">
+        <div class="header-container">
+            <a href="#" class="viewbook-brand">
+                <img src="images/logo.png" alt="Logo SDTQ ATTAMAM" class="viewbook-logo">
+                <div class="viewbook-title-wrap">
+                    <span class="v-title">SDTQ ATTAMAM</span>
+                    <span class="v-sub">DIGITAL VIEWBOOK 2025-2026</span>
                 </div>
             </a>
 
-            <div class="korowa-nav-right">
-                <a href="#tentang" class="nav-text-link">TENTANG KAMI</a>
-                <a href="#pilar" class="nav-text-link">PILAR PENDIDIKAN</a>
-                <a href="#kegiatan" class="nav-text-link">KEGIATAN SANTRI</a>
-                <a href="#ppdb" class="btn-enquire">PPDB 2025-2026</a>
-                <button class="btn-korowa-menu" id="menu-toggle" aria-label="Buka Menu">
-                    <i class="fas fa-bars"></i> MENU
-                </button>
-            </div>
+            <!-- Navigasi Bab Viewbook -->
+            <nav class="viewbook-chapter-nav">
+                <a href="#bab-1" class="v-nav-item active">01. Kerisauan</a>
+                <a href="#bab-2" class="v-nav-item">02. 3 Pilar</a>
+                <a href="#bab-3" class="v-nav-item">03. Keseharian</a>
+                <a href="#bab-4" class="v-nav-item">04. Kampus</a>
+                <a href="#bab-5" class="v-nav-item">05. PPDB</a>
+            </nav>
+
+            <a href="#bab-5" class="btn-v-ppdb">Daftar PPDB</a>
         </div>
     </header>
 
-    <!-- HERO UTAMA GAYA KOROWA — Warna Biru Dongker & Emas -->
-    <section class="korowa-hero-section">
-        <div class="container hero-container-inner">
-            <div class="hero-sub-tag">SEKOLAH DASAR TAHFIDZ QUR'AN GARUT</div>
+    <!-- SAMPUIL VIEWBOOK UTAMA (HERO SPREAD COVER) -->
+    <section class="viewbook-cover-section">
+        <div class="v-cover-bg" style="background-image: url('images/quote_bg.webp');"></div>
+        <div class="v-cover-overlay"></div>
+
+        <div class="container v-cover-content">
+            <span class="v-edition-badge">✦ JURNAL INTERAKTIF SDTQ ATTAMAM GARUT ✦</span>
             
-            <h1 class="korowa-hero-title">
-                Pendidikan Unggulan <br>
-                Melahirkan Generasi Rabbani yang <br>
-                <em>Beriman</em>, <em>Beradab</em>, & <em>Berilmu</em>
+            <h1 class="v-main-headline">
+                Melahirkan Generasi Rabbani <br>
+                yang <em>Beriman</em>, <em>Beradab</em>, <br>
+                & <em>Berilmu</em>
             </h1>
 
-            <p class="korowa-hero-desc">
-                SDTQ ATTAMAM hadir dengan konsep Full Day School berafiliasi resmi ke Dinas Pendidikan. Menyelenggarakan pendidikan islami yang memadukan Aqidah Sohihah, Adab Hasanah, dan Hafalan Al-Qur'an di bawah sejuknya alam Cipanas Garut.
+            <p class="v-main-desc">
+                Selamat datang di Digital Viewbook SDTQ ATTAMAM. Halaman interaktif ini dirancang untuk mengajak Bapak/Ibu menjelajahi bagaimana kami mendidik santri di Objek Wisata Cipanas Garut.
             </p>
 
-            <div class="hero-action-row">
-                <a href="#ppdb" class="btn-primary-gold">
-                    <span>Daftar PPDB 2025-2026</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#kisah" class="btn-outline-white">
-                    <span>Kisah Orang Tua Santri</span>
+            <div class="v-cover-actions">
+                <a href="#bab-1" class="btn-open-viewbook">
+                    <span>Mulai Membaca Viewbook</span>
+                    <i class="fas fa-book-open"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- KUTIPAN SOROTAN ORANG TUA (Latar Gambar Khusus quote_bg.webp) -->
-    <section class="section-padding bg-quote-custom" id="kisah">
-        <div class="container container-narrow">
-            <div class="quote-card-korowa">
-                <div class="quote-icon">“</div>
-                <blockquote class="quote-body-text">
-                    Saya takut anak saya pintar tapi tak punya adab. Saya takut dia sukses, tapi kosong jiwanya. Karena itu saya cari sekolah yang pertama-tama ngajarin dia jadi manusia yang tahu arah. Di Attamam, anak-anak diajarin wudhu yang benar, cara menjawab salam, adab ke guru, hingga cara duduk waktu belajar. Kalau iman dan adabnya kuat dari kecil, insyaAllah dia bisa bertahan dalam hidup.
-                </blockquote>
-                <div class="quote-author-info">
-                    <strong>Pak Hidayat</strong>
-                    <span>Wali Murid Naila &bull; Dikutip dari BeritaDisdik Garut</span>
+    <!-- BAB 01: KERISAUAN ORANG TUA (SPREAD EDITORIAL 2 KOLOM) -->
+    <section class="v-chapter-section bg-white" id="bab-1">
+        <div class="container">
+            <div class="v-chapter-header">
+                <span class="v-chap-num">BAB 01</span>
+                <h2>Kerisauan Seorang <em>Orang Tua</em></h2>
+                <div class="v-header-line"></div>
+            </div>
+
+            <div class="v-editorial-spread">
+                <div class="v-spread-col-left">
+                    <div class="v-quote-feature-box">
+                        <div class="quote-mark-large">“</div>
+                        <blockquote class="quote-text-large">
+                            Saya takut anak saya pintar tapi tak punya adab. Saya takut dia sukses, tapi kosong jiwanya. Karena itu saya cari sekolah yang pertama-tama ngajarin dia jadi manusia yang tahu arah. Di Attamam, anak-anak diajarin wudhu yang benar, cara menjawab salam, adab ke guru, hingga cara duduk waktu belajar.
+                        </blockquote>
+                        <div class="quote-author-tag">
+                            <strong>Pak Hidayat</strong>
+                            <span>Wali Murid Naila &bull; BeritaDisdik Garut</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="v-spread-col-right">
+                    <h3>Pendidikan Karakter Sebelum Akademik</h3>
+                    <p class="v-paragraph drop-cap">
+                        Pendidikan dasar bukan sekadar tentang menumpuk materi pelajaran umum. Di SDTQ ATTAMAM, kami meyakini bahwa **adab dan penataan jiwa** adalah pondasi utama yang harus ditanamkan sebelum anak menerima cabang-cabang ilmu lainnya.
+                    </p>
+                    <p class="v-paragraph">
+                        Melalui pembiasaan rutin dari pagi hingga sore hari, setiap santri dilatih untuk memiliki Aqidah Sohihah (tauhid yang lurus) serta kecerdasan emosional dan spiritual yang matang.
+                    </p>
+
+                    <div class="v-stat-row-inline">
+                        <div class="v-mini-stat">
+                            <strong>4 Juz</strong>
+                            <span>Target Hafalan</span>
+                        </div>
+                        <div class="v-mini-stat">
+                            <strong>100 Hadits</strong>
+                            <span>Hafalan Pilihan</span>
+                        </div>
+                        <div class="v-mini-stat">
+                            <strong>Full Day</strong>
+                            <span>Konsep Sekolah</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CAPAIAN & TARGET KELULUSAN (Kartu Statistik Grid Korowa) -->
-    <section class="section-padding bg-light-subtle">
+    <!-- BAB 02: TIGA PILAR UTAMA (CARD SPREAD KOROWA NAVY) -->
+    <section class="v-chapter-section bg-subtle" id="bab-2">
         <div class="container">
-            <div class="section-title-center">
-                <span class="eyebrow-text">TARGET KELULUSAN SANTRI</span>
-                <h2>Pendidikan <em>Berkarakter</em> & <em>Beradab</em></h2>
+            <div class="v-chapter-header">
+                <span class="v-chap-num">BAB 02</span>
+                <h2>Tiga Pilar <em>Pendidikan Utama</em></h2>
+                <div class="v-header-line"></div>
             </div>
 
-            <div class="stats-grid-korowa">
-                <div class="stat-card-korowa">
-                    <div class="stat-number">4 <span>Juz</span></div>
-                    <div class="stat-divider"></div>
-                    <p class="stat-label">Target Hafalan Minimal Al-Qur'an Santri Lulusan SDTQ</p>
-                </div>
-                <div class="stat-card-korowa">
-                    <div class="stat-number">100 <span>Hadits</span></div>
-                    <div class="stat-divider"></div>
-                    <p class="stat-label">Hafalan Hadits Pilihan & Pembiasaan Doa/Dzikir Harian</p>
-                </div>
-                <div class="stat-card-korowa">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-divider"></div>
-                    <p class="stat-label">Penanaman Aqidah Sohihah & Adab Hasanah Keseharian</p>
-                </div>
-                <div class="stat-card-korowa">
-                    <div class="stat-number">Full <span>Day</span></div>
-                    <div class="stat-divider"></div>
-                    <p class="stat-label">Konsep Pembelajaran Kondusif di Objek Wisata Cipanas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3 PILAR UTAMA PENDIDIKAN -->
-    <section class="section-padding bg-white" id="pilar">
-        <div class="container">
-            <div class="section-title-center">
-                <span class="eyebrow-text">FONDASI KAMI</span>
-                <h2>Tiga Pilar <em>Pendidikan SDTQ ATTAMAM</em></h2>
-            </div>
-
-            <div class="cards-grid-3">
-                <div class="pilar-card-korowa">
-                    <div class="pilar-icon"><i class="fas fa-heart-pulse"></i></div>
-                    <span class="pilar-tag">PILAR 01</span>
+            <div class="v-cards-grid-3">
+                <div class="v-pilar-card">
+                    <div class="v-card-number">01</div>
+                    <div class="v-card-icon"><i class="fas fa-heart"></i></div>
                     <h3>Iman yang Kokoh</h3>
-                    <p>Pembentukan Aqidah Sohihah sejak dini agar anak memiliki pegangan hidup yang lurus dan kecintaan mendalam kepada Allah SWT.</p>
+                    <p>Pembentukan Aqidah Sohihah sejak dini agar santri memiliki kecintaan mendalam kepada Allah SWT dan ajaran Al-Qur'an.</p>
                 </div>
 
-                <div class="pilar-card-korowa active">
-                    <div class="pilar-icon"><i class="fas fa-hands-praying"></i></div>
-                    <span class="pilar-tag">PILAR 02</span>
+                <div class="v-pilar-card active">
+                    <div class="v-card-number">02</div>
+                    <div class="v-card-icon"><i class="fas fa-hands-praying"></i></div>
                     <h3>Adab Hasanah</h3>
-                    <p>Penanaman sopan santun, penghormatan kepada guru dan orang tua, wudhu yang syar'i, serta kesantunan berinteraksi sesama teman.</p>
+                    <p>Penanaman kesantunan, cara berwudhu yang syar'i, menghormati pengajar, serta etika berinteraksi sesama santri.</p>
                 </div>
 
-                <div class="pilar-card-korowa">
-                    <div class="pilar-icon"><i class="fas fa-book-quran"></i></div>
-                    <span class="pilar-tag">PILAR 03</span>
+                <div class="v-pilar-card">
+                    <div class="v-card-number">03</div>
+                    <div class="v-card-icon"><i class="fas fa-book-quran"></i></div>
                     <h3>Ilmu yang Bermanfaat</h3>
-                    <p>Perpaduan hafalan Al-Qur'an 4 Juz, hafalan 100 hadits pilihan, serta penguasaan akademik dasar membaca, menulis, dan berhitung.</p>
+                    <p>Hafalan Al-Qur'an 4 Juz, 100 hadits pilihan, serta penguasaan akademik dasar membaca, menulis, dan berhitung.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- POTRET SUASANA BELAJAR SANTRI (Foto Asli Picture1 & Picture2) -->
-    <section class="section-padding bg-light-subtle" id="kegiatan">
+    <!-- BAB 03: SEHARI DALAM KEHIDUPAN SANTRI (TIMELINE SLIDE) -->
+    <section class="v-chapter-section bg-navy text-white" id="bab-3">
         <div class="container">
-            <div class="section-title-center">
-                <span class="eyebrow-text">DOKUMENTASI KAMPUS</span>
-                <h2>Potret <em>Kegiatan Santri</em></h2>
+            <div class="v-chapter-header">
+                <span class="v-chap-num text-gold">BAB 03</span>
+                <h2 class="text-white">Sehari dalam <em>Kehidupan Santri</em></h2>
+                <div class="v-header-line bg-gold"></div>
             </div>
 
-            <div class="photo-grid-korowa">
-                <div class="photo-card-korowa">
-                    <img src="images/picture1.jpg" alt="Aktivitas Siswa Belajar Bersama" class="photo-img">
-                    <div class="photo-card-info">
-                        <span class="photo-tag">Pembiasaan Adab</span>
-                        <h3>Interaksi Sehat & Saling Menyayangi</h3>
-                        <p>Santri diajarkan wudhu yang benar, tata cara menjawab salam, serta adab kebersamaan sejak hari pertama sekolah.</p>
+            <div class="v-timeline-grid-4">
+                <div class="v-timeline-item">
+                    <span class="v-time-badge">07.00 WIB</span>
+                    <h3>Salam & Adab Pagi</h3>
+                    <p>Penyambutan santri dengan senyum, salam, sapa, dan pembiasaan dzikir pagi.</p>
+                </div>
+
+                <div class="v-timeline-item">
+                    <span class="v-time-badge">08.00 WIB</span>
+                    <h3>Sima'i Tahfidz Qur'an</h3>
+                    <p>Bimbingan intensif hafalan Al-Qur'an dengan metode Sima'i yang kondusif.</p>
+                </div>
+
+                <div class="v-timeline-item">
+                    <span class="v-time-badge">11.30 WIB</span>
+                    <h3>Wudhu & Sholat Berjamaah</h3>
+                    <p>Praktik wudhu yang syar'i dan sholat Dzuhur berjamaah tepat waktu di musholla.</p>
+                </div>
+
+                <div class="v-timeline-item">
+                    <span class="v-time-badge">13.00 WIB</span>
+                    <h3>Akademik & Calistung</h3>
+                    <p>Pembelajaran interaktif Matematika dasar, Bahasa, dan Eksplorasi Sains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAB 04: KAMPUS CIPANAS & GALERI FOTO (PICTURE1 & PICTURE2) -->
+    <section class="v-chapter-section bg-white" id="bab-4">
+        <div class="container">
+            <div class="v-chapter-header">
+                <span class="v-chap-num">BAB 04</span>
+                <h2>Lingkungan & <em>Potret Kebersamaan</em></h2>
+                <div class="v-header-line"></div>
+            </div>
+
+            <div class="v-gallery-split">
+                <div class="v-photo-card">
+                    <img src="images/picture1.jpg" alt="Kegiatan Santri SDTQ ATTAMAM" class="v-photo-img">
+                    <div class="v-photo-caption">
+                        <span class="v-tag">Adab & Kebersamaan</span>
+                        <h3>Saling Menyayangi & Menghormati Teman</h3>
+                        <p>Santri diajarkan adab berinteraksi yang santun dan membangun persahabatan Islami.</p>
                     </div>
                 </div>
 
-                <div class="photo-card-korowa">
-                    <img src="images/picture2.jpg" alt="Ruang Kelas SDTQ ATTAMAM Garut" class="photo-img">
-                    <div class="photo-card-info">
-                        <span class="photo-tag">Fasilitas Kelas</span>
-                        <h3>Suasana Belajar Nyaman & Terang</h3>
-                        <p>Penyelenggaraan kelas dengan jumlah siswa terkontrol agar pembimbingan hafalan Al-Qur'an berlangsung optimal.</p>
+                <div class="v-photo-card">
+                    <img src="images/picture2.jpg" alt="Ruang Kelas SDTQ ATTAMAM Garut" class="v-photo-img">
+                    <div class="v-photo-caption">
+                        <span class="v-tag">Fasilitas Belajar</span>
+                        <h3>Kelas Terang & Pembimbingan Personal</h3>
+                        <p>Ruang kelas bersih dan sejuk di Cipanas Garut dengan jumlah santri terkontrol.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TENTANG SCHOOL & VISI -->
-    <section class="section-padding bg-white" id="tentang">
+    <!-- BAB 05: INFORMASI PPDB 2025-2026 -->
+    <section class="v-chapter-section bg-subtle" id="bab-5">
         <div class="container">
-            <div class="grid-2-equal">
-                <div class="info-box-white">
-                    <span class="eyebrow-text">TENTANG SEKOLAH</span>
-                    <h2>Full Day School <em>Berafiliasi Resmi</em></h2>
-                    <p class="desc-text">Sekolah Dasar Tahfidz Qur’an (SDTQ) ATTAMAM berada di bawah naungan Yayasan ATTAMAM, hadir dengan konsep Full Day School. Kurikulum menekankan pada tahfidz Qur’an, dipadukan dengan <em>al-‘ulumul Fardhu ‘Ain</em> (Pendidikan Agama Islam) dan <em>al-‘ulumul Fardhu Kifayah</em> (Mata pelajaran umum Dinas Pendidikan).</p>
+            <div class="v-ppdb-card-viewbook">
+                <div class="v-ppdb-head">
+                    <span class="v-chap-num">BAB 05</span>
+                    <h2>Penerimaan Peserta Didik Baru <em>T.A. 2025-2026</em></h2>
+                    <p>Bergabunglah bersama keluarga besar SDTQ ATTAMAM Garut Angkatan Ke-2</p>
                 </div>
 
-                <div class="info-box-navy">
-                    <span class="eyebrow-gold">VISI UTAMA</span>
-                    <h3 class="visi-headline">"Terwujudnya penyelenggara pendidikan yang melahirkan peserta didik yang beriman, beradab, berilmu sesuai panduan Al Qur’an"</h3>
-                    <div class="motto-box">Motto Sekolah: <strong>Iman, Adab, Ilmu</strong></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PARA MENTOR & TENAGA PENDIDIK -->
-    <section class="section-padding bg-light-subtle" id="mentor">
-        <div class="container">
-            <div class="section-title-center">
-                <span class="eyebrow-text">STAF PENDIDIK</span>
-                <h2>Mentor & <em>Pengasuh Santri</em></h2>
-            </div>
-
-            <div class="yayasan-box-navy">
-                <span class="role-badge">KETUA YAYASAN ATTAMAM</span>
-                <h3>Drs. Imam Tamamu Taufiq, M.Pd</h3>
-                <p>Membimbing dan mengarahkan visi pendidikan karakter berbasis nilai-nilai Al-Qur'an dan Sunnah.</p>
-            </div>
-
-            <div class="faculty-grid-korowa">
-                <div class="faculty-card-korowa">
-                    <h4>H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag</h4>
-                    <span>Staff Pengajar & Guru Kelas</span>
-                </div>
-                <div class="faculty-card-korowa">
-                    <h4>Teti Nuryanti, S.Pd.I</h4>
-                    <span>Staff Pengajar & Guru Kelas</span>
-                </div>
-                <div class="faculty-card-korowa">
-                    <h4>Alliyah Rasyidah, S.Ag</h4>
-                    <span>Staff Pengajar & Guru Kelas</span>
-                </div>
-                <div class="faculty-card-korowa">
-                    <h4>Fitriani, S.Pd</h4>
-                    <span>Staff Pengajar & Guru Kelas</span>
-                </div>
-                <div class="faculty-card-korowa">
-                    <h4>Rosalin Qurota Ayunin, SH</h4>
-                    <span>Staff Pengajar & Guru Kelas</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INFORMASI PPDB 2025-2026 -->
-    <section class="section-padding bg-white" id="ppdb">
-        <div class="container">
-            <div class="ppdb-main-card">
-                <div class="ppdb-header-center">
-                    <span class="eyebrow-text">PENERIMAAN PESERTA DIDIK BARU</span>
-                    <h2>PPDB <em>T.A. 2025-2026</em> Angkatan Ke-2</h2>
-                    <p class="ppdb-sub-desc">Mari menjadi bagian dari keluarga besar Sekolah Dasar Tahfidz Qur’an ATTAMAM Garut.</p>
-                </div>
-
-                <div class="ppdb-split-grid">
-                    <div class="ppdb-col-left">
-                        <h3>Jadwal Pendaftaran</h3>
-                        <div class="wave-box-item">
+                <div class="v-ppdb-grid-2">
+                    <div class="v-ppdb-col">
+                        <h3>Jadwal & Berkas Pendaftaran</h3>
+                        <div class="v-box-wave">
                             <strong>Gelombang 1:</strong> 8 Jan 2025 – 28 Mar 2025<br>
                             <small>Daftar Ulang: 17–18 April 2025</small>
                         </div>
-                        <div class="wave-box-item muted">
+                        <div class="v-box-wave muted">
                             <strong>Gelombang 2:</strong> 21 Apr 2025 – 16 Jun 2026<br>
                             <small>Daftar Ulang: 19–20 Juni 2025</small>
                         </div>
 
-                        <h4 class="mt-3">Persyaratan Berkas:</h4>
-                        <ul class="check-list-navy">
+                        <h4 class="mt-4">Persyaratan Berkas:</h4>
+                        <ul class="v-check-list">
                             <li><i class="fas fa-check-circle"></i> Formulir Pendaftaran</li>
                             <li><i class="fas fa-check-circle"></i> FC Kartu Keluarga & Akta Kelahiran (@ 2 lembar)</li>
                             <li><i class="fas fa-check-circle"></i> FC KTP Orang Tua & Ijazah TK (@ 2 lembar)</li>
@@ -277,30 +250,30 @@
                         </ul>
                     </div>
 
-                    <div class="ppdb-col-right">
+                    <div class="v-ppdb-col">
                         <h3>Rincian Biaya Masuk</h3>
-                        <div class="fee-table-list">
-                            <div class="fee-row-item">
+                        <div class="v-fee-list">
+                            <div class="v-fee-row">
                                 <span>Buku Paket 1 thn & Media</span>
                                 <strong>Rp 570.000</strong>
                             </div>
-                            <div class="fee-row-item">
+                            <div class="v-fee-row">
                                 <span>Seragam 2 stel (Batik & Olah Raga)</span>
                                 <strong>Rp 320.000</strong>
                             </div>
-                            <div class="fee-row-item">
+                            <div class="v-fee-row">
                                 <span>Dana Sumbangan Pendidikan (DSP)</span>
                                 <strong>Rp 1.000.000</strong>
                             </div>
-                            <div class="fee-row-item">
+                            <div class="v-fee-row">
                                 <span>SPP Bulan Pertama (Juli)</span>
                                 <strong>Rp 100.000</strong>
                             </div>
                         </div>
 
-                        <div class="total-price-card">
+                        <div class="v-total-box">
                             <span>TOTAL BIAYA MASUK</span>
-                            <span class="total-num">Rp 1.990.000</span>
+                            <span class="v-total-price">Rp 1.990.000</span>
                         </div>
 
                         <a href="https://wa.me/?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20PPDB%20SDTQ%20ATTAMAM" target="_blank" class="btn-wa-green">
@@ -309,35 +282,28 @@
                     </div>
                 </div>
 
-                <div class="location-banner">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span><strong>Lokasi Sekolah:</strong> Objek Wisata Cipanas (Belakang kolam renang PURBASARI), RT/RW 05/06 Ds. Rancabango, Kec. Tarogong Kaler, Kab. Garut.</span>
+                <div class="v-location-footer">
+                    <i class="fas fa-location-dot"></i>
+                    <span><strong>Lokasi Kampus:</strong> Objek Wisata Cipanas (Belakang kolam renang PURBASARI), RT/RW 05/06 Ds. Rancabango, Kec. Tarogong Kaler, Kab. Garut.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER BIRU DONGKER KOROWA -->
-    <footer class="korowa-footer">
-        <div class="container footer-inner-grid">
-            <div class="footer-left-group">
-                <img src="images/logo.png" alt="Logo SDTQ ATTAMAM" class="footer-logo-img">
+    <!-- FOOTER VIEWBOOK -->
+    <footer class="viewbook-footer">
+        <div class="container v-footer-inner">
+            <div class="v-footer-brand">
+                <img src="images/logo.png" alt="Logo SDTQ ATTAMAM" class="v-footer-logo">
                 <div>
-                    <h3 class="footer-title">SDTQ ATTAMAM</h3>
-                    <p class="footer-sub">Sekolah Dasar Tahfidz Qur'an Garut &bull; Full Day School</p>
+                    <h3>SDTQ ATTAMAM GARUT</h3>
+                    <p>Sekolah Dasar Tahfidz Qur'an &bull; Full Day School Berafiliasi Dinas Pendidikan</p>
                 </div>
             </div>
 
-            <div class="footer-nav-links">
-                <a href="#tentang">Tentang Kami</a>
-                <a href="#pilar">3 Pilar Utama</a>
-                <a href="#kegiatan">Kegiatan Santri</a>
-                <a href="#ppdb">Informasi PPDB</a>
+            <div class="v-footer-copyright">
+                Hak Cipta Dilindungi &copy; 2025 SDTQ ATTAMAM Garut &bull; Digital Viewbook Edition
             </div>
-        </div>
-
-        <div class="footer-copyright">
-            Hak Cipta Dilindungi &copy; 2025 SDTQ ATTAMAM Garut
         </div>
     </footer>
 
