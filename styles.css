@@ -1,17 +1,23 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Korowa Exact Crimson Red Design System
+   SDTQ ATTAMAM — Navy Blue & Gold Theme (Korowa Layout Structure)
    ========================================================================== */
 
 :root {
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
     --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     
-    /* Exact Korowa Color Tokens */
-    --korowa-crimson: #9E1B32;
-    --korowa-crimson-dark: #7A1224;
-    --korowa-crimson-deep: #580B18;
+    /* Previous Official Navy Blue & Gold Color Palette */
+    --color-navy-primary: #0B1C38;
+    --color-navy-dark: #061124;
+    --color-navy-light: #162B54;
     
-    --bg-page: #FAF9FB;
+    --color-gold: #F1A21F;
+    --color-gold-dark: #D97706;
+    --color-gold-light: #FDE68A;
+    
+    --color-green: #10B981;
+    
+    --bg-page: #F8F9FC;
     --bg-card: #FFFFFF;
     --bg-subtle: #F1F4F9;
     
@@ -20,15 +26,12 @@
     --text-body: #334155;
     --text-muted: #64748B;
     
-    --accent-gold: #F1A21F;
-    --accent-green: #10B981;
-    
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
     
-    --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
-    --shadow-md: 0 12px 32px rgba(15, 23, 42, 0.08);
+    --shadow-sm: 0 4px 12px rgba(11, 28, 56, 0.05);
+    --shadow-md: 0 12px 32px rgba(11, 28, 56, 0.08);
 }
 
 * {
@@ -87,7 +90,7 @@ body {
 }
 
 .korowa-logo-img {
-    height: 44px;
+    height: 46px;
     width: auto;
     object-fit: contain;
 }
@@ -95,7 +98,7 @@ body {
 .korowa-brand-title {
     font-size: 1.45rem;
     font-weight: 800;
-    color: var(--korowa-crimson);
+    color: var(--color-navy-primary);
     letter-spacing: 0.06em;
     font-family: var(--font-sans-body);
 }
@@ -116,7 +119,7 @@ body {
 }
 
 .nav-text-link:hover {
-    color: var(--korowa-crimson);
+    color: var(--color-gold-dark);
 }
 
 .btn-enquire {
@@ -136,14 +139,14 @@ body {
 }
 
 .btn-korowa-menu {
-    background: var(--korowa-crimson);
+    background: var(--color-navy-primary);
     color: #FFFFFF;
     border: none;
     padding: 0.65rem 1.4rem;
     font-weight: 800;
     font-size: 0.85rem;
     letter-spacing: 0.06em;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -152,12 +155,12 @@ body {
 }
 
 .btn-korowa-menu:hover {
-    background: var(--korowa-crimson-dark);
+    background: var(--color-navy-light);
 }
 
-/* Korowa Full Crimson Red Hero Section (Exact Match to Screenshot) */
+/* Deep Navy Blue Hero Section (With Warm Gold Accents) */
 .korowa-crimson-hero {
-    background-color: var(--korowa-crimson);
+    background-color: var(--color-navy-primary);
     color: #FFFFFF;
     padding: 6rem 1.5rem 7rem;
     text-align: center;
@@ -192,6 +195,7 @@ body {
     font-weight: 400;
     font-size: 1.15em;
     letter-spacing: 0.01em;
+    color: var(--color-gold);
 }
 
 /* Floating Contrast Control Slider Pill */
@@ -204,23 +208,23 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-control-pill i {
-    color: var(--korowa-crimson);
+    color: var(--color-navy-primary);
     font-size: 1.1rem;
 }
 
 .control-slider {
-    accent-color: var(--korowa-crimson);
+    accent-color: var(--color-navy-primary);
     cursor: pointer;
     width: 140px;
 }
 
 /* Quote Highlight Section (Pak Hidayat's Testimonial) */
 .section-quote-highlight {
-    padding: 5rem 0;
+    padding: 5.5rem 0;
     background: #FFFFFF;
     border-bottom: 1px solid var(--border-light);
 }
@@ -233,7 +237,7 @@ body {
 .quote-mark-lg {
     font-family: var(--font-serif-italic);
     font-size: 6rem;
-    color: var(--korowa-crimson);
+    color: var(--color-gold);
     line-height: 1;
     margin-bottom: -1.5rem;
 }
@@ -250,7 +254,7 @@ body {
 .quote-author-info strong {
     display: block;
     font-size: 1.1rem;
-    color: var(--korowa-crimson);
+    color: var(--color-navy-primary);
 }
 
 .quote-author-info span {
@@ -276,7 +280,7 @@ body {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--korowa-crimson);
+    color: var(--color-navy-primary);
     letter-spacing: 0.08em;
     margin-bottom: 0.6rem;
 }
@@ -285,7 +289,7 @@ body {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--accent-gold);
+    color: var(--color-gold);
     letter-spacing: 0.08em;
     margin-bottom: 0.6rem;
 }
@@ -300,7 +304,7 @@ body {
     font-style: italic;
     font-weight: 400;
     font-size: 1.15em;
-    color: var(--korowa-crimson);
+    color: var(--color-gold-dark);
 }
 
 .stats-stagger-container {
@@ -326,14 +330,14 @@ body {
 .stat-number {
     font-size: 2.8rem;
     font-weight: 900;
-    color: var(--korowa-crimson);
+    color: var(--color-navy-primary);
     line-height: 1;
 }
 
 .stat-number small {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--color-gold-dark);
 }
 
 .divider-line {
@@ -425,11 +429,11 @@ body {
 .about-card-light h2 em {
     font-family: var(--font-serif-italic);
     font-style: italic;
-    color: var(--korowa-crimson);
+    color: var(--color-gold-dark);
 }
 
 .about-card-dark {
-    background: var(--korowa-crimson);
+    background: var(--color-navy-primary);
     color: #FFFFFF;
     border-radius: var(--radius-lg);
     padding: 2.5rem;
@@ -486,7 +490,7 @@ body {
 }
 
 .check-list-korowa li i {
-    color: var(--accent-green);
+    color: var(--color-green);
 }
 
 .skl-tags-wrap {
@@ -512,7 +516,7 @@ body {
 }
 
 .yayasan-banner {
-    background: var(--korowa-crimson);
+    background: var(--color-navy-primary);
     color: #FFFFFF;
     padding: 2rem 2.5rem;
     border-radius: var(--radius-md);
@@ -524,7 +528,7 @@ body {
     font-size: 0.78rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--accent-gold);
+    color: var(--color-gold);
 }
 
 .yayasan-banner h3 {
@@ -571,7 +575,7 @@ body {
 
 .ppdb-main-card h2 em {
     font-family: var(--font-serif-italic);
-    color: var(--korowa-crimson);
+    color: var(--color-gold-dark);
 }
 
 .ppdb-grid-2 {
@@ -583,7 +587,7 @@ body {
 
 .wave-info-box {
     background: #FFFFFF;
-    border-left: 4px solid var(--korowa-crimson);
+    border-left: 4px solid var(--color-navy-primary);
     padding: 1rem 1.2rem;
     border-radius: 0 6px 6px 0;
     margin-top: 1rem;
@@ -611,7 +615,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--korowa-crimson);
+    background: var(--color-navy-primary);
     color: #FFFFFF;
     padding: 1.1rem 1.5rem;
     border-radius: var(--radius-sm);
@@ -621,13 +625,13 @@ body {
 
 .total-val {
     font-size: 1.35rem;
-    color: var(--accent-gold);
+    color: var(--color-gold);
 }
 
 .btn-wa-korowa {
     display: block;
     text-align: center;
-    background: var(--accent-green);
+    background: var(--color-green);
     color: #FFFFFF;
     padding: 0.9rem;
     border-radius: var(--radius-sm);
@@ -649,12 +653,12 @@ body {
 
 .location-bar-korowa i {
     font-size: 1.4rem;
-    color: var(--korowa-crimson);
+    color: var(--color-navy-primary);
 }
 
 /* Footer */
 .korowa-footer {
-    background: var(--korowa-crimson-deep);
+    background: var(--color-navy-dark);
     color: rgba(255, 255, 255, 0.8);
     padding: 3rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
