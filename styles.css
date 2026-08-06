@@ -1,6 +1,7 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Tilton School Digital Viewbook Edition
-   Warna Utama: Biru Dongker (#0B1C38) & Emas Hangat (#F1A21F)
+   SDTQ ATTAMAM — Korowa Layout All-Navy Dark Mode Edition
+   Semua Background: Biru Dongker (#0B1C38 & #061124)
+   Aksen: Emas Hangat (#F1A21F) & Putih (#FFFFFF)
    Bahasa: 100% Bahasa Indonesia
    ========================================================================== */
 
@@ -8,33 +9,32 @@
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
     --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     
-    /* Tilton Viewbook Navy & Gold Color Tokens */
-    --v-navy: #0B1C38;
-    --v-navy-dark: #061124;
-    --v-navy-light: #162B54;
+    /* Warna Biru Dongker Seragam (All-Navy) */
+    --navy-bg-deep: #061124;
+    --navy-bg-main: #0B1C38;
+    --navy-card: #122544;
+    --navy-card-hover: #19325A;
+    --navy-card-glass: rgba(255, 255, 255, 0.05);
     
-    --v-gold: #F1A21F;
-    --v-gold-dark: #D97706;
-    --v-gold-tint: rgba(241, 162, 31, 0.12);
+    /* Emas & Putih */
+    --gold-primary: #F1A21F;
+    --gold-dark: #D97706;
+    --gold-bg-tint: rgba(241, 162, 31, 0.18);
     
-    --color-green: #10B981;
+    --green-accent: #10B981;
     
-    --bg-page: #F8F9FC;
-    --bg-card: #FFFFFF;
-    --bg-subtle: #F1F4F9;
+    --text-white: #FFFFFF;
+    --text-light-sub: rgba(255, 255, 255, 0.85);
+    --text-muted-light: rgba(255, 255, 255, 0.65);
     
-    --border-color: #E2E8F0;
-    --text-dark: #0F172A;
-    --text-body: #334155;
-    --text-muted: #64748B;
+    --border-navy: rgba(255, 255, 255, 0.12);
+    --border-gold: rgba(241, 162, 31, 0.4);
     
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
     
-    --shadow-sm: 0 4px 14px rgba(11, 28, 56, 0.05);
-    --shadow-md: 0 12px 36px rgba(11, 28, 56, 0.08);
-    --shadow-lg: 0 20px 48px rgba(11, 28, 56, 0.12);
+    --shadow-navy: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
 * {
@@ -48,10 +48,10 @@ html {
     font-size: 16px;
 }
 
-body.tilton-viewbook-theme {
+body.korowa-all-navy {
     font-family: var(--font-sans-body);
-    background-color: var(--bg-page);
-    color: var(--text-dark);
+    background-color: var(--navy-bg-deep);
+    color: var(--text-white);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
 }
@@ -62,11 +62,15 @@ body.tilton-viewbook-theme {
     padding: 0 1.5rem;
 }
 
-/* Tipografi Editorial Viewbook */
+.container-narrow {
+    max-width: 860px;
+}
+
+/* Tipografi Heading & Italic */
 h1, h2, h3, h4 {
     font-family: var(--font-sans-body);
     font-weight: 800;
-    color: var(--text-dark);
+    color: var(--text-white);
     letter-spacing: -0.02em;
 }
 
@@ -74,35 +78,69 @@ h1 em, h2 em, h3 em, p em {
     font-family: var(--font-serif-italic);
     font-style: italic;
     font-weight: 400;
-    font-size: 1.16em;
-    color: var(--v-gold);
+    font-size: 1.18em;
+    color: var(--gold-primary);
 }
 
-.v-chap-num {
-    display: inline-block;
-    background: var(--v-gold-tint);
-    border: 1px solid var(--v-gold);
-    color: var(--v-gold-dark);
-    font-size: 0.78rem;
+.eyebrow-gold {
+    font-size: 0.8rem;
     font-weight: 800;
-    padding: 4px 14px;
-    border-radius: 50px;
-    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    color: var(--gold-primary);
     letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-/* Bilah Navigasi Viewbook Melayang (Floating Header) */
-.viewbook-header {
+/* Bilah Pengumuman Atas (Biru Dongker Gelap) */
+.top-notice-navy {
+    background: #030A17;
+    color: #FFFFFF;
+    padding: 0.65rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border-navy);
+}
+
+.notice-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notice-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notice-badge-gold {
+    background: var(--gold-primary);
+    color: var(--navy-bg-deep);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+.notice-link-gold {
+    color: var(--gold-primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Header Atas Korowa (Biru Dongker Transparan Blur) */
+.korowa-navy-header {
+    background: rgba(11, 28, 56, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-navy);
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-.header-container {
+.header-inner-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,503 +149,570 @@ h1 em, h2 em, h3 em, p em {
     margin: 0 auto;
 }
 
-.viewbook-brand {
+.korowa-brand {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     text-decoration: none;
 }
 
-.viewbook-logo {
-    height: 44px;
+.korowa-logo-img {
+    height: 48px;
     width: auto;
+    background: #FFFFFF;
+    padding: 2px;
+    border-radius: 6px;
 }
 
-.v-title {
-    font-size: 1.3rem;
+.korowa-brand-title {
+    font-size: 1.45rem;
     font-weight: 800;
-    color: var(--v-navy);
+    color: var(--text-white);
     display: block;
     line-height: 1;
+    letter-spacing: 0.04em;
 }
 
-.v-sub {
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: var(--v-gold-dark);
-    letter-spacing: 0.08em;
+.korowa-brand-sub {
+    font-size: 0.72rem;
+    color: var(--text-muted-light);
+    font-weight: 600;
 }
 
-.viewbook-chapter-nav {
-    display: flex;
-    gap: 1rem;
-}
-
-.v-nav-item {
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    padding: 6px 14px;
-    border-radius: 40px;
-    transition: background 0.2s, color 0.2s;
-}
-
-.v-nav-item:hover, .v-nav-item.active {
-    background: var(--v-navy);
-    color: #FFFFFF;
-}
-
-.btn-v-ppdb {
-    background: var(--v-gold);
-    color: var(--v-navy);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.85rem;
-    padding: 0.6rem 1.4rem;
-    border-radius: 40px;
-    transition: background 0.2s;
-}
-
-.btn-v-ppdb:hover {
-    background: var(--v-navy);
-    color: #FFFFFF;
-}
-
-/* COVER VIEWBOOK (HERO SPREAD) */
-.viewbook-cover-section {
-    position: relative;
-    min-height: 88vh;
+.korowa-nav-right {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 7rem 1.5rem 8rem;
-    background: var(--v-navy-dark);
-    overflow: hidden;
+    gap: 1.5rem;
 }
 
-.v-cover-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.02);
-    transition: transform 6s ease;
-}
-
-.viewbook-cover-section:hover .v-cover-bg {
-    transform: scale(1);
-}
-
-.v-cover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(6, 17, 36, 0.94) 0%, rgba(11, 28, 56, 0.8) 60%, rgba(6, 17, 36, 0.92) 100%);
-}
-
-.v-cover-content {
-    position: relative;
-    z-index: 3;
-    max-width: 940px;
-    margin: 0 auto;
-}
-
-.v-edition-badge {
-    display: inline-block;
-    background: rgba(241, 162, 31, 0.2);
-    border: 1px solid var(--v-gold);
-    color: var(--v-gold);
-    font-size: 0.8rem;
+.nav-text-link {
+    text-decoration: none;
+    color: var(--text-white);
     font-weight: 800;
-    padding: 5px 18px;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+}
+
+.nav-text-link:hover {
+    color: var(--gold-primary);
+}
+
+.btn-gold-capsule {
+    background: var(--gold-primary);
+    color: var(--navy-bg-deep);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 0.65rem 1.4rem;
     border-radius: 50px;
-    margin-bottom: 2rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-gold-capsule:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.btn-navy-menu {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-navy);
+    color: #FFFFFF;
+    padding: 0.65rem 1.4rem;
+    font-weight: 800;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* HERO UTAMA (Biru Dongker) */
+.korowa-hero-navy {
+    background-color: var(--navy-bg-main);
+    color: #FFFFFF;
+    padding: 6.5rem 1.5rem 7.5rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--border-navy);
+}
+
+.hero-container-inner {
+    max-width: 960px;
+}
+
+.hero-sub-tag {
+    display: inline-block;
+    background: rgba(241, 162, 31, 0.15);
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 4px 16px;
+    border-radius: 50px;
+    margin-bottom: 1.8rem;
     letter-spacing: 0.08em;
 }
 
-.v-main-headline {
-    font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+.korowa-hero-title {
+    font-size: clamp(2.3rem, 5.2vw, 4.2rem);
+    font-weight: 800;
     line-height: 1.15;
     color: #FFFFFF;
     margin-bottom: 1.8rem;
 }
 
-.v-main-desc {
+.korowa-hero-desc {
     font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-light-sub);
     line-height: 1.65;
-    max-width: 780px;
-    margin: 0 auto 3rem;
+    max-width: 820px;
+    margin: 0 auto 2.5rem;
 }
 
-.btn-open-viewbook {
+.hero-action-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary-gold {
+    background: var(--gold-primary);
+    color: var(--navy-bg-deep);
+    padding: 0.9rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: var(--v-gold);
-    color: var(--v-navy);
-    padding: 1rem 2.2rem;
-    border-radius: 50px;
-    font-weight: 800;
-    font-size: 1.05rem;
-    text-decoration: none;
-    box-shadow: var(--shadow-md);
+    gap: 10px;
     transition: transform 0.2s, background 0.2s;
 }
 
-.btn-open-viewbook:hover {
+.btn-primary-gold:hover {
     background: #FFFFFF;
     transform: translateY(-2px);
 }
 
-/* CHAPTER SECTIONS */
-.v-chapter-section {
+.btn-outline-white {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-navy);
+    color: #FFFFFF;
+    padding: 0.9rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* SECTION PADDING & NAVY BACKGROUNDS */
+.section-padding {
     padding: 6rem 0;
 }
 
-.bg-white { background: #FFFFFF; }
-.bg-subtle { background: var(--bg-subtle); }
-.bg-navy { background: var(--v-navy); color: #FFFFFF; }
-
-.v-chapter-header {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 4rem;
+.bg-navy-body {
+    background: var(--navy-bg-deep);
+    border-bottom: 1px solid var(--border-navy);
 }
 
-.v-chapter-header h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-top: 0.4rem;
-}
-
-.v-header-line {
-    width: 60px;
-    height: 3px;
-    background: var(--v-gold);
-    margin: 1.2rem auto 0;
-    border-radius: 2px;
-}
-
-.bg-gold { background: var(--v-gold) !important; }
-.text-gold { color: var(--v-gold) !important; }
-.text-white { color: #FFFFFF !important; }
-
-/* EDITORIAL SPREAD (BAB 01) */
-.v-editorial-spread {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
-    align-items: center;
-}
-
-.v-quote-feature-box {
-    background: var(--v-navy);
+/* KUTIPAN ORANG TUA (Background WebP quote_bg.webp + Biru Dongker Overlay) */
+.bg-quote-navy {
+    background-image: linear-gradient(rgba(6, 17, 36, 0.92), rgba(6, 17, 36, 0.92)), url('images/quote_bg.webp');
+    background-size: cover;
+    background-position: center;
     color: #FFFFFF;
-    border-radius: var(--radius-lg);
-    padding: 3rem;
-    position: relative;
-    box-shadow: var(--shadow-md);
+    border-bottom: 1px solid var(--border-navy);
 }
 
-.quote-mark-large {
+.quote-card-navy {
+    text-align: center;
+    padding: 2rem;
+}
+
+.quote-icon {
     font-family: var(--font-serif-italic);
-    font-size: 5rem;
-    color: var(--v-gold);
+    font-size: 5.5rem;
+    color: var(--gold-primary);
     line-height: 1;
-    margin-bottom: -1rem;
+    margin-bottom: -1.2rem;
 }
 
-.quote-text-large {
+.quote-body-text {
     font-family: var(--font-serif-italic);
     font-style: italic;
-    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    font-size: clamp(1.35rem, 2.3vw, 1.8rem);
     color: #FFFFFF;
-    line-height: 1.48;
-    margin-bottom: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
 }
 
-.quote-author-tag strong {
+.quote-author-info strong {
     display: block;
-    font-size: 1.05rem;
-    color: var(--v-gold);
+    font-size: 1.1rem;
+    color: var(--gold-primary);
 }
 
-.quote-author-tag span {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
+.quote-author-info span {
+    font-size: 0.88rem;
+    color: var(--text-muted-light);
 }
 
-.v-spread-col-right h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.2rem;
+/* KARTU STATISTIK GRID BIRU DONGKER */
+.section-title-center {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3.5rem;
 }
 
-.v-paragraph {
-    font-size: 1.05rem;
-    color: var(--text-body);
-    margin-bottom: 1.2rem;
+.section-title-center h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
 }
 
-.drop-cap::first-letter {
-    font-family: var(--font-serif-italic);
-    font-size: 3.5rem;
-    float: left;
-    line-height: 0.8;
-    padding-right: 10px;
-    color: var(--v-gold-dark);
-}
-
-.v-stat-row-inline {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-}
-
-.v-mini-stat strong {
-    display: block;
-    font-size: 1.4rem;
-    color: var(--v-navy);
-}
-
-.v-mini-stat span {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-}
-
-/* CARDS GRID (BAB 02) */
-.v-cards-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.v-pilar-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 2.5rem;
-    position: relative;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s;
-}
-
-.v-pilar-card.active {
-    border-color: var(--v-gold);
-    box-shadow: var(--shadow-md);
-}
-
-.v-pilar-card:hover {
-    transform: translateY(-6px);
-}
-
-.v-card-number {
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: var(--v-gold-dark);
-    margin-bottom: 1rem;
-}
-
-.v-card-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--v-gold-tint);
-    color: var(--v-gold-dark);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-}
-
-.v-pilar-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-}
-
-.v-pilar-card p {
-    font-size: 0.95rem;
-    color: var(--text-body);
-}
-
-/* TIMELINE (BAB 03) */
-.v-timeline-grid-4 {
+.stats-grid-korowa {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
-.v-timeline-item {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.stat-card-navy {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
     border-radius: var(--radius-md);
     padding: 2rem 1.5rem;
-    transition: transform 0.3s;
+    box-shadow: var(--shadow-navy);
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-.v-timeline-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.12);
+.stat-card-navy:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-primary);
 }
 
-.v-time-badge {
-    background: var(--v-gold);
-    color: var(--v-navy);
-    font-size: 0.78rem;
+.stat-number {
+    font-size: 2.8rem;
     font-weight: 800;
-    padding: 4px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.v-timeline-item h3 {
     color: #FFFFFF;
-    font-size: 1.15rem;
-    margin-bottom: 0.6rem;
+    line-height: 1;
 }
 
-.v-timeline-item p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+.stat-number span {
+    font-size: 1.2rem;
+    color: var(--gold-primary);
 }
 
-/* GALLERY (BAB 04) */
-.v-gallery-split {
+.stat-divider-navy {
+    width: 100%;
+    height: 1px;
+    background: var(--border-navy);
+    margin: 1rem 0;
+}
+
+.stat-label {
+    font-size: 0.88rem;
+    color: var(--text-light-sub);
+}
+
+/* 3 PILAR UTAMA CARDS (Biru Dongker) */
+.cards-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pilar-card-navy {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-navy);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.pilar-card-navy.active {
+    border-color: var(--gold-primary);
+    background: var(--navy-card-hover);
+}
+
+.pilar-card-navy:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold-primary);
+}
+
+.pilar-icon-gold {
+    width: 54px;
+    height: 54px;
+    background: var(--gold-bg-tint);
+    color: var(--gold-primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.pilar-tag-gold {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+}
+
+.pilar-card-navy h3 {
+    font-size: 1.3rem;
+    margin: 0.4rem 0 0.8rem;
+    color: #FFFFFF;
+}
+
+.pilar-card-navy p {
+    font-size: 0.95rem;
+    color: var(--text-light-sub);
+}
+
+/* FOTO KEBERSAMAAN SANTRI (Biru Dongker Card) */
+.photo-grid-korowa {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
 }
 
-.v-photo-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
+.photo-card-navy {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-navy);
     transition: transform 0.3s;
 }
 
-.v-photo-card:hover {
+.photo-card-navy:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--gold-primary);
 }
 
-.v-photo-img {
+.photo-img {
     width: 100%;
     height: 340px;
     object-fit: cover;
     display: block;
 }
 
-.v-photo-caption {
+.photo-card-info {
     padding: 2rem;
 }
 
-.v-tag {
+.photo-tag-gold {
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--v-gold-dark);
+    color: var(--gold-primary);
 }
 
-.v-photo-caption h3 {
+.photo-card-info h3 {
     font-size: 1.25rem;
+    margin: 0.3rem 0 0.6rem;
+    color: #FFFFFF;
+}
+
+.photo-card-info p {
+    font-size: 0.92rem;
+    color: var(--text-light-sub);
+}
+
+/* GRID TENTANG & VISI (Biru Dongker) */
+.grid-2-equal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.info-box-navy {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-navy);
+}
+
+.desc-text-light {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    color: var(--text-light-sub);
+}
+
+.info-box-navy-border {
+    background: var(--navy-bg-main);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-navy);
+}
+
+.visi-headline {
+    font-family: var(--font-serif-italic);
+    font-style: italic;
+    font-size: 1.55rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 1rem 0 1.5rem;
+}
+
+.motto-box-gold {
+    border-top: 1px solid var(--border-navy);
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-light-sub);
+}
+
+.motto-box-gold strong {
+    color: var(--gold-primary);
+}
+
+/* MENTOR & YAYASAN */
+.yayasan-box-navy-gold {
+    background: var(--navy-card);
+    border: 1px solid var(--border-gold);
+    color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-navy);
+}
+
+.role-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+}
+
+.yayasan-box-navy-gold h3 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
     margin: 0.3rem 0 0.6rem;
 }
 
-.v-photo-caption p {
-    font-size: 0.92rem;
-    color: var(--text-muted);
+.yayasan-box-navy-gold p {
+    color: var(--text-light-sub);
 }
 
-/* PPDB (BAB 05) */
-.v-ppdb-card-viewbook {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
+.faculty-grid-korowa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.faculty-card-navy {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
+    border-radius: var(--radius-sm);
+    padding: 1.4rem;
+}
+
+.faculty-card-navy h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: #FFFFFF;
+}
+
+.faculty-card-navy span {
+    font-size: 0.8rem;
+    color: var(--text-muted-light);
+}
+
+/* PPDB MAIN CARD (Biru Dongker) */
+.ppdb-navy-card {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
     border-radius: var(--radius-lg);
-    padding: 4rem;
-    box-shadow: var(--shadow-md);
+    padding: 3.5rem;
+    box-shadow: var(--shadow-navy);
 }
 
-.v-ppdb-head {
+.ppdb-header-center {
     text-align: center;
     max-width: 680px;
-    margin: 0 auto 3.5rem;
+    margin: 0 auto 3rem;
 }
 
-.v-ppdb-head h2 {
+.ppdb-header-center h2 {
     font-size: 2.5rem;
-    margin: 0.4rem 0;
+    margin-bottom: 0.4rem;
 }
 
-.v-ppdb-grid-2 {
+.ppdb-sub-desc-light {
+    font-size: 1.05rem;
+    color: var(--text-light-sub);
+}
+
+.ppdb-split-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-bottom: 2.5rem;
 }
 
-.v-box-wave {
-    background: var(--bg-subtle);
-    border-left: 4px solid var(--v-navy);
+.wave-box-navy {
+    background: var(--navy-bg-deep);
+    border-left: 4px solid var(--gold-primary);
     padding: 1rem 1.2rem;
     border-radius: 0 6px 6px 0;
     margin-top: 1rem;
 }
 
-.v-box-wave.muted {
-    border-left-color: var(--text-muted);
+.wave-box-navy.muted {
+    border-left-color: var(--text-muted-light);
 }
 
-.mt-4 { margin-top: 1.5rem; }
+.mt-3 { margin-top: 1.5rem; }
 
-.v-check-list {
+.check-list-gold {
     list-style: none;
     margin-top: 0.8rem;
 }
 
-.v-check-list li {
+.check-list-gold li {
     padding: 0.4rem 0;
     font-size: 0.92rem;
-    color: var(--text-body);
+    color: var(--text-light-sub);
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.v-check-list li i {
-    color: var(--color-green);
+.check-list-gold li i {
+    color: var(--green-accent);
 }
 
-.v-fee-list {
+.fee-table-list {
     margin: 1.2rem 0;
 }
 
-.v-fee-row {
+.fee-row-item-navy {
     display: flex;
     justify-content: space-between;
     padding: 0.6rem 0;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-navy);
     font-size: 0.92rem;
+    color: var(--text-light-sub);
 }
 
-.v-total-box {
+.total-price-card-navy {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--v-navy);
+    background: var(--navy-bg-deep);
+    border: 1px solid var(--border-gold);
     color: #FFFFFF;
     padding: 1.1rem 1.5rem;
     border-radius: var(--radius-sm);
@@ -615,15 +720,15 @@ h1 em, h2 em, h3 em, p em {
     font-weight: 800;
 }
 
-.v-total-price {
+.total-num-gold {
     font-size: 1.35rem;
-    color: var(--v-gold);
+    color: var(--gold-primary);
 }
 
 .btn-wa-green {
     display: block;
     text-align: center;
-    background: var(--color-green);
+    background: var(--green-accent);
     color: #FFFFFF;
     padding: 0.9rem;
     border-radius: var(--radius-sm);
@@ -632,73 +737,91 @@ h1 em, h2 em, h3 em, p em {
     font-size: 1rem;
 }
 
-.v-location-footer {
-    background: var(--bg-subtle);
+.location-banner-navy {
+    background: var(--navy-bg-deep);
+    border: 1px solid var(--border-navy);
     padding: 1.2rem 1.5rem;
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 0.9rem;
+    color: var(--text-light-sub);
 }
 
-.v-location-footer i {
+.location-banner-navy i {
     font-size: 1.4rem;
-    color: var(--v-navy);
+    color: var(--gold-primary);
 }
 
-/* FOOTER VIEWBOOK */
-.viewbook-footer {
-    background: var(--v-navy-dark);
+/* FOOTER BIRU DONGKER KOROWA */
+.korowa-footer-navy {
+    background: #030A17;
     color: rgba(255, 255, 255, 0.8);
-    padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3.5rem 0 2rem;
+    border-top: 1px solid var(--border-navy);
 }
 
-.v-footer-inner {
+.footer-inner-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 2.5rem;
 }
 
-.v-footer-brand {
+.footer-left-group {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.v-footer-logo {
+.footer-logo-img {
     height: 44px;
     background: #FFFFFF;
     padding: 3px;
     border-radius: 6px;
 }
 
-.v-footer-brand h3 {
+.footer-title {
     color: #FFFFFF;
     font-size: 1.3rem;
 }
 
-.v-footer-brand p {
+.footer-sub {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-muted-light);
 }
 
-.v-footer-copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+.footer-nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-nav-links a {
+    color: var(--text-light-sub);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+
+.footer-nav-links a:hover {
+    color: var(--gold-primary);
+}
+
+.footer-copyright {
+    border-top: 1px solid var(--border-navy);
     padding-top: 1.5rem;
-    margin-top: 2.5rem;
-    width: 100%;
     text-align: center;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-muted-light);
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    .header-container { padding: 0.8rem 1rem; }
-    .viewbook-chapter-nav { display: none; }
-    .v-editorial-spread, .v-cards-grid-3, .v-timeline-grid-4, .v-gallery-split, .v-ppdb-grid-2 { grid-template-columns: 1fr; }
+    .header-inner-wrap { padding: 0.8rem 1rem; }
+    .nav-text-link { display: none; }
+    .stats-grid-korowa, .cards-grid-3, .photo-grid-korowa, .grid-2-equal, .ppdb-split-grid { grid-template-columns: 1fr; }
 }
