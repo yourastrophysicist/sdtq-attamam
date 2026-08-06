@@ -1,11 +1,12 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Sevenoaks Inspired Quote Highlight & Minimal Sans System
+   SDTQ ATTAMAM — Sevenoaks Big Picture Hero & Typewriter System
    ========================================================================== */
 
 :root {
-    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif-hero: 'Cinzel', Georgia, serif;
+    --font-sans-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     
-    /* Sevenoaks Deep Navy & Slate Theme */
+    /* Sevenoaks Deep Navy & Gold Accent Palette */
     --bg-page: #FAFAFA;
     --bg-card: #FFFFFF;
     --bg-dark: #0A192F;
@@ -18,8 +19,8 @@
     --text-secondary: #475569;
     --text-muted: #64748B;
     
-    --accent: #1D4ED8;
-    --accent-gold: #D97706;
+    --accent-blue: #1D4ED8;
+    --accent-gold: #F1A21F;
     --accent-green: #16A34A;
     
     --radius: 8px;
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-sans-body);
     background-color: var(--bg-page);
     color: var(--text-primary);
     line-height: 1.6;
@@ -47,323 +48,322 @@ body {
 }
 
 .container {
-    max-width: 1120px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-/* Typography Defaults */
-h1, h2, h3, h4 {
-    font-family: var(--font-sans);
-    color: var(--text-primary);
-    letter-spacing: -0.025em;
-    font-weight: 700;
-}
-
-/* Top Notice */
-.top-notice {
-    background: var(--bg-dark);
-    color: #FFFFFF;
-    padding: 0.6rem 0;
-    font-size: 0.85rem;
-}
-
-.notice-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.notice-badge {
-    background: var(--accent-gold);
-    color: #FFFFFF;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-
-.notice-link {
-    color: #93C5FD;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.notice-link:hover {
-    color: #FFFFFF;
-}
-
-/* Header */
-.header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
+/* Sevenoaks Floating Header Navigation */
+.sevenoaks-header {
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
-    padding: 0.8rem 0;
+    padding: 1.5rem 0;
+    background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0) 100%);
 }
 
-.header-inner {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand-logo {
+.school-logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     text-decoration: none;
 }
 
-.logo-svg {
+.logo-box {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    font-weight: 900;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.7rem;
     border-radius: 6px;
+    letter-spacing: 1px;
 }
 
-.brand-text {
+.logo-name {
     display: flex;
     flex-direction: column;
 }
 
-.brand-title {
+.l-title {
+    font-size: 1.25rem;
     font-weight: 800;
-    font-size: 1.15rem;
-    color: var(--text-primary);
+    color: #FFFFFF;
     line-height: 1;
-    letter-spacing: -0.03em;
+    letter-spacing: 1px;
 }
 
-.brand-sub {
+.l-sub {
     font-size: 0.72rem;
-    color: var(--text-muted);
-    font-weight: 600;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 1.8rem;
-}
-
-.nav a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
-    transition: color 0.2s;
 }
 
-.nav a:hover {
-    color: var(--text-primary);
-}
-
-.btn-nav {
-    background: var(--text-primary);
-    color: #FFFFFF !important;
-    padding: 0.45rem 1.1rem;
-    border-radius: 6px;
-}
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-/* Sevenoaks School Hero Feature Quote Layout */
-.sevenoaks-hero {
-    padding: 4rem 0 5rem;
-    background: #FFFFFF;
-    border-bottom: 1px solid var(--border);
-}
-
-.sevenoaks-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 3.5rem;
-    align-items: center;
-}
-
-.hero-quote-card {
-    padding-right: 1rem;
-}
-
-.quote-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent-gold);
-    margin-bottom: 1rem;
-}
-
-.highlight-quote {
-    font-size: clamp(1.6rem, 3.2vw, 2.5rem);
-    font-weight: 800;
-    line-height: 1.25;
-    color: var(--text-primary);
-    margin-bottom: 1.2rem;
-    letter-spacing: -0.03em;
-}
-
-.quote-detail {
-    font-size: 1.05rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-.quote-author-bar {
+.main-nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 0.8rem 1.2rem;
-    background: var(--bg-subtle);
-    border-left: 3px solid var(--text-primary);
-    border-radius: 0 var(--radius) var(--radius) 0;
-}
-
-.author-avatar-circle {
-    width: 42px;
-    height: 42px;
-    background: var(--text-primary);
-    color: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 1.1rem;
-}
-
-.author-info strong {
-    display: block;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
-.author-info span {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.hero-cta-group {
-    display: flex;
-    gap: 1rem;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-primary {
-    background: var(--text-primary);
-    color: #FFFFFF;
-}
-
-.btn-primary:hover {
-    background: #1E293B;
-}
-
-.btn-secondary {
-    background: var(--bg-subtle);
-    color: var(--text-primary);
-    border: 1px solid var(--border);
-}
-
-.btn-secondary:hover {
-    background: #E2E8F0;
-}
-
-/* Media Card (Right Photo Feature) */
-.hero-media-card {
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-}
-
-.hero-feature-img {
-    width: 100%;
-    height: 440px;
-    object-fit: cover;
-    display: block;
-}
-
-.media-overlay-badge {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(6px);
-    color: #FFFFFF;
-    padding: 1rem 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.media-overlay-badge i {
-    color: var(--accent-gold);
-}
-
-/* Stats Bar */
-.stats-bar-section {
-    padding: 2.5rem 0;
-    background: var(--bg-subtle);
-    border-bottom: 1px solid var(--border);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
 
-.stat-num {
-    display: block;
+.main-nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+    opacity: 0.9;
+}
+
+.main-nav a:hover {
+    opacity: 1;
+    color: var(--accent-gold);
+}
+
+.btn-nav-ppdb {
+    background: var(--accent-gold);
+    color: var(--bg-dark) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
     font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-primary);
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
-.stat-lbl {
-    font-size: 0.82rem;
-    color: var(--text-muted);
+/* Sevenoaks Big Picture Hero Area (100vh Full Width) */
+.sevenoaks-big-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 7rem 0 6rem;
+    overflow: hidden;
 }
 
-/* Classroom Section */
-.rounded-img {
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+    transition: transform 10s ease;
+    z-index: 1;
 }
 
-.align-center {
+.sevenoaks-big-hero:hover .hero-bg-image {
+    transform: scale(1);
+}
+
+.hero-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.92) 0%, rgba(10, 25, 47, 0.65) 60%, rgba(10, 25, 47, 0.85) 100%);
+    z-index: 2;
+}
+
+.hero-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 920px;
+}
+
+.motto-pill {
+    display: inline-flex;
     align-items: center;
+    gap: 8px;
+    background: rgba(241, 162, 31, 0.25);
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.5px;
 }
 
-/* Sections & Cards */
+/* Typewriter Animation Styles */
+.typewriter-container {
+    min-height: 120px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.hero-typewriter-text {
+    font-family: var(--font-serif-hero);
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #FFFFFF;
+    display: inline;
+}
+
+.typewriter-cursor {
+    font-family: var(--font-serif-hero);
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    color: var(--accent-gold);
+    font-weight: 700;
+    animation: blink 0.8s infinite;
+    margin-left: 4px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-quote-sub {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 780px;
+}
+
+.quote-author-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 2.5rem;
+}
+
+.author-badge {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.author-desc {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-actions-row {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btn-sevenoaks-primary {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    padding: 0.85rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-sevenoaks-primary:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.btn-sevenoaks-ghost {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #FFFFFF;
+    padding: 0.85rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.btn-sevenoaks-ghost:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #FFFFFF;
+}
+
+/* Sevenoaks Bottom Quick Bar */
+.sevenoaks-quick-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(10, 25, 47, 0.92);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+}
+
+.quick-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.quick-link-item {
+    padding: 1.2rem 1.5rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s;
+}
+
+.quick-link-item:last-child {
+    border-right: none;
+}
+
+.quick-link-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.quick-link-item.highlight-item {
+    background: rgba(241, 162, 31, 0.15);
+}
+
+.q-title {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--accent-gold);
+}
+
+.q-sub {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Section Components */
 .section {
     padding: 5rem 0;
 }
@@ -377,7 +377,8 @@ h1, h2, h3, h4 {
 }
 
 .section-head h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 800;
 }
 
 .grid-2 {
@@ -390,6 +391,19 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
+}
+
+.rounded-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.align-center {
+    align-items: center;
 }
 
 .card {
@@ -567,7 +581,7 @@ h1, h2, h3, h4 {
 
 .location-banner i {
     font-size: 1.5rem;
-    color: var(--accent);
+    color: var(--accent-blue);
 }
 
 /* Footer */
@@ -595,20 +609,20 @@ h1, h2, h3, h4 {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .sevenoaks-grid, .grid-2 { grid-template-columns: 1fr; }
-    .hero-cta-group { flex-direction: column; }
-    .hero-feature-img { height: 280px; }
-    .nav {
+    .sevenoaks-big-hero { min-height: auto; padding-top: 7rem; }
+    .typewriter-container { min-height: 160px; }
+    .quick-bar-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+    .main-nav {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--bg-card);
+        background: var(--bg-dark);
         padding: 1.5rem;
         flex-direction: column;
-        border-bottom: 1px solid var(--border);
     }
-    .nav.show { display: flex; }
-    .menu-btn { display: block; }
+    .main-nav.show { display: flex; }
+    .menu-toggle { display: block; }
 }

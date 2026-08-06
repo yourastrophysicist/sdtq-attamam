@@ -4,115 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDTQ ATTAMAM — Sekolah Dasar Tahfidz Qur’an Garut</title>
-    <meta name="description" content="Sekolah Dasar Tahfidz Qur’an (SDTQ) ATTAMAM Garut. Full Day School berafiliasi Dinas Pendidikan. PPDB Tahun Ajaran 2025-2026.">
+    <meta name="description" content="Sekolah Dasar Tahfidz Qur’an (SDTQ) ATTAMAM Garut. Full Day School berafiliasi Dinas Pendidikan. PPDB T.A. 2025-2026.">
+    
+    <!-- Sevenoaks-Style Typography: Serif Display + Modern Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Top Notice Bar -->
-    <div class="top-notice">
-        <div class="container notice-inner">
-            <span class="notice-badge">PPDB 2025-2026</span>
-            <span class="notice-text">Pendaftaran Angkatan Ke-2 (Gelombang 1: 8 Jan – 28 Mar 2025)</span>
-            <a href="#ppdb" class="notice-link">Daftar Sekarang &rarr;</a>
-        </div>
-    </div>
-
-    <!-- Header Navigation -->
-    <header class="header" id="header">
-        <div class="container header-inner">
-            <a href="#" class="brand-logo">
-                <svg class="logo-svg" viewBox="0 0 180 180" width="44" height="44">
-                    <rect x="5" y="5" width="170" height="170" fill="none" stroke="#11458A" stroke-width="8"/>
-                    <rect x="25" y="25" width="130" height="130" fill="#F1A21F" stroke="#11458A" stroke-width="4"/>
-                    <path d="M50,90 Q90,60 130,90 Q90,120 50,90 Z" fill="#FFFFFF"/>
-                    <path d="M70,85 L90,105 L110,85" fill="none" stroke="#11458A" stroke-width="6"/>
-                </svg>
-                <div class="brand-text">
-                    <span class="brand-title">SDTQ ATTAMAM</span>
-                    <span class="brand-sub">Sekolah Dasar Tahfidz Qur'an</span>
+    <!-- Floating Sevenoaks-Style Header Nav -->
+    <header class="sevenoaks-header" id="header">
+        <div class="container header-container">
+            <a href="#" class="school-logo">
+                <div class="logo-box">SDTQ</div>
+                <div class="logo-name">
+                    <span class="l-title">ATTAMAM</span>
+                    <span class="l-sub">Sekolah Dasar Tahfidz Qur'an</span>
                 </div>
             </a>
             
-            <nav class="nav" id="nav">
-                <a href="#highlight">Highlight Story</a>
-                <a href="#about">Tentang</a>
-                <a href="#programs">Program & SKL</a>
-                <a href="#faculty">Pengajar</a>
-                <a href="#ppdb" class="btn-nav">PPDB 2025</a>
+            <nav class="main-nav" id="main-nav">
+                <a href="#about">Tentang Kami</a>
+                <a href="#program">Program & SKL</a>
+                <a href="#pengajar">Pengajar</a>
+                <a href="#ppdb" class="btn-nav-ppdb">PPDB 2025-2026</a>
             </nav>
 
-            <button class="menu-btn" id="menu-btn" aria-label="Toggle menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Buka Menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- Sevenoaks-Style Highlight Hero (Featured Parent Quote & Photo) -->
-    <section class="sevenoaks-hero" id="highlight">
-        <div class="container sevenoaks-grid">
-            
-            <!-- Highlight Quote Card (Sevenoaks Feature Style) -->
-            <div class="hero-quote-card">
-                <div class="quote-tag"><i class="fas fa-quote-left"></i> Kisah Wali Murid</div>
-                <h1 class="highlight-quote">
-                    "Saya takut anak saya pintar tapi tak punya adab. Saya takut dia sukses, tapi kosong jiwanya. Karena itu saya cari sekolah yang pertama-tama ngajarin dia jadi manusia yang tahu arah."
-                </h1>
-                
-                <p class="quote-detail">
-                    "Di Attamam, anak-anak bukan cuma belajar umum, tapi diajarin wudhu yang benar, cara menjawab salam, adab ke guru, hingga cara duduk waktu belajar. Kalau iman dan adabnya kuat dari kecil, insyaAllah dia bisa bertahan dalam hidup."
-                </p>
+    <!-- Full-Screen Big Picture Hero (Sevenoaks Signature Style) -->
+    <section class="sevenoaks-big-hero">
+        <div class="hero-bg-image" style="background-image: url('images/classroom1.jpg');"></div>
+        <div class="hero-dark-overlay"></div>
 
-                <div class="quote-author-bar">
-                    <div class="author-avatar-circle">H</div>
-                    <div class="author-info">
-                        <strong>Pak Hidayat (49 Tahun)</strong>
-                        <span>Wali Murid Naila &bull; Dikutip dari BeritaDisdik Garut</span>
-                    </div>
-                </div>
+        <div class="container hero-hero-content">
+            <div class="motto-pill"><i class="fas fa-quote-left"></i> Kisah Wali Murid SDTQ ATTAMAM</div>
 
-                <div class="hero-cta-group">
-                    <a href="#ppdb" class="btn-primary">Pendaftaran PPDB 2025-2026 &rarr;</a>
-                    <a href="#about" class="btn-secondary">Pelajari Program Kami</a>
-                </div>
+            <!-- Typewriter Headline Quote Section -->
+            <div class="typewriter-container">
+                <h1 class="hero-typewriter-text" id="typewriter-target"></h1>
+                <span class="typewriter-cursor">|</span>
             </div>
 
-            <!-- Main Feature Photo (Provided Classroom Picture) -->
-            <div class="hero-media-card">
-                <img src="images/classroom1.jpg" alt="Siswa SDTQ ATTAMAM Belajar Bersama" class="hero-feature-img">
-                <div class="media-overlay-badge">
-                    <i class="fas fa-heart"></i>
-                    <span>Suasana Belajar Beradab & Hati Ceria di SDTQ ATTAMAM</span>
-                </div>
+            <p class="hero-quote-sub">
+                "Di Attamam, anak-anak diajarin wudhu yang benar, cara menjawab salam, adab ke guru, cara minta maaf, hingga cara duduk waktu belajar. Kalau iman dan adabnya kuat dari kecil, insyaAllah dia bisa bertahan dalam hidup."
+            </p>
+
+            <div class="quote-author-tag">
+                <span class="author-badge">Pak Hidayat</span>
+                <span class="author-desc">Wali Murid Naila &bull; Dikutip dari BeritaDisdik Garut</span>
             </div>
 
+            <div class="hero-actions-row">
+                <a href="#ppdb" class="btn-sevenoaks-primary"><i class="fas fa-paper-plane"></i> Informasi PPDB 2025-2026</a>
+                <a href="#about" class="btn-sevenoaks-ghost">Pelajari Lebih Lanjut <i class="fas fa-arrow-down"></i></a>
+            </div>
         </div>
-    </section>
 
-    <!-- Quick Stats Bar -->
-    <section class="stats-bar-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-num">Iman &bull; Adab &bull; Ilmu</span>
-                    <span class="stat-lbl">Motto Utama SDTQ ATTAMAM</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">4 Juz</span>
-                    <span class="stat-lbl">Target Hafalan Qur'an</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">100+</span>
-                    <span class="stat-lbl">Hafalan Hadits Pilihan</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">Rp 1.99M</span>
-                    <span class="stat-lbl">Total Biaya Masuk PPDB</span>
-                </div>
+        <!-- Sevenoaks Bottom Quick Bar -->
+        <div class="sevenoaks-quick-bar">
+            <div class="container quick-bar-grid">
+                <a href="#ppdb" class="quick-link-item">
+                    <span class="q-title">PPDB 2025-2026</span>
+                    <span class="q-sub">Gelombang 1: 8 Jan – 28 Mar 2025</span>
+                </a>
+                <a href="#program" class="quick-link-item">
+                    <span class="q-title">Tahfidz 4 Juz</span>
+                    <span class="q-sub">Metode Sima'i & 100 Hadits</span>
+                </a>
+                <a href="#about" class="quick-link-item">
+                    <span class="q-title">Full Day School</span>
+                    <span class="q-sub">Cipanas, Tarogong Kaler, Garut</span>
+                </a>
+                <a href="#ppdb" class="quick-link-item highlight-item">
+                    <span class="q-title">Biaya Masuk</span>
+                    <span class="q-sub">Rp 1.990.000 (Lengkap)</span>
+                </a>
             </div>
         </div>
     </section>
@@ -124,8 +98,8 @@
                 <img src="images/classroom2.jpg" alt="Ruang Kelas SDTQ ATTAMAM Garut" class="rounded-img">
             </div>
             <div class="classroom-text-box">
-                <span class="label">Lingkungan Belajar</span>
-                <h2>Kelas Kecil & Pembimbingan Personal</h2>
+                <span class="label">Suasana Belajar</span>
+                <h2>Kelas Kondusif & Pembimbingan Personal</h2>
                 <p>SDTQ ATTAMAM menjaga rasio siswa per kelas tetap kondusif. Setiap guru mengenal nama, karakter, dan perkembangan hafalan serta adab santri secara mendalam dan sabar.</p>
                 <ul class="clean-list">
                     <li><i class="fas fa-check"></i> Lingkungan sejuk di kawasan wisata Cipanas Garut</li>
@@ -159,7 +133,7 @@
     </section>
 
     <!-- Programs & SKL -->
-    <section class="section bg-subtle" id="programs">
+    <section class="section bg-subtle" id="program">
         <div class="container">
             <div class="section-head">
                 <span class="label">Kurikulum</span>
@@ -198,7 +172,7 @@
     </section>
 
     <!-- Faculty -->
-    <section class="section" id="faculty">
+    <section class="section" id="pengajar">
         <div class="container">
             <div class="section-head">
                 <span class="label">Pendidik</span>
