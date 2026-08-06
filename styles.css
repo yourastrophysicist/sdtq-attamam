@@ -1,30 +1,30 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Ultra-Minimalist Sans-Serif Design System (With Photos)
+   SDTQ ATTAMAM — Sevenoaks Inspired Quote Highlight & Minimal Sans System
    ========================================================================== */
 
 :root {
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     
-    /* Minimal Monochromatic & Slate Palette */
+    /* Sevenoaks Deep Navy & Slate Theme */
     --bg-page: #FAFAFA;
     --bg-card: #FFFFFF;
-    --bg-dark: #0F172A;
+    --bg-dark: #0A192F;
     --bg-subtle: #F1F5F9;
     
     --border: #E2E8F0;
-    --border-dark: #334155;
+    --border-dark: #1E293B;
     
     --text-primary: #0F172A;
     --text-secondary: #475569;
-    --text-muted: #94A3B8;
+    --text-muted: #64748B;
     
-    --accent: #2563EB;
+    --accent: #1D4ED8;
     --accent-gold: #D97706;
     --accent-green: #16A34A;
     
     --radius: 8px;
     --radius-lg: 16px;
-    --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    --shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -47,7 +47,7 @@ body {
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -56,7 +56,7 @@ body {
 h1, h2, h3, h4 {
     font-family: var(--font-sans);
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
     font-weight: 700;
 }
 
@@ -85,9 +85,13 @@ h1, h2, h3, h4 {
 }
 
 .notice-link {
-    color: var(--accent);
+    color: #93C5FD;
     text-decoration: none;
     font-weight: 600;
+}
+
+.notice-link:hover {
+    color: #FFFFFF;
 }
 
 /* Header */
@@ -98,7 +102,7 @@ h1, h2, h3, h4 {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
 }
 
 .header-inner {
@@ -107,16 +111,34 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-.brand {
-    font-weight: 800;
-    font-size: 1.25rem;
-    color: var(--text-primary);
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     text-decoration: none;
+}
+
+.logo-svg {
+    border-radius: 6px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    line-height: 1;
     letter-spacing: -0.03em;
 }
 
-.brand-accent {
-    color: var(--accent);
+.brand-sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
 }
 
 .nav {
@@ -140,7 +162,7 @@ h1, h2, h3, h4 {
 .btn-nav {
     background: var(--text-primary);
     color: #FFFFFF !important;
-    padding: 0.4rem 1rem;
+    padding: 0.45rem 1.1rem;
     border-radius: 6px;
 }
 
@@ -152,51 +174,94 @@ h1, h2, h3, h4 {
     cursor: pointer;
 }
 
-/* Hero Grid Layout */
-.hero {
-    padding: 4rem 0;
+/* Sevenoaks School Hero Feature Quote Layout */
+.sevenoaks-hero {
+    padding: 4rem 0 5rem;
+    background: #FFFFFF;
     border-bottom: 1px solid var(--border);
 }
 
-.hero-grid {
+.sevenoaks-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 3.5rem;
     align-items: center;
 }
 
-.pill-tag {
-    display: inline-block;
-    background: var(--bg-subtle);
-    border: 1px solid var(--border);
-    padding: 4px 12px;
-    border-radius: 50px;
+.hero-quote-card {
+    padding-right: 1rem;
+}
+
+.quote-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    margin-bottom: 1.2rem;
-}
-
-.hero-title {
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    font-weight: 800;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-gold);
     margin-bottom: 1rem;
-    line-height: 1.1;
 }
 
-.hero-desc {
-    font-size: 1.1rem;
+.highlight-quote {
+    font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.03em;
+}
+
+.quote-detail {
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    margin-bottom: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
-.hero-actions {
+.quote-author-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.8rem 1.2rem;
+    background: var(--bg-subtle);
+    border-left: 3px solid var(--text-primary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.author-avatar-circle {
+    width: 42px;
+    height: 42px;
+    background: var(--text-primary);
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.author-info strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.author-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.hero-cta-group {
     display: flex;
     gap: 1rem;
 }
 
 .btn-primary, .btn-secondary {
-    padding: 0.75rem 1.4rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 6px;
     font-weight: 600;
     font-size: 0.95rem;
@@ -223,168 +288,79 @@ h1, h2, h3, h4 {
     background: #E2E8F0;
 }
 
-.hero-photo-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+/* Media Card (Right Photo Feature) */
+.hero-media-card {
+    position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
-.hero-img {
+.hero-feature-img {
     width: 100%;
-    height: 280px;
+    height: 440px;
     object-fit: cover;
     display: block;
 }
 
-.photo-caption {
-    padding: 0.8rem 1rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-align: center;
-    font-weight: 500;
+.media-overlay-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(6px);
+    color: #FFFFFF;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
-/* Stats */
+.media-overlay-badge i {
+    color: var(--accent-gold);
+}
+
+/* Stats Bar */
+.stats-bar-section {
+    padding: 2.5rem 0;
+    background: var(--bg-subtle);
+    border-bottom: 1px solid var(--border);
+}
+
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 
 .stat-num {
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--text-primary);
 }
 
 .stat-lbl {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--text-muted);
 }
 
-/* Photo Gallery Cards */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.photo-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.gallery-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
-}
-
-.card-body-sm {
-    padding: 1.5rem;
-}
-
-.card-body-sm h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.4rem;
-}
-
-.card-body-sm p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* Story Section */
-.story-section {
-    padding: 5rem 0;
-    background: #FFFFFF;
-}
-
-.story-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.story-card {
-    border-left: 3px solid var(--text-primary);
-    padding-left: 2rem;
-}
-
-.label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 0.8rem;
-    display: block;
-}
-
-.quote-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.35;
-    margin-bottom: 1rem;
-}
-
-.quote-body {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-}
-
-.quote-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.author-avatar-sm {
-    width: 36px;
-    height: 36px;
-    background: var(--text-primary);
-    color: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.author-title {
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.author-sub {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-}
-
-.story-photo {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-}
-
-.story-img {
+/* Classroom Section */
+.rounded-img {
     width: 100%;
     height: 320px;
     object-fit: cover;
-    display: block;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.align-center {
+    align-items: center;
 }
 
 /* Sections & Cards */
@@ -407,7 +383,7 @@ h1, h2, h3, h4 {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .grid-3 {
@@ -426,6 +402,16 @@ h1, h2, h3, h4 {
 .card-dark {
     background: var(--bg-dark);
     color: #FFFFFF;
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    display: block;
 }
 
 .label-light {
@@ -609,8 +595,9 @@ h1, h2, h3, h4 {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .hero-grid, .story-grid, .grid-2, .gallery-grid { grid-template-columns: 1fr; }
-    .hero-actions { flex-direction: column; }
+    .sevenoaks-grid, .grid-2 { grid-template-columns: 1fr; }
+    .hero-cta-group { flex-direction: column; }
+    .hero-feature-img { height: 280px; }
     .nav {
         display: none;
         position: absolute;
