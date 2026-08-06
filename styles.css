@@ -1,38 +1,38 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Great Walstead Countryside Style Edition
+   SDTQ ATTAMAM — Korowa Anglican School Layout Edition
+   Warna Utama: Biru Dongker (#0B1C38) & Emas Hangat (#F1A21F)
    ========================================================================== */
 
 :root {
-    --font-sans-heading: 'Oxygen', 'Plus Jakarta Sans', sans-serif;
-    --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
+    --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     
-    /* Great Walstead Countryside Palette */
-    --gw-forest: #1E3A2B;
-    --gw-forest-dark: #12251B;
-    --gw-forest-light: #2D543F;
+    /* Warna Biru Dongker & Emas Resmi SDTQ ATTAMAM */
+    --navy-primary: #0B1C38;
+    --navy-dark: #061124;
+    --navy-light: #162B54;
     
-    --gw-sage: #4A6B56;
+    --gold-primary: #F1A21F;
+    --gold-dark: #D97706;
+    --gold-bg-tint: rgba(241, 162, 31, 0.12);
     
-    --gw-cream: #F9F7F2;
-    --gw-cream-dark: #F2EFE8;
+    --green-accent: #10B981;
     
-    --gw-terracotta: #C86438;
-    --gw-gold: #EAA720;
-    --gw-green: #10B981;
+    --bg-page: #F8F9FC;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #F1F4F9;
     
-    --text-dark: #1E3A2B;
+    --border-color: #E2E8F0;
+    --text-dark: #0F172A;
     --text-body: #334155;
     --text-muted: #64748B;
     
-    --border-light: #E5E0D8;
-    
     --radius-sm: 8px;
     --radius-md: 16px;
-    --radius-lg: 28px;
+    --radius-lg: 24px;
     
-    --shadow-sm: 0 4px 16px rgba(30, 58, 43, 0.05);
-    --shadow-md: 0 12px 32px rgba(30, 58, 43, 0.08);
+    --shadow-sm: 0 4px 12px rgba(11, 28, 56, 0.05);
+    --shadow-md: 0 12px 32px rgba(11, 28, 56, 0.08);
 }
 
 * {
@@ -46,9 +46,9 @@ html {
     font-size: 16px;
 }
 
-body.gw-theme {
+body.korowa-navy-theme {
     font-family: var(--font-sans-body);
-    background-color: var(--gw-cream);
+    background-color: var(--bg-page);
     color: var(--text-dark);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -64,10 +64,10 @@ body.gw-theme {
     max-width: 860px;
 }
 
-/* Headings & Typography */
+/* Tipografi Heading & Italic Korowa */
 h1, h2, h3, h4 {
-    font-family: var(--font-sans-heading);
-    font-weight: 700;
+    font-family: var(--font-sans-body);
+    font-weight: 800;
     color: var(--text-dark);
     letter-spacing: -0.02em;
 }
@@ -77,34 +77,34 @@ h1 em, h2 em, h3 em, p em {
     font-style: italic;
     font-weight: 400;
     font-size: 1.18em;
-    color: var(--gw-terracotta);
+    color: var(--gold-primary);
 }
 
-.gw-eyebrow-forest {
+.eyebrow-text {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--gw-forest);
+    color: var(--navy-primary);
     letter-spacing: 0.08em;
     display: block;
     margin-bottom: 0.5rem;
 }
 
-.gw-eyebrow-terracotta {
+.eyebrow-gold {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--gw-terracotta);
+    color: var(--gold-primary);
     letter-spacing: 0.08em;
     display: block;
     margin-bottom: 0.5rem;
 }
 
-/* Top Notice Bar */
-.gw-top-notice {
-    background: var(--gw-forest-dark);
+/* Bilah Pengumuman Atas */
+.top-notice {
+    background: var(--navy-dark);
     color: #FFFFFF;
-    padding: 0.6rem 0;
+    padding: 0.65rem 0;
     font-size: 0.85rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -122,32 +122,32 @@ h1 em, h2 em, h3 em, p em {
     gap: 10px;
 }
 
-.gw-badge-pill {
-    background: var(--gw-terracotta);
-    color: #FFFFFF;
+.notice-badge {
+    background: var(--gold-primary);
+    color: var(--navy-primary);
     font-size: 0.72rem;
     font-weight: 800;
-    padding: 3px 12px;
-    border-radius: 50px;
+    padding: 2px 10px;
+    border-radius: 4px;
 }
 
-.gw-notice-link {
-    color: #FCD34D;
+.notice-link {
+    color: #93C5FD;
     text-decoration: none;
     font-weight: 700;
 }
 
-/* Header */
-.gw-header {
+/* Header Atas Gaya Korowa */
+.korowa-top-bar {
     background: #FFFFFF;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 12px rgba(30, 58, 43, 0.04);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
-.header-inner {
+.header-inner-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,425 +156,555 @@ h1 em, h2 em, h3 em, p em {
     margin: 0 auto;
 }
 
-.gw-brand {
+.korowa-brand {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     text-decoration: none;
 }
 
-.gw-logo-img {
-    height: 46px;
+.korowa-logo-img {
+    height: 48px;
     width: auto;
 }
 
-.gw-brand-title span {
-    font-size: 1.35rem;
+.korowa-brand-title {
+    font-size: 1.45rem;
     font-weight: 800;
-    color: var(--gw-forest);
+    color: var(--navy-primary);
     display: block;
     line-height: 1;
+    letter-spacing: 0.04em;
 }
 
-.gw-brand-title small {
+.korowa-brand-sub {
     font-size: 0.72rem;
     color: var(--text-muted);
     font-weight: 600;
 }
 
-.gw-nav {
+.korowa-nav-right {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
+    gap: 1.5rem;
 }
 
-.gw-nav-item {
+.nav-text-link {
     text-decoration: none;
     color: var(--text-dark);
-    font-weight: 700;
-    font-size: 0.88rem;
+    font-weight: 800;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
     transition: color 0.2s;
 }
 
-.gw-nav-item:hover {
-    color: var(--gw-terracotta);
+.nav-text-link:hover {
+    color: var(--gold-dark);
 }
 
-.btn-gw-visit {
-    background: var(--gw-terracotta);
-    color: #FFFFFF;
+.btn-enquire {
+    background: #E2E8F0;
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     padding: 0.65rem 1.4rem;
-    border-radius: 50px;
+    border-radius: 4px;
     transition: background 0.2s;
 }
 
-.btn-gw-visit:hover {
-    background: #B05228;
+.btn-enquire:hover {
+    background: #CBD5E1;
 }
 
-.btn-gw-menu {
-    background: var(--gw-forest);
+.btn-korowa-menu {
+    background: var(--navy-primary);
     color: #FFFFFF;
     border: none;
-    padding: 0.65rem 1.2rem;
+    padding: 0.65rem 1.4rem;
     font-weight: 800;
     font-size: 0.85rem;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-/* HERO SECTION */
-.gw-hero-section {
-    position: relative;
-    min-height: 85vh;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
-    padding: 6rem 0;
-    overflow: hidden;
-    background: var(--gw-forest-dark);
-}
-
-.gw-hero-bg-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.gw-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gw-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(18, 37, 27, 0.92) 0%, rgba(30, 58, 43, 0.78) 60%, rgba(18, 37, 27, 0.88) 100%);
-}
-
-.gw-hero-container {
-    position: relative;
-    z-index: 3;
-    max-width: 920px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.gw-emblem-badge {
-    display: inline-flex;
-    align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #FCD34D;
+}
+
+/* HERO SECTION (Biru Dongker) */
+.korowa-hero-section {
+    background-color: var(--navy-primary);
+    color: #FFFFFF;
+    padding: 6.5rem 1.5rem 7.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero-container-inner {
+    max-width: 960px;
+}
+
+.hero-sub-tag {
+    display: inline-block;
+    background: rgba(241, 162, 31, 0.2);
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
     font-size: 0.78rem;
     font-weight: 800;
-    padding: 5px 16px;
+    padding: 4px 16px;
     border-radius: 50px;
     margin-bottom: 1.8rem;
     letter-spacing: 0.08em;
 }
 
-.gw-hero-headline {
-    font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+.korowa-hero-title {
+    font-size: clamp(2.3rem, 5.2vw, 4.2rem);
+    font-weight: 800;
     line-height: 1.15;
     color: #FFFFFF;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 }
 
-.gw-hero-sub {
+.korowa-hero-desc {
     font-size: clamp(1.05rem, 1.8vw, 1.25rem);
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.65;
-    max-width: 760px;
+    max-width: 820px;
     margin: 0 auto 2.5rem;
 }
 
-.gw-hero-actions {
+.hero-action-row {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
 }
 
-.btn-gw-primary {
-    background: var(--gw-terracotta);
-    color: #FFFFFF;
-    padding: 0.9rem 2rem;
-    border-radius: 50px;
+.btn-primary-gold {
+    background: var(--gold-primary);
+    color: var(--navy-primary);
+    padding: 0.9rem 2.2rem;
+    border-radius: 8px;
     font-weight: 800;
+    font-size: 1rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    transition: background 0.2s, transform 0.2s;
+    transition: transform 0.2s, background 0.2s;
 }
 
-.btn-gw-primary:hover {
-    background: #B05228;
+.btn-primary-gold:hover {
+    background: #FFFFFF;
     transform: translateY(-2px);
 }
 
-.btn-gw-secondary {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.btn-outline-white {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     color: #FFFFFF;
-    padding: 0.9rem 2rem;
-    border-radius: 50px;
+    padding: 0.9rem 2.2rem;
+    border-radius: 8px;
     font-weight: 800;
+    font-size: 1rem;
     text-decoration: none;
     transition: background 0.2s;
 }
 
-.btn-gw-secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
-/* SECTIONS */
-.gw-section {
+/* SECTION PADDING & COLORS */
+.section-padding {
     padding: 6rem 0;
 }
 
-.bg-cream { background: var(--gw-cream); }
 .bg-white { background: #FFFFFF; }
-.bg-forest { background: var(--gw-forest); }
+.bg-light-subtle { background: var(--bg-subtle); }
 
-.gw-quote-card {
-    background: #FFFFFF;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: 3rem;
+/* KUTIPAN ORANG TUA (Background WebP quote_bg.webp) */
+.bg-quote-custom {
+    background-image: linear-gradient(rgba(11, 28, 56, 0.88), rgba(11, 28, 56, 0.88)), url('images/quote_bg.webp');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.quote-card-korowa {
     text-align: center;
-    box-shadow: var(--shadow-sm);
+    padding: 2rem;
 }
 
-.gw-card-eyebrow {
-    font-size: 0.78rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--gw-terracotta);
-    letter-spacing: 0.08em;
-    display: block;
-    margin-bottom: 1.2rem;
+.quote-icon {
+    font-family: var(--font-serif-italic);
+    font-size: 5.5rem;
+    color: var(--gold-primary);
+    line-height: 1;
+    margin-bottom: -1.2rem;
 }
 
-.gw-quote-text {
+.quote-body-text {
     font-family: var(--font-serif-italic);
     font-style: italic;
-    font-size: clamp(1.35rem, 2.2vw, 1.8rem);
-    color: var(--gw-forest);
-    line-height: 1.48;
+    font-size: clamp(1.35rem, 2.3vw, 1.8rem);
+    color: #FFFFFF;
+    line-height: 1.5;
     margin-bottom: 2rem;
 }
 
-.gw-quote-author strong {
+.quote-author-info strong {
     display: block;
     font-size: 1.1rem;
-    color: var(--gw-forest);
+    color: var(--gold-primary);
 }
 
-.gw-quote-author span {
+.quote-author-info span {
     font-size: 0.88rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.8);
 }
 
-/* 7Cs Framework */
-.gw-intro-center {
+/* KARTU STATISTIK GRID KOROWA */
+.section-title-center {
     text-align: center;
     max-width: 720px;
     margin: 0 auto 3.5rem;
 }
 
-.gw-intro-center h2 {
+.section-title-center h2 {
     font-size: 2.5rem;
-    margin-bottom: 0.8rem;
+    line-height: 1.2;
 }
 
-.text-white { color: #FFFFFF !important; }
-.text-sub { color: rgba(255, 255, 255, 0.82); font-size: 1.05rem; }
-
-.gw-7cs-grid {
+.stats-grid-korowa {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-.gw-c-card {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.stat-card-korowa {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 2rem;
-    position: relative;
-    transition: transform 0.3s;
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
 }
 
-.gw-c-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.12);
+.stat-card-korowa:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
-.c-num {
-    font-size: 0.75rem;
+.stat-number {
+    font-size: 2.8rem;
     font-weight: 800;
-    color: var(--gw-gold);
-    display: block;
-    margin-bottom: 0.5rem;
+    color: var(--navy-primary);
+    line-height: 1;
 }
 
-.gw-c-card h3 {
-    color: #FFFFFF;
-    font-size: 1.3rem;
-    margin-bottom: 0.6rem;
+.stat-number span {
+    font-size: 1.2rem;
+    color: var(--gold-dark);
 }
 
-.gw-c-card p {
-    font-size: 0.92rem;
-    color: rgba(255, 255, 255, 0.8);
+.stat-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border-color);
+    margin: 1rem 0;
 }
 
-/* Gallery Stagger */
-.gw-gallery-stagger {
+.stat-label {
+    font-size: 0.88rem;
+    color: var(--text-body);
+}
+
+/* 3 PILAR UTAMA KOROWA CARDS */
+.cards-grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.gw-gallery-card {
+.pilar-card-korowa {
     background: #FFFFFF;
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
     box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
 }
 
-.gw-gallery-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
+.pilar-card-korowa.active {
+    border-color: var(--gold-primary);
+    box-shadow: var(--shadow-md);
 }
 
-.gw-gallery-caption {
-    padding: 1.8rem;
+.pilar-card-korowa:hover {
+    transform: translateY(-6px);
 }
 
-.gw-tag {
+.pilar-icon {
+    width: 54px;
+    height: 54px;
+    background: var(--gold-bg-tint);
+    color: var(--gold-dark);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.pilar-tag {
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--gw-terracotta);
+    color: var(--gold-dark);
 }
 
-.gw-gallery-caption h3 {
-    font-size: 1.18rem;
-    margin: 0.3rem 0 0.5rem;
+.pilar-card-korowa h3 {
+    font-size: 1.3rem;
+    margin: 0.4rem 0 0.8rem;
 }
 
-.gw-gallery-caption p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+.pilar-card-korowa p {
+    font-size: 0.95rem;
+    color: var(--text-body);
 }
 
-/* Grids */
-.gw-grid-2 {
+/* FOTO KEBERSAMAAN SANTRI (PICTURE1 & PICTURE2) */
+.photo-grid-korowa {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
 }
 
-.gw-box {
-    border-radius: var(--radius-lg);
-    padding: 3rem;
-    border: 1px solid var(--border-light);
-}
-
-.gw-check-list {
-    list-style: none;
-    margin-top: 1.2rem;
-}
-
-.gw-check-list li {
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.gw-check-list li i {
-    color: var(--gw-sage);
-}
-
-.text-gold { color: var(--gw-gold) !important; }
-.text-role { font-size: 0.88rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1.2rem; }
-
-/* Admissions Card */
-.gw-admissions-card {
+.photo-card-korowa {
     background: #FFFFFF;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 4rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
+}
+
+.photo-card-korowa:hover {
+    transform: translateY(-6px);
     box-shadow: var(--shadow-md);
 }
 
-.gw-adm-head {
+.photo-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-card-info {
+    padding: 2rem;
+}
+
+.photo-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+}
+
+.photo-card-info h3 {
+    font-size: 1.25rem;
+    margin: 0.3rem 0 0.6rem;
+}
+
+.photo-card-info p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+/* GRID TENTANG & VISI */
+.grid-2-equal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.info-box-white {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.desc-text {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    color: var(--text-body);
+}
+
+.info-box-navy {
+    background: var(--navy-primary);
+    color: #FFFFFF;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.visi-headline {
+    font-family: var(--font-serif-italic);
+    font-style: italic;
+    font-size: 1.55rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 1rem 0 1.5rem;
+}
+
+.motto-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.motto-box strong {
+    color: var(--gold-primary);
+}
+
+/* MENTOR & YAYASAN */
+.yayasan-box-navy {
+    background: var(--navy-primary);
+    color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.role-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+}
+
+.yayasan-box-navy h3 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin: 0.3rem 0 0.6rem;
+}
+
+.yayasan-box-navy p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.faculty-grid-korowa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.faculty-card-korowa {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 1.4rem;
+}
+
+.faculty-card-korowa h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.faculty-card-korowa span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* PPDB MAIN CARD */
+.ppdb-main-card {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.ppdb-header-center {
     text-align: center;
     max-width: 680px;
     margin: 0 auto 3rem;
 }
 
-.gw-adm-head h2 {
+.ppdb-header-center h2 {
     font-size: 2.5rem;
-    margin: 0.8rem 0 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
-.gw-adm-grid {
+.ppdb-sub-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+.ppdb-split-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-bottom: 2.5rem;
 }
 
-.gw-wave-item {
-    background: var(--gw-cream);
-    border-left: 4px solid var(--gw-forest);
+.wave-box-item {
+    background: #FFFFFF;
+    border-left: 4px solid var(--navy-primary);
     padding: 1rem 1.2rem;
     border-radius: 0 6px 6px 0;
     margin-top: 1rem;
 }
 
-.gw-wave-item.muted {
+.wave-box-item.muted {
     border-left-color: var(--text-muted);
 }
 
-.gw-fee-list {
+.mt-3 { margin-top: 1.5rem; }
+
+.check-list-navy {
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.check-list-navy li {
+    padding: 0.4rem 0;
+    font-size: 0.92rem;
+    color: var(--text-body);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-list-navy li i {
+    color: var(--green-accent);
+}
+
+.fee-table-list {
     margin: 1.2rem 0;
 }
 
-.gw-fee-item {
+.fee-row-item {
     display: flex;
     justify-content: space-between;
     padding: 0.6rem 0;
-    border-bottom: 1px dashed var(--border-light);
+    border-bottom: 1px dashed var(--border-color);
     font-size: 0.92rem;
 }
 
-.gw-total-bar {
+.total-price-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--gw-forest);
+    background: var(--navy-primary);
     color: #FFFFFF;
     padding: 1.1rem 1.5rem;
     border-radius: var(--radius-sm);
@@ -582,15 +712,15 @@ h1 em, h2 em, h3 em, p em {
     font-weight: 800;
 }
 
-.gw-total-bar .price {
+.total-num {
     font-size: 1.35rem;
-    color: var(--gw-gold);
+    color: var(--gold-primary);
 }
 
-.btn-gw-wa {
+.btn-wa-green {
     display: block;
     text-align: center;
-    background: var(--gw-green);
+    background: var(--green-accent);
     color: #FFFFFF;
     padding: 0.9rem;
     border-radius: var(--radius-sm);
@@ -599,8 +729,9 @@ h1 em, h2 em, h3 em, p em {
     font-size: 1rem;
 }
 
-.gw-location-footer {
-    background: var(--gw-cream);
+.location-banner {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
     padding: 1.2rem 1.5rem;
     border-radius: var(--radius-sm);
     display: flex;
@@ -609,54 +740,69 @@ h1 em, h2 em, h3 em, p em {
     font-size: 0.9rem;
 }
 
-.gw-location-footer i {
+.location-banner i {
     font-size: 1.4rem;
-    color: var(--gw-forest);
+    color: var(--navy-primary);
 }
 
-/* Footer */
-.gw-footer {
-    background: var(--gw-forest-dark);
+/* FOOTER BIRU DONGKER KOROWA */
+.korowa-footer {
+    background: var(--navy-dark);
     color: rgba(255, 255, 255, 0.8);
-    padding: 4rem 0 2rem;
+    padding: 3.5rem 0 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.gw-footer-inner {
+.footer-inner-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
-.gw-footer-logo {
+.footer-left-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo-img {
     height: 44px;
     background: #FFFFFF;
     padding: 3px;
     border-radius: 6px;
-    margin-bottom: 0.8rem;
 }
 
-.gw-footer-nav {
+.footer-title {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
+.footer-sub {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-nav-links {
     display: flex;
     gap: 1.5rem;
 }
 
-.gw-footer-nav a {
-    color: rgba(255, 255, 255, 0.8);
+.footer-nav-links a {
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     transition: color 0.2s;
 }
 
-.gw-footer-nav a:hover {
-    color: var(--gw-gold);
+.footer-nav-links a:hover {
+    color: var(--gold-primary);
 }
 
-.gw-copyright {
+.footer-copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.5rem;
     text-align: center;
@@ -664,9 +810,9 @@ h1 em, h2 em, h3 em, p em {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    .header-inner { padding: 0.8rem 1rem; }
-    .gw-nav-item { display: none; }
-    .gw-7cs-grid, .gw-gallery-stagger, .gw-grid-2, .gw-adm-grid { grid-template-columns: 1fr; }
+    .header-inner-wrap { padding: 0.8rem 1rem; }
+    .nav-text-link { display: none; }
+    .stats-grid-korowa, .cards-grid-3, .photo-grid-korowa, .grid-2-equal, .ppdb-split-grid { grid-template-columns: 1fr; }
 }
