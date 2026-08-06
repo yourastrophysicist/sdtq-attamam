@@ -1,20 +1,17 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Korowa Layout All-Navy Dark Mode Edition
-   Semua Background: Biru Dongker (#0B1C38 & #061124)
-   Aksen: Emas Hangat (#F1A21F) & Putih (#FFFFFF)
-   Bahasa: 100% Bahasa Indonesia
+   SDTQ ATTAMAM — Korowa All-Navy Theme dengan Stiker Whimsical & Fun
+   Latar Belakang: All-Navy Blue (#0B1C38 & #061124)
    ========================================================================== */
 
 :root {
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
     --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     
-    /* Warna Biru Dongker Seragam (All-Navy) */
+    /* Warna Biru Dongker Seragam */
     --navy-bg-deep: #061124;
     --navy-bg-main: #0B1C38;
     --navy-card: #122544;
     --navy-card-hover: #19325A;
-    --navy-card-glass: rgba(255, 255, 255, 0.05);
     
     /* Emas & Putih */
     --gold-primary: #F1A21F;
@@ -24,7 +21,7 @@
     --green-accent: #10B981;
     
     --text-white: #FFFFFF;
-    --text-light-sub: rgba(255, 255, 255, 0.85);
+    --text-light-sub: rgba(255, 255, 255, 0.88);
     --text-muted-light: rgba(255, 255, 255, 0.65);
     
     --border-navy: rgba(255, 255, 255, 0.12);
@@ -35,6 +32,7 @@
     --radius-lg: 24px;
     
     --shadow-navy: 0 12px 36px rgba(0, 0, 0, 0.35);
+    --shadow-sticker: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 3px #FFFFFF;
 }
 
 * {
@@ -66,6 +64,11 @@ body.korowa-all-navy {
     max-width: 860px;
 }
 
+.pos-relative {
+    position: relative;
+    overflow: hidden;
+}
+
 /* Tipografi Heading & Italic */
 h1, h2, h3, h4 {
     font-family: var(--font-sans-body);
@@ -92,7 +95,208 @@ h1 em, h2 em, h3 em, p em {
     margin-bottom: 0.5rem;
 }
 
-/* Bilah Pengumuman Atas (Biru Dongker Gelap) */
+/* ==========================================================================
+   WHIMSICAL STICKER BADGES & ANIMATIONS
+   ========================================================================== */
+
+.whimsy-sticker {
+    position: absolute;
+    z-index: 10;
+    user-select: none;
+    pointer-events: auto;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whimsy-sticker:hover {
+    transform: scale(1.15) rotate(0deg) !important;
+    z-index: 20;
+}
+
+.sticker-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    background: #FFFFFF;
+    color: var(--navy-bg-deep);
+}
+
+/* Sticker Variations */
+.star-sticker {
+    background: #FEF08A;
+    color: #854D0E;
+    border-color: #FFFFFF;
+}
+
+.plane-sticker {
+    background: #BFDBFE;
+    color: #1E40AF;
+}
+
+.ribbon-sticker {
+    background: #FBCFE8;
+    color: #9D174D;
+}
+
+.stamp-sticker {
+    background: #FDE68A;
+    color: #92400E;
+    border-radius: 50px;
+    padding: 8px 16px;
+}
+
+.quran-sticker {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.spark-sticker {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.tape-sticker {
+    background: #FEF3C7;
+    color: #78350F;
+}
+
+.smile-sticker {
+    background: #E0E7FF;
+    color: #3730A3;
+}
+
+.mentor-sticker {
+    background: #F3E8FF;
+    color: #6B21A8;
+}
+
+.pin-sticker {
+    background: #FFEDD5;
+    color: #9A3412;
+}
+
+.chat-sticker {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+/* Individual Sticker Placements across sections */
+.sticker-hero-star {
+    top: 15%;
+    left: 4%;
+    transform: rotate(-12deg);
+}
+
+.sticker-hero-plane {
+    top: 25%;
+    right: 5%;
+    transform: rotate(15deg);
+}
+
+.sticker-hero-sparkle {
+    bottom: 12%;
+    left: 8%;
+    font-size: 1.6rem;
+    color: var(--gold-primary);
+}
+
+.sticker-quote-ribbon {
+    top: 10%;
+    right: 6%;
+    transform: rotate(-8deg);
+}
+
+.sticker-quote-crescent {
+    bottom: 15%;
+    left: 5%;
+    font-size: 2rem;
+    color: var(--gold-primary);
+}
+
+.sticker-stamp-4juz {
+    top: 8%;
+    right: 4%;
+    transform: rotate(10deg);
+}
+
+.sticker-pilar-quran {
+    top: 12%;
+    left: 3%;
+    transform: rotate(-10deg);
+}
+
+.sticker-pilar-spark {
+    bottom: 15%;
+    right: 5%;
+    transform: rotate(8deg);
+}
+
+.sticker-photo-tape {
+    top: 10%;
+    right: 6%;
+    transform: rotate(-6deg);
+}
+
+.sticker-photo-smile {
+    bottom: 10%;
+    left: 4%;
+    transform: rotate(12deg);
+}
+
+.sticker-mentor-badge {
+    top: 8%;
+    right: 5%;
+    transform: rotate(-8deg);
+}
+
+.sticker-ppdb-pin {
+    top: 10%;
+    left: 4%;
+    transform: rotate(14deg);
+}
+
+.sticker-ppdb-chat {
+    bottom: 12%;
+    right: 5%;
+    transform: rotate(-10deg);
+}
+
+/* Animations */
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-10px) rotate(-4deg); }
+}
+
+@keyframes wobbleAnim {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes pulseAnim {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.float-anim { animation: floatAnim 4s ease-in-out infinite; }
+.wobble-anim { animation: wobbleAnim 5s ease-in-out infinite; }
+.pulse-anim { animation: pulseAnim 3s ease-in-out infinite; }
+.spin-slow { animation: spinSlow 20s linear infinite; }
+
+/* ==========================================================================
+   KOROWA NAVY COMPONENT STYLES
+   ========================================================================== */
+
+/* Bilah Pengumuman Atas */
 .top-notice-navy {
     background: #030A17;
     color: #FFFFFF;
@@ -129,9 +333,9 @@ h1 em, h2 em, h3 em, p em {
     font-weight: 700;
 }
 
-/* Header Atas Korowa (Biru Dongker Transparan Blur) */
+/* Header Atas Korowa */
 .korowa-navy-header {
-    background: rgba(11, 28, 56, 0.92);
+    background: rgba(11, 28, 56, 0.94);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-navy);
     position: sticky;
@@ -228,7 +432,7 @@ h1 em, h2 em, h3 em, p em {
     gap: 8px;
 }
 
-/* HERO UTAMA (Biru Dongker) */
+/* HERO UTAMA */
 .korowa-hero-navy {
     background-color: var(--navy-bg-main);
     color: #FFFFFF;
@@ -313,7 +517,7 @@ h1 em, h2 em, h3 em, p em {
     background: rgba(255, 255, 255, 0.16);
 }
 
-/* SECTION PADDING & NAVY BACKGROUNDS */
+/* SEKSI NAVY & KUTIPAN ORANG TUA */
 .section-padding {
     padding: 6rem 0;
 }
@@ -323,7 +527,6 @@ h1 em, h2 em, h3 em, p em {
     border-bottom: 1px solid var(--border-navy);
 }
 
-/* KUTIPAN ORANG TUA (Background WebP quote_bg.webp + Biru Dongker Overlay) */
 .bg-quote-navy {
     background-image: linear-gradient(rgba(6, 17, 36, 0.92), rgba(6, 17, 36, 0.92)), url('images/quote_bg.webp');
     background-size: cover;
@@ -365,7 +568,7 @@ h1 em, h2 em, h3 em, p em {
     color: var(--text-muted-light);
 }
 
-/* KARTU STATISTIK GRID BIRU DONGKER */
+/* STATISTIK & PILAR CARDS */
 .section-title-center {
     text-align: center;
     max-width: 720px;
@@ -421,7 +624,6 @@ h1 em, h2 em, h3 em, p em {
     color: var(--text-light-sub);
 }
 
-/* 3 PILAR UTAMA CARDS (Biru Dongker) */
 .cards-grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -478,7 +680,7 @@ h1 em, h2 em, h3 em, p em {
     color: var(--text-light-sub);
 }
 
-/* FOTO KEBERSAMAAN SANTRI (Biru Dongker Card) */
+/* FOTO SANTRI (PICTURE1 & PICTURE2) */
 .photo-grid-korowa {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -528,7 +730,7 @@ h1 em, h2 em, h3 em, p em {
     color: var(--text-light-sub);
 }
 
-/* GRID TENTANG & VISI (Biru Dongker) */
+/* TENTANG & VISI */
 .grid-2-equal {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -630,7 +832,7 @@ h1 em, h2 em, h3 em, p em {
     color: var(--text-muted-light);
 }
 
-/* PPDB MAIN CARD (Biru Dongker) */
+/* PPDB MAIN CARD */
 .ppdb-navy-card {
     background: var(--navy-card);
     border: 1px solid var(--border-navy);
@@ -754,7 +956,7 @@ h1 em, h2 em, h3 em, p em {
     color: var(--gold-primary);
 }
 
-/* FOOTER BIRU DONGKER KOROWA */
+/* FOOTER */
 .korowa-footer-navy {
     background: #030A17;
     color: rgba(255, 255, 255, 0.8);
@@ -824,4 +1026,5 @@ h1 em, h2 em, h3 em, p em {
     .header-inner-wrap { padding: 0.8rem 1rem; }
     .nav-text-link { display: none; }
     .stats-grid-korowa, .cards-grid-3, .photo-grid-korowa, .grid-2-equal, .ppdb-split-grid { grid-template-columns: 1fr; }
+    .whimsy-sticker { display: none; } /* Hide stickers on mobile to avoid overlapping */
 }
