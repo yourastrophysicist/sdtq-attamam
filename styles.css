@@ -1,35 +1,38 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Malatak-Kelola Layout dengan 11 Stiker Asli Downloads/stat
-   Latar Belakang: All-Navy Blue (#0B1C38 & #061124) + Emas (#F1A21F)
+   SDTQ ATTAMAM — Malatak-Kelola Layout dengan Aksesori Kuning Cerah & Teks Putih
+   Latar Belakang: All-Navy Blue (#0B1C38 & #061124) + Kuning (#FFD600) + Putih (#FFFFFF)
    ========================================================================== */
 
 :root {
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
     --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
     
+    /* Latar Belakang Biru Dongker */
     --navy-bg-deep: #061124;
     --navy-bg-main: #0B1C38;
     --navy-card: #122544;
     --navy-card-hover: #19325A;
     
-    --gold-primary: #F1A21F;
-    --gold-dark: #D97706;
-    --gold-tint: rgba(241, 162, 31, 0.15);
+    /* Aksesori KUNING CERAH (Bukan Emas) */
+    --yellow-primary: #FFD600;
+    --yellow-dark: #EAB308;
+    --yellow-tint: rgba(255, 214, 0, 0.18);
     
     --green-accent: #10B981;
     
+    /* Teks & Elemen Semuanya PUTIH MURNI */
     --fg-main: #FFFFFF;
-    --fg-sub: rgba(255, 255, 255, 0.88);
-    --fg-mute: rgba(255, 255, 255, 0.65);
+    --fg-sub: #FFFFFF;
+    --fg-mute: rgba(255, 255, 255, 0.78);
     
-    --border-navy: rgba(255, 255, 255, 0.12);
-    --border-gold: rgba(241, 162, 31, 0.4);
+    --border-navy: rgba(255, 255, 255, 0.15);
+    --border-yellow: rgba(255, 214, 0, 0.4);
     
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
     
-    --shadow-navy: 0 12px 36px rgba(0, 0, 0, 0.35);
+    --shadow-navy: 0 12px 36px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -46,7 +49,7 @@ html {
 body.korowa-all-navy {
     font-family: var(--font-sans-body);
     background-color: var(--navy-bg-deep);
-    color: var(--fg-main);
+    color: #FFFFFF;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -62,10 +65,10 @@ body.korowa-all-navy {
     overflow: hidden;
 }
 
-/* Tipografi Heading & Italic */
+/* Tipografi Heading & Italic (Semua Teks Putih & Aksesori Kuning) */
 h1, h2, h3, h4 {
     font-weight: 800;
-    color: var(--fg-main);
+    color: #FFFFFF;
     letter-spacing: -0.02em;
 }
 
@@ -74,14 +77,14 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     font-style: italic;
     font-weight: 400;
     font-size: 1.15em;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
 }
 
 .eyebrow {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
     letter-spacing: 0.08em;
     display: inline-flex;
     align-items: center;
@@ -92,7 +95,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .eyebrow i {
     width: 6px;
     height: 6px;
-    background: var(--gold-primary);
+    background: var(--yellow-primary);
     border-radius: 50%;
     display: inline-block;
 }
@@ -102,7 +105,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
    ========================================================================== */
 
 .nav {
-    background: rgba(11, 28, 56, 0.94);
+    background: rgba(11, 28, 56, 0.96);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-navy);
     position: sticky;
@@ -148,7 +151,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .merek__t span {
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
 }
 
 .nav__tautan {
@@ -157,7 +160,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .nav__tautan a {
-    color: var(--fg-sub);
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.88rem;
@@ -165,7 +168,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .nav__tautan a:hover {
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
 }
 
 .btn {
@@ -181,7 +184,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     transition: transform 0.2s, background 0.2s, color 0.2s;
     cursor: pointer;
     border: 1px solid var(--border-navy);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     color: #FFFFFF;
 }
 
@@ -196,9 +199,9 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .btn--pri {
-    background: var(--gold-primary);
+    background: var(--yellow-primary);
     color: var(--navy-bg-deep);
-    border-color: var(--gold-primary);
+    border-color: var(--yellow-primary);
 }
 
 .btn--pri:hover {
@@ -229,11 +232,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   HERO MALATAK-KELOLA DENGAN BENDA REALISTIS ALAT TULIS STAT DOWLOADS
+   HERO MALATAK-KELOLA (DENGAN BATAS MAKSIMAL ELEMEN DEKORATIF KECIL)
    ========================================================================== */
 
 .hero {
-    padding: 7rem 0 8rem;
+    padding: 6.5rem 0 7.5rem;
     text-align: center;
     background: var(--navy-bg-main);
     border-bottom: 1px solid var(--border-navy);
@@ -251,11 +254,12 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     font-size: clamp(2.8rem, 5.8vw, 4.8rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    color: #FFFFFF;
 }
 
 .lead {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: var(--fg-sub);
+    color: #FFFFFF;
     line-height: 1.6;
     margin-bottom: 2.5rem;
 }
@@ -267,7 +271,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     flex-wrap: wrap;
 }
 
-/* DEKORASI BENDA FISIK REALISTIS 11 STIKER DARI DOWNLOADS/STAT (MALATAK STYLE) */
+/* BATASAN STRICT AGAR ELEMEN BENDA / STIKER TIDAK RAKSASA */
 .hero__dekor {
     position: absolute;
     top: 0;
@@ -281,72 +285,24 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 
 .hero__benda {
     position: absolute;
-    filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.65));
+    max-width: 120px !important;
+    max-height: 110px !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
     transition: transform 0.4s ease;
 }
 
-.hero__benda--stat1 {
-    top: 8%;
-    left: 2%;
-    transform: rotate(-12deg);
-    animation: floatAnim 6s ease-in-out infinite;
-}
+.hero__benda--stat1 { top: 8%; left: 3%; transform: rotate(-12deg); }
+.hero__benda--stat2 { top: 6%; right: 3%; transform: rotate(14deg); }
+.hero__benda--stat3 { bottom: 8%; right: 4%; transform: rotate(-8deg); }
+.hero__benda--stat4 { bottom: 10%; left: 4%; transform: rotate(10deg); }
 
-.hero__benda--stat2 {
-    top: 6%;
-    right: 2%;
-    transform: rotate(14deg);
-    animation: floatAnim 7s ease-in-out infinite 1s;
-}
+.seksi__benda--stat5 { top: 12%; right: 4%; transform: rotate(-10deg); }
+.seksi__benda--stat6 { top: 10%; left: 4%; transform: rotate(12deg); }
+.seksi__benda--stat10 { top: 12%; right: 4%; transform: rotate(-14deg); }
+.seksi__benda--stat11 { top: 10%; left: 4%; transform: rotate(8deg); }
 
-.hero__benda--stat3 {
-    bottom: 8%;
-    right: 3%;
-    transform: rotate(-8deg);
-    animation: floatAnim 5.5s ease-in-out infinite 1.5s;
-}
-
-.hero__benda--stat4 {
-    bottom: 10%;
-    left: 3%;
-    transform: rotate(10deg);
-    animation: floatAnim 6.5s ease-in-out infinite 2s;
-}
-
-.seksi__benda--stat5 {
-    top: 15%;
-    right: 4%;
-    transform: rotate(-10deg);
-    animation: floatAnim 6s ease-in-out infinite 0.8s;
-}
-
-.seksi__benda--stat6 {
-    top: 12%;
-    left: 3%;
-    transform: rotate(12deg);
-    animation: floatAnim 7s ease-in-out infinite 1.2s;
-}
-
-.seksi__benda--stat10 {
-    top: 14%;
-    right: 4%;
-    transform: rotate(-14deg);
-    animation: floatAnim 5.5s ease-in-out infinite 1.8s;
-}
-
-.seksi__benda--stat11 {
-    top: 10%;
-    left: 3%;
-    transform: rotate(8deg);
-    animation: floatAnim 6.5s ease-in-out infinite 0.4s;
-}
-
-@keyframes floatAnim {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-12px) rotate(4deg); }
-}
-
-/* PITA RUNNING TICKER MALATAK */
+/* PITA RUNNING TICKER KUNING CERAH */
 .pita {
     background: #030A17;
     border-bottom: 1px solid var(--border-navy);
@@ -358,7 +314,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .pita__t {
     font-size: 0.88rem;
     font-weight: 800;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: center;
@@ -369,7 +325,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
    ========================================================================== */
 
 .seksi {
-    padding: 6.5rem 0;
+    padding: 6rem 0;
 }
 
 .seksi--garis {
@@ -389,6 +345,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .kepala--tengah h2 {
     font-size: clamp(2rem, 3.8vw, 3rem);
     margin-bottom: 0.8rem;
+    color: #FFFFFF;
 }
 
 /* FITUR BLOK MALATAK-KELOLA */
@@ -412,9 +369,9 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .fitur--balik .fitur__gbr { grid-area: gbr; }
 
 .fitur__no {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 800;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
     letter-spacing: 0.08em;
     margin-bottom: 0.8rem;
 }
@@ -423,6 +380,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     line-height: 1.25;
     margin-bottom: 1.5rem;
+    color: #FFFFFF;
 }
 
 .daftar {
@@ -431,28 +389,42 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 
 .daftar li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     margin-bottom: 1rem;
     font-size: 1rem;
-    color: var(--fg-sub);
+    color: #FFFFFF;
 }
 
-.daftar li b {
-    color: var(--gold-primary);
+.daftar li i {
+    color: var(--yellow-primary);
+    font-size: 0.9rem;
 }
 
 .fitur__gbr {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
-.fitur__benda {
+/* KARTU FOTO KAMPUS TIDAK RAKSASA */
+.card-frame-neat {
+    width: 100%;
+    max-width: 440px;
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
+    padding: 10px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-navy);
-    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.65));
+}
+
+.neat-card-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    display: block;
 }
 
 /* ==========================================================================
@@ -486,8 +458,8 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .otak__m span {
     width: 44px;
     height: 44px;
-    background: var(--gold-tint);
-    color: var(--gold-primary);
+    background: var(--yellow-tint);
+    color: var(--yellow-primary);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -505,12 +477,12 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 
 .otak__m em {
     font-size: 0.85rem;
-    color: var(--fg-mute);
+    color: rgba(255, 255, 255, 0.8);
     font-style: normal;
 }
 
 .otak__inti {
-    background: var(--gold-primary);
+    background: var(--yellow-primary);
     color: var(--navy-bg-deep);
     height: 180px;
     border-radius: 50%;
@@ -519,7 +491,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     justify-content: center;
     text-align: center;
     font-weight: 800;
-    box-shadow: 0 0 40px rgba(241, 162, 31, 0.3);
+    box-shadow: 0 0 40px rgba(255, 214, 0, 0.35);
 }
 
 .otak__inti b {
@@ -554,7 +526,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .harga--unggul {
-    border-color: var(--gold-primary);
+    border-color: var(--yellow-primary);
     background: var(--navy-card-hover);
 }
 
@@ -562,7 +534,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     position: absolute;
     top: -14px;
     right: 24px;
-    background: var(--gold-primary);
+    background: var(--yellow-primary);
     color: var(--navy-bg-deep);
     font-size: 0.72rem;
     font-weight: 800;
@@ -574,23 +546,24 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     font-size: 1.35rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    color: #FFFFFF;
 }
 
 .harga__rp {
     font-size: 2.2rem;
     font-weight: 800;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
     margin-bottom: 0.5rem;
 }
 
 .harga__rp small {
     font-size: 1rem;
-    color: var(--fg-mute);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .harga__ket {
     font-size: 0.92rem;
-    color: var(--fg-sub);
+    color: #FFFFFF;
     margin-bottom: 1.8rem;
 }
 
@@ -600,17 +573,17 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .harga ul li {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     border-bottom: 1px dashed var(--border-navy);
     font-size: 0.92rem;
-    color: var(--fg-sub);
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.harga ul li b {
-    color: var(--green-accent);
+.harga ul li i {
+    color: var(--yellow-primary);
 }
 
 .visi-text-quote {
@@ -628,7 +601,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .quote-icon {
     font-family: var(--font-serif-italic);
     font-size: 5rem;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
     line-height: 1;
     margin-bottom: -1.5rem;
 }
@@ -645,12 +618,12 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .quote-author-info strong {
     display: block;
     font-size: 1.1rem;
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
 }
 
 .quote-author-info span {
     font-size: 0.88rem;
-    color: var(--fg-mute);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .w-100 { width: 100%; }
@@ -681,7 +654,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 
 .kaki__k a {
     display: block;
-    color: var(--fg-mute);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-size: 0.88rem;
     margin-bottom: 0.6rem;
@@ -689,7 +662,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .kaki__k a:hover {
-    color: var(--gold-primary);
+    color: var(--yellow-primary);
 }
 
 .kaki__bawah {
@@ -698,7 +671,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     display: flex;
     justify-content: space-between;
     font-size: 0.85rem;
-    color: var(--fg-mute);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* RESPONSIVE */

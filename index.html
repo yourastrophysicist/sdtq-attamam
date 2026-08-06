@@ -16,7 +16,7 @@
 <body class="korowa-all-navy">
 
     <!-- HEADER / NAV STIL MALATAK-KELOLA -->
-    <header class="nav" id="nav">
+    <header class="nav" id="header">
         <div class="wrap">
             <a class="merek" href="#atas">
                 <span class="merek__m"><img src="images/logo.png" alt="Logo SDTQ ATTAMAM"></span>
@@ -39,14 +39,14 @@
 
     <main id="atas">
 
-        <!-- HERO DENGAN DEKORASI BENDA STAT DOWLOADS (11 STIKER ASLI DARI DOWNLOADS/STAT) -->
+        <!-- HERO UTAMA DENGAN STIKER BENDA KECIL PROPORSIONAL (KUNING CERIA & PUTIH) -->
         <section class="hero pos-relative">
-            <!-- BENDA DEKORATIF DENGAN GAYA CUTOUT MALATAK-KELOLA -->
+            <!-- STIKER DEKORATIF DENGAN BATAS UKURAN KECIL (MAX 110PX) -->
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda hero__benda--stat1" src="images/stat/stat_1.png" alt="Elemen Stat 1" width="180" />
-                <img class="hero__benda hero__benda--stat2" src="images/stat/stat_2.png" alt="Elemen Stat 2" width="160" />
-                <img class="hero__benda hero__benda--stat3" src="images/stat/stat_3.png" alt="Elemen Stat 3" width="150" />
-                <img class="hero__benda hero__benda--stat4" src="images/stat/stat_4.png" alt="Elemen Stat 4" width="140" />
+                <img class="hero__benda hero__benda--stat1" src="images/stat/stat_1.png" alt="Stiker 1" />
+                <img class="hero__benda hero__benda--stat2" src="images/stat/stat_2.png" alt="Stiker 2" />
+                <img class="hero__benda hero__benda--stat3" src="images/stat/stat_3.png" alt="Stiker 3" />
+                <img class="hero__benda hero__benda--stat4" src="images/stat/stat_4.png" alt="Stiker 4" />
             </div>
 
             <div class="wrap">
@@ -69,15 +69,15 @@
             </div>
         </section>
 
-        <!-- PITA RUNNING TICKER (MALATAK STYLE) -->
+        <!-- PITA RUNNING TICKER (KUNING CERIA & TEXT PUTIH) -->
         <div class="pita">
             <div class="pita__t">✦ AQIDAH SOHIHAH ✦ ADAB HASANAH ✦ HAFALAN 4 JUZ ✦ FULL DAY SCHOOL CIPANAS GARUT ✦ PERALATAN BELAJAR LENGKAP ✦</div>
         </div>
 
-        <!-- KUTIPAN ORANG TUA DENGAN ELEMEN STAT 5 -->
+        <!-- KUTIPAN ORANG TUA (TEKS PUTIH & AKSEN KUNING) -->
         <section class="seksi seksi--garis pos-relative" id="kisah">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat5" src="images/stat/stat_5.png" alt="Elemen Stat 5" width="170" />
+                <img class="hero__benda seksi__benda--stat5" src="images/stat/stat_5.png" alt="Stiker 5" />
             </div>
             <div class="wrap" style="max-width: 860px;">
                 <div class="quote-card-navy text-center">
@@ -93,10 +93,10 @@
             </div>
         </section>
 
-        <!-- SATU FONDASI: 3 PILAR & TARGET KELULUSAN DENGAN ELEMEN STAT 6 -->
+        <!-- SATU FONDASI: 3 PILAR & TARGET KELULUSAN -->
         <section class="seksi seksi--garis seksi--gelap pos-relative" id="pilar">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat6" src="images/stat/stat_6.png" alt="Elemen Stat 6" width="160" />
+                <img class="hero__benda seksi__benda--stat6" src="images/stat/stat_6.png" alt="Stiker 6" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -138,55 +138,61 @@
             </div>
         </section>
 
-        <!-- SEKSI FITUR BERDERET DENGAN ELEMEN STAT 7, 8, 9 -->
+        <!-- SEKSI FITUR DENGAN FOTO KAMPUS & STIKER RAPI PROPORSIONAL -->
         <section class="seksi seksi--garis" id="kegiatan">
             <div class="wrap">
 
-                <!-- FITUR 01: ADAB & AQIDAH DENGAN STAT 7 -->
+                <!-- FITUR 01: ADAB & AQIDAH DENGAN FOTO KAMPUS SANTRI -->
                 <div class="fitur">
                     <div class="fitur__teks">
                         <div class="fitur__no">01 — PEMBIASAAN ADAB</div>
                         <h2>Membentuk anak yang beradab saat Anda sedang bekerja.</h2>
                         <ul class="daftar">
-                            <li><b>▸</b><span>Wudhu sesuai sunnah & tata cara ibadah harian yang tertib</span></li>
-                            <li><b>▸</b><span>Sopan santun berinteraksi dengan guru, orang tua, dan teman</span></li>
-                            <li><b>▸</b><span>Pembiasaan doa, dzikir pagi-petang, serta etika keseharian</span></li>
+                            <li><i class="fas fa-check"></i><span>Wudhu sesuai sunnah & tata cara ibadah harian yang tertib</span></li>
+                            <li><i class="fas fa-check"></i><span>Sopan santun berinteraksi dengan guru, orang tua, dan teman</span></li>
+                            <li><i class="fas fa-check"></i><span>Pembiasaan doa, dzikir pagi-petang, serta etika keseharian</span></li>
                         </ul>
                     </div>
                     <div class="fitur__gbr">
-                        <img class="fitur__benda" src="images/stat/stat_7.png" alt="Elemen Stat 7" width="280" />
+                        <div class="card-frame-neat">
+                            <img src="images/picture1.jpg" alt="Santri Belajar Adab Bersama" class="neat-card-img" />
+                        </div>
                     </div>
                 </div>
 
-                <!-- FITUR 02: TAHFIDZ & HADITS DENGAN STAT 8 -->
+                <!-- FITUR 02: TAHFIDZ & HADITS DENGAN FOTO RUANG KELAS -->
                 <div class="fitur fitur--balik">
                     <div class="fitur__teks">
                         <div class="fitur__no">02 — TAHFIDZ & HADITS</div>
                         <h2>Target 4 Juz Al-Qur'an dan 100 Hadits pilihan.</h2>
                         <ul class="daftar">
-                            <li><b>▸</b><span>Bimbingan halaqah hafalan dengan metode yang menyenangkan</span></li>
-                            <li><b>▸</b><span>Hafalan 100 hadits pilihan untuk panduan perilaku sehari-hari</span></li>
-                            <li><b>▸</b><span>Ujian mutaba'ah hafalan berkala yang terpantau orang tua</span></li>
+                            <li><i class="fas fa-check"></i><span>Bimbingan halaqah hafalan dengan metode yang menyenangkan</span></li>
+                            <li><i class="fas fa-check"></i><span>Hafalan 100 hadits pilihan untuk panduan perilaku sehari-hari</span></li>
+                            <li><i class="fas fa-check"></i><span>Ujian mutaba'ah hafalan berkala yang terpantau orang tua</span></li>
                         </ul>
                     </div>
                     <div class="fitur__gbr">
-                        <img class="fitur__benda" src="images/stat/stat_8.png" alt="Elemen Stat 8" width="280" />
+                        <div class="card-frame-neat">
+                            <img src="images/picture2.jpg" alt="Ruang Kelas Santri ATTAMAM" class="neat-card-img" />
+                        </div>
                     </div>
                 </div>
 
-                <!-- FITUR 03: DOKUMENTASI MEDIA DENGAN STAT 9 -->
+                <!-- FITUR 03: PERALATAN BELAJAR DENGAN POLAROID ALAT TULIS -->
                 <div class="fitur">
                     <div class="fitur__teks">
                         <div class="fitur__no">03 — DOKUMENTASI & MEDIA</div>
                         <h2>Potret kegiatan & media belajar mandiri santri.</h2>
                         <ul class="daftar">
-                            <li><b>▸</b><span>Perlengkapan sekolah lengkap yang menumbuhkan minat belajar</span></li>
-                            <li><b>▸</b><span>Ruang kelas terang & sejuk di kawasan Objek Wisata Cipanas</span></li>
-                            <li><b>▸</b><span>Interaksi sehat, pembimbingan intensif, dan pembiasaan mandiri</span></li>
+                            <li><i class="fas fa-check"></i><span>Perlengkapan sekolah lengkap yang menumbuhkan minat belajar</span></li>
+                            <li><i class="fas fa-check"></i><span>Ruang kelas terang & sejuk di kawasan Objek Wisata Cipanas</span></li>
+                            <li><i class="fas fa-check"></i><span>Interaksi sehat, pembimbingan intensif, dan pembiasaan mandiri</span></li>
                         </ul>
                     </div>
                     <div class="fitur__gbr">
-                        <img class="fitur__benda" src="images/stat/stat_9.png" alt="Elemen Stat 9" width="300" />
+                        <div class="card-frame-neat">
+                            <img src="images/y.jpg" alt="Alat Tulis Santri y.jpg" class="neat-card-img" />
+                        </div>
                     </div>
                 </div>
 
@@ -196,7 +202,7 @@
         <!-- SEKSI TENTANG DENGAN STAT 10 -->
         <section class="seksi seksi--garis seksi--gelap pos-relative" id="tentang">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat10" src="images/stat/stat_10.png" alt="Elemen Stat 10" width="160" />
+                <img class="hero__benda seksi__benda--stat10" src="images/stat/stat_10.png" alt="Stiker 10" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -218,11 +224,11 @@
                         <div class="harga__nm">Iman &bull; Adab &bull; Ilmu</div>
                         <div class="harga__ket">Ketua Yayasan: <strong>Drs. Imam Tamamu Taufiq, M.Pd</strong></div>
                         <ul>
-                            <li><b>✓</b>H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag</li>
-                            <li><b>✓</b>Teti Nuryanti, S.Pd.I</li>
-                            <li><b>✓</b>Alliyah Rasyidah, S.Ag</li>
-                            <li><b>✓</b>Fitriani, S.Pd</li>
-                            <li><b>✓</b>Rosalin Qurota Ayunin, SH</li>
+                            <li><i class="fas fa-check-circle"></i> H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag</li>
+                            <li><i class="fas fa-check-circle"></i> Teti Nuryanti, S.Pd.I</li>
+                            <li><i class="fas fa-check-circle"></i> Alliyah Rasyidah, S.Ag</li>
+                            <li><i class="fas fa-check-circle"></i> Fitriani, S.Pd</li>
+                            <li><i class="fas fa-check-circle"></i> Rosalin Qurota Ayunin, SH</li>
                         </ul>
                     </div>
                 </div>
@@ -232,7 +238,7 @@
         <!-- INFORMASI PPDB 2025-2026 DENGAN STAT 11 -->
         <section class="seksi seksi--garis pos-relative" id="ppdb">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat11" src="images/stat/stat_11.png" alt="Elemen Stat 11" width="170" />
+                <img class="hero__benda seksi__benda--stat11" src="images/stat/stat_11.png" alt="Stiker 11" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -247,11 +253,11 @@
                         <div class="harga__rp">Gelombang 1</div>
                         <div class="harga__ket">8 Jan 2025 – 28 Mar 2025 (Daftar Ulang: 17–18 Apr 2025)</div>
                         <ul>
-                            <li><b>✓</b>Gelombang 2: 21 Apr 2025 – 16 Jun 2026</li>
-                            <li><b>✓</b>Formulir Pendaftaran</li>
-                            <li><b>✓</b>FC Kartu Keluarga & Akta Kelahiran (@ 2 lbr)</li>
-                            <li><b>✓</b>FC KTP Orang Tua & Ijazah TK (@ 2 lbr)</li>
-                            <li><b>✓</b>Pas Foto 3x4 & 2x3 (@ 2 lbr)</li>
+                            <li><i class="fas fa-check-circle"></i> Gelombang 2: 21 Apr 2025 – 16 Jun 2026</li>
+                            <li><i class="fas fa-check-circle"></i> Formulir Pendaftaran</li>
+                            <li><i class="fas fa-check-circle"></i> FC Kartu Keluarga & Akta Kelahiran (@ 2 lbr)</li>
+                            <li><i class="fas fa-check-circle"></i> FC KTP Orang Tua & Ijazah TK (@ 2 lbr)</li>
+                            <li><i class="fas fa-check-circle"></i> Pas Foto 3x4 & 2x3 (@ 2 lbr)</li>
                         </ul>
                     </div>
 
@@ -261,10 +267,10 @@
                         <div class="harga__rp">Rp1.990.000<small> total</small></div>
                         <div class="harga__ket">Terdiri dari Buku Paket, Seragam 2 stel, DSP, dan SPP Juli.</div>
                         <ul>
-                            <li><b>✓</b>Buku Paket 1 Thn: Rp 570.000</li>
-                            <li><b>✓</b>Seragam 2 Stel: Rp 320.000</li>
-                            <li><b>✓</b>Dana Sumbangan (DSP): Rp 1.000.000</li>
-                            <li><b>✓</b>SPP Bulan Pertama (Juli): Rp 100.000</li>
+                            <li><i class="fas fa-check-circle"></i> Buku Paket 1 Thn: Rp 570.000</li>
+                            <li><i class="fas fa-check-circle"></i> Seragam 2 Stel: Rp 320.000</li>
+                            <li><i class="fas fa-check-circle"></i> Dana Sumbangan (DSP): Rp 1.000.000</li>
+                            <li><i class="fas fa-check-circle"></i> SPP Bulan Pertama (Juli): Rp 100.000</li>
                         </ul>
                         <a class="btn btn--pri btn--lg w-100 text-center" href="https://wa.me/?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20PPDB%20SDTQ%20ATTAMAM" target="_blank">
                             <i class="fab fa-whatsapp"></i> Hubungi Panitia (WhatsApp)
