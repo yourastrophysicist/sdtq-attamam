@@ -1,38 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Westbourne Interactive Content Shaper Bar Logic
-    const shaperGoBtn = document.getElementById('shaper-go-btn');
-    const topicSelect = document.getElementById('topic-select');
+    // 1. Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
 
-    if (shaperGoBtn && topicSelect) {
-        shaperGoBtn.addEventListener('click', () => {
-            const selectedTopic = topicSelect.value;
-            let targetId = '#ppdb';
-
-            if (selectedTopic === 'ppdb') targetId = '#ppdb';
-            else if (selectedTopic === 'tahfidz') targetId = '#program';
-            else if (selectedTopic === 'adab') targetId = '#kisah';
-            else if (selectedTopic === 'lokasi') targetId = '#about';
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            alert('Navigasi SDTQ ATTAMAM (Great Walstead Edition):\n- Our Philosophy\n- Character & 7Cs\n- Countryside Campus\n- Kurikulum\n- Book a Visit (PPDB)');
         });
     }
 
-    // 2. Mobile Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            alert('Navigasi SDTQ ATTAMAM:\n- Tentang Kami\n- Program & SKL\n- Galeri Kegiatan\n- PPDB 2025-2026');
-        });
-    }
-
-    // 3. Smooth Anchor Links
+    // 2. Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
