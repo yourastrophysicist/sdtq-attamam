@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Korowa All-Navy Theme dengan Stiker Alat Tulis y.jpg
+   SDTQ ATTAMAM — Korowa All-Navy Theme dengan Stiker Potongan Asli y.jpg
    Latar Belakang: All-Navy Blue (#0B1C38 & #061124)
    ========================================================================== */
 
@@ -95,148 +95,108 @@ h1 em, h2 em, h3 em, p em {
 }
 
 /* ==========================================================================
-   STIKER ALAT TULIS IMUT (DARI Y.JPG: GUNTING, STAPLER, KRAYON, PENGGARIS, DLL)
+   STIKER POTONGAN FOTO ASLI (REAL CUTOUT STICKERS FROM Y.JPG)
    ========================================================================== */
 
-.whimsy-sticker {
+.real-cutout-sticker {
     position: absolute;
     z-index: 10;
     user-select: none;
     pointer-events: auto;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.7));
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.whimsy-sticker:hover {
-    transform: scale(1.18) rotate(0deg) !important;
+.real-cutout-sticker img {
+    display: block;
+    height: auto;
+}
+
+.real-cutout-sticker:hover {
+    transform: scale(1.2) rotate(0deg) !important;
     z-index: 20;
 }
 
-.sticker-inner {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 15px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    border: 3px solid #FFFFFF;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
-    background: #FFFFFF;
-    color: var(--navy-bg-deep);
+/* Ukuran & Posisi Masing-Masing Stiker Alat Tulis y.jpg */
+.img-scissors {
+    top: 14%;
+    left: 2%;
+    width: 130px;
+    transform: rotate(-15deg);
 }
 
-/* Variasi Warna Stiker Alat Tulis */
-.white-sticker {
-    background: #FFFFFF;
-    color: #1E293B;
+.img-stapler {
+    top: 22%;
+    right: 3%;
+    width: 95px;
+    transform: rotate(14deg);
 }
 
-.red-sticker {
-    background: #FCA5A5;
-    color: #991B1B;
-}
-
-.wood-sticker {
-    background: #FEF08A;
-    color: #854D0E;
-}
-
-.pink-sticker {
-    background: #FBCFE8;
-    color: #9D174D;
-}
-
-.button-sticker {
-    background: #EF4444;
-    color: #FFFFFF;
-    border-radius: 50px;
-}
-
-.pen-sticker {
-    background: #1E293B;
-    color: #FDE047;
-}
-
-.purple-sticker {
-    background: #DDD6FE;
-    color: #5B21B6;
-}
-
-.clip-sticker {
-    background: #F472B6;
-    color: #FFFFFF;
-}
-
-/* Posisi Stiker Alat Tulis Per Seksi */
-.sticker-scissors {
-    top: 15%;
-    left: 3%;
-    transform: rotate(-12deg);
-}
-
-.sticker-crayola {
-    top: 25%;
-    right: 4%;
-    transform: rotate(15deg);
-}
-
-.sticker-ruler {
+.img-crayons {
     bottom: 12%;
-    left: 6%;
-    transform: rotate(-6deg);
-}
-
-.sticker-tape-measure {
-    top: 10%;
-    right: 5%;
+    left: 4%;
+    width: 75px;
     transform: rotate(-10deg);
 }
 
-.sticker-button-red {
-    bottom: 15%;
-    left: 4%;
-    transform: rotate(12deg);
-}
-
-.sticker-pen {
-    top: 8%;
+.img-tape-measure {
+    top: 10%;
     right: 4%;
-    transform: rotate(8deg);
+    width: 140px;
+    transform: rotate(-12deg);
 }
 
-.sticker-stapler {
-    top: 12%;
+.img-tape-dispenser {
+    bottom: 12%;
     left: 3%;
-    transform: rotate(-14deg);
-}
-
-.sticker-paperclip {
-    bottom: 15%;
-    right: 5%;
+    width: 130px;
     transform: rotate(10deg);
 }
 
-.sticker-pencil {
+.img-ruler {
     top: 8%;
-    right: 5%;
-    transform: rotate(-8deg);
+    right: 3%;
+    width: 70px;
+    transform: rotate(15deg);
 }
 
-.sticker-whiteout {
-    top: 10%;
-    left: 4%;
+.img-pen {
+    top: 12%;
+    left: 2%;
+    width: 65px;
+    transform: rotate(-14deg);
+}
+
+.img-pencil {
+    bottom: 15%;
+    right: 4%;
+    width: 70px;
     transform: rotate(12deg);
 }
 
-/* Animasi Stiker Floating & Wobble */
+.img-eraser {
+    top: 8%;
+    right: 4%;
+    width: 110px;
+    transform: rotate(-8deg);
+}
+
+.img-cream {
+    top: 10%;
+    left: 3%;
+    width: 85px;
+    transform: rotate(14deg);
+}
+
+/* Animasi Stiker Melayang & Wobble */
 @keyframes floatAnim {
     0%, 100% { transform: translateY(0) rotate(-8deg); }
-    50% { transform: translateY(-10px) rotate(-3deg); }
+    50% { transform: translateY(-12px) rotate(-3deg); }
 }
 
 @keyframes wobbleAnim {
-    0%, 100% { transform: rotate(-10deg); }
-    50% { transform: rotate(10deg); }
+    0%, 100% { transform: rotate(-12deg); }
+    50% { transform: rotate(12deg); }
 }
 
 @keyframes pulseAnim {
@@ -246,7 +206,7 @@ h1 em, h2 em, h3 em, p em {
 
 .float-anim { animation: floatAnim 4s ease-in-out infinite; }
 .wobble-anim { animation: wobbleAnim 5s ease-in-out infinite; }
-.pulse-anim { animation: pulseAnim 3s ease-in-out infinite; }
+.pulse-anim { animation: pulseAnim 3.5s ease-in-out infinite; }
 
 /* ==========================================================================
    POLAROID STICKER CARD (Y.JPG INTEGRATION)
@@ -1022,5 +982,5 @@ h1 em, h2 em, h3 em, p em {
     .header-inner-wrap { padding: 0.8rem 1rem; }
     .nav-text-link { display: none; }
     .stats-grid-korowa, .cards-grid-3, .photo-grid-3, .grid-2-equal, .ppdb-split-grid { grid-template-columns: 1fr; }
-    .whimsy-sticker { display: none; }
+    .real-cutout-sticker { display: none; }
 }
