@@ -205,44 +205,68 @@
             </div>
         </section>
 
-        <!-- DOKUMENTASI KEGIATAN SANTRI -->
-        <section class="seksi seksi--garis seksi--gelap" id="kegiatan">
+        <!-- DOKUMENTASI KEGIATAN SANTRI DENGAN SLIDESHOW ANIMASI -->
+        <section class="seksi seksi--garis seksi--gelap pos-relative" id="kegiatan">
             <div class="wrap">
                 <div class="kepala kepala--tengah">
-                    <span class="eyebrow"><i></i>KEGIATAN SANTRI</span>
+                    <span class="eyebrow"><i></i>DOKUMENTASI KEGIATAN SANTRI</span>
                     <h2>Suasana Belajar Nyaman & Terbimbing di Cipanas Garut</h2>
-                    <p class="lead">Jumlah siswa per kelas yang terukur agar pembimbingan hafalan berlangsung maksimal.</p>
+                    <p class="lead">Dokumentasi langsung suasana pembelajaran, kebersamaan santri, dan aktivitas di SDTQ ATTAMAM Garut.</p>
                 </div>
 
-                <div class="fitur">
-                    <div class="fitur__teks">
-                        <div class="fitur__no">DOKUMENTASI 01</div>
-                        <h2>Pembiasaan Adab & Pembimbingan Kelas Kecil</h2>
-                        <ul class="daftar">
-                            <li><i class="fas fa-check"></i><span>Wudhu syar'i, cara menjawab salam, dan adab menghormati guru</span></li>
-                            <li><i class="fas fa-check"></i><span>Kelas kondusif sehingga guru mengenali sifat dan membimbing tiap santri</span></li>
-                        </ul>
-                    </div>
-                    <div class="fitur__gbr">
-                        <div class="card-frame-neat">
-                            <img src="images/picture1.jpg" alt="Santri Belajar Adab Bersama" class="neat-card-img" />
+                <!-- ANIMATED SLIDESHOW CAROUSEL Utama -->
+                <div class="galeri-slider-wrap">
+                    <div class="galeri-slider" id="galeriSlider">
+                        <div class="galeri-slide active">
+                            <img src="images/kegiatan_1.jpg" alt="Kegiatan Santri SDTQ ATTAMAM 1" />
+                            <div class="galeri-caption">Pembiasaan Adab, Tilawah & Hafalan Al-Qur'an Santri</div>
+                        </div>
+                        <div class="galeri-slide">
+                            <img src="images/kegiatan_2.jpg" alt="Kegiatan Santri SDTQ ATTAMAM 2" />
+                            <div class="galeri-caption">Bimbingan Karakter & Pembiasaan Doa Harian</div>
+                        </div>
+                        <div class="galeri-slide">
+                            <img src="images/kegiatan_3.jpg" alt="Kegiatan Santri SDTQ ATTAMAM 3" />
+                            <div class="galeri-caption">Bimbingan Tahfidz Al-Qur'an Metode Sima'i</div>
+                        </div>
+                        <div class="galeri-slide">
+                            <img src="images/kegiatan_4.jpg" alt="Kegiatan Santri SDTQ ATTAMAM 4" />
+                            <div class="galeri-caption">Kebersamaan & Pembelajaran Kelas Kondusif</div>
+                        </div>
+                        <div class="galeri-slide">
+                            <img src="images/picture1.jpg" alt="Kegiatan Santri SDTQ ATTAMAM 5" />
+                            <div class="galeri-caption">Pembimbingan Kelas Kecil oleh Guru Berdedikasi</div>
+                        </div>
+                        <div class="galeri-slide">
+                            <img src="images/picture2.jpg" alt="Kegiatan Santri SDTQ ATTAMAM 6" />
+                            <div class="galeri-caption">Ruang Kelas Nyaman di Cipanas Garut</div>
                         </div>
                     </div>
+
+                    <!-- Navigasi Panah & Dots Slider -->
+                    <button class="slider-btn prev-btn" id="prevSlide" aria-label="Foto Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next-btn" id="nextSlide" aria-label="Foto Selanjutnya"><i class="fas fa-chevron-right"></i></button>
+
+                    <div class="slider-dots" id="sliderDots"></div>
                 </div>
 
-                <div class="fitur fitur--balik">
-                    <div class="fitur__teks">
-                        <div class="fitur__no">DOKUMENTASI 02</div>
-                        <h2>Ruang Kelas Nyaman & Alam Cipanas yang Sejuk</h2>
-                        <ul class="daftar">
-                            <li><i class="fas fa-check"></i><span>Lokasi strategis di Objek Wisata Cipanas (Belakang Kolam Purbasari)</span></li>
-                            <li><i class="fas fa-check"></i><span>Udara sejuk dan lingkungan aman untuk tumbuh kembang anak</span></li>
-                        </ul>
+                <!-- GRID 4 KARTU FOTO DENGAN HOVER MICRO-ANIMATION -->
+                <div class="galeri-grid mt-4">
+                    <div class="galeri-item" onclick="setGaleriSlide(0)">
+                        <img src="images/kegiatan_1.jpg" alt="Kegiatan Santri 1" />
+                        <div class="galeri-overlay"><span><i class="fas fa-expand-alt"></i> Lihat Foto 1</span></div>
                     </div>
-                    <div class="fitur__gbr">
-                        <div class="card-frame-neat">
-                            <img src="images/picture2.jpg" alt="Ruang Kelas Santri ATTAMAM" class="neat-card-img" />
-                        </div>
+                    <div class="galeri-item" onclick="setGaleriSlide(1)">
+                        <img src="images/kegiatan_2.jpg" alt="Kegiatan Santri 2" />
+                        <div class="galeri-overlay"><span><i class="fas fa-expand-alt"></i> Lihat Foto 2</span></div>
+                    </div>
+                    <div class="galeri-item" onclick="setGaleriSlide(2)">
+                        <img src="images/kegiatan_3.jpg" alt="Kegiatan Santri 3" />
+                        <div class="galeri-overlay"><span><i class="fas fa-expand-alt"></i> Lihat Foto 3</span></div>
+                    </div>
+                    <div class="galeri-item" onclick="setGaleriSlide(3)">
+                        <img src="images/kegiatan_4.jpg" alt="Kegiatan Santri 4" />
+                        <div class="galeri-overlay"><span><i class="fas fa-expand-alt"></i> Lihat Foto 4</span></div>
                     </div>
                 </div>
             </div>
