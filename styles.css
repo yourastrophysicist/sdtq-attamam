@@ -1139,7 +1139,12 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: bottom center;
     display: block;
+}
+
+.img-focus-kids, .galeri-slide img.img-focus-kids, .galeri-item img.img-focus-kids {
+    object-position: 50% 90% !important;
 }
 
 /* TANPA GARIS HORISONTAL (BORDER-TOP DIBUANG) */
