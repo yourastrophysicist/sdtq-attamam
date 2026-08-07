@@ -867,8 +867,28 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
    RESPONSIVE LAYOUT KHUSUS HP (TAMPILKAN STIKER BERGERAK DI ZONA AMAN MARJIN)
    ========================================================================== */
 
+.nav__mobile-cta {
+    display: none;
+}
+
 @media (max-width: 990px) {
-    .nav__burger { display: flex; }
+    .nav__aksi .btn {
+        display: none !important; /* Hide header yellow button on mobile to prevent overlap with hamburger menu */
+    }
+
+    .nav__burger {
+        display: flex !important;
+        align-self: center;
+        padding: 8px;
+    }
+
+    .nav__mobile-cta {
+        display: inline-flex !important;
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+        justify-content: center;
+    }
     
     /* Overlay Drawer Menu Mobile */
     .nav__tautan {
