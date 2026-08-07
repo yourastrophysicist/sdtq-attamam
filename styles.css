@@ -1545,7 +1545,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     opacity: 1;
 }
 
-/* LEGAL BADGES NPSN & SK IZIN OPERASIONAL */
+/* LEGAL BADGES NPSN & SK IZIN OPERASIONAL (APPLE MINIMALIST GLASS BADGES) */
 .legal-badges-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -1556,59 +1556,40 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .legal-badge {
-    background: rgba(11, 28, 56, 0.9);
-    border: 1px solid rgba(0, 200, 255, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: rgba(255, 255, 255, 0.95);
     font-size: 0.85rem;
+    font-weight: 500;
     padding: 8px 18px;
-    border-radius: 50px;
-    box-shadow: 0 6px 18px rgba(0, 180, 255, 0.2);
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: badgePulse 3s infinite ease-in-out;
+    animation: none !important;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
 }
 
 .legal-badge:hover {
-    transform: translateY(-4px) scale(1.03);
-    border-color: var(--yellow-primary);
-    box-shadow: 0 10px 25px rgba(0, 200, 255, 0.4);
+    transform: translateY(-2px);
+    border-color: #FF9500;
+    color: #FF9500;
+    background: rgba(255, 149, 0, 0.1);
+    box-shadow: 0 4px 14px rgba(255, 149, 0, 0.25);
 }
 
-@keyframes badgePulse {
-    0%, 100% {
-        transform: translateY(0);
-        box-shadow: 0 6px 18px rgba(0, 180, 255, 0.2);
-        border-color: rgba(0, 200, 255, 0.45);
-    }
-    50% {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 24px rgba(0, 200, 255, 0.4);
-        border-color: rgba(255, 214, 0, 0.65);
-    }
-}
-
-/* ANIMASI GLOW PULSE PADA TOMBOL HERO SPMB */
+/* HERO SPMB CTA BUTTON (CLEAN APPLE ORANGE BUTTON - NO NEON GLOW PULSE) */
 .hero__cta {
     margin-top: 0.5rem;
 }
 
 .hero__cta .btn--pri {
-    animation: btnGlowPulse 2.2s infinite ease-in-out;
-    padding: 1.1rem 2.4rem !important;
-    font-size: 1.15rem !important;
-}
-
-@keyframes btnGlowPulse {
-    0%, 100% {
-        box-shadow: 0 8px 25px rgba(255, 214, 0, 0.45), 0 0 15px rgba(255, 214, 0, 0.2);
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 0 14px 38px rgba(255, 214, 0, 0.75), 0 0 28px rgba(255, 214, 0, 0.45);
-        transform: scale(1.03);
-    }
+    animation: none !important;
+    padding: 1rem 2.4rem !important;
+    font-size: 1.05rem !important;
 }
 
 .img-tone-matched {
