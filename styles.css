@@ -382,13 +382,25 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     overflow: hidden;
 }
 
-.hero__benda, .seksi__benda, .hero__benda--quran, .seksi__benda--quran-tentang, .seksi__benda--quran-kisah {
+/* ==========================================================================
+   MACTAHOE 3D SQUIRCLE ICON DESIGN SYSTEM (VINCELIUICE/MACTAHOE-ICON-THEME)
+   - macOS Tahoe Apple Squircle curvature (border-radius: 22.5%)
+   - Rich 3D depth elevation, translucent glass sheen & realistic lighting
+   - Smooth 3D drop shadows (drop-shadow: 0 14px 28px rgba(0, 0, 0, 0.5))
+   ========================================================================== */
+
+.hero__benda, .seksi__benda, .hero__benda--quran, .seksi__benda--quran-tentang, .seksi__benda--quran-kisah, .seksi__benda--quran-pilar, .seksi__benda--quran-kekhasan, .seksi__benda--quran-kegiatan, .seksi__benda--quran-spmb {
     position: absolute;
-    max-width: 110px !important;
+    max-width: 105px !important;
     max-height: 100px !important;
     object-fit: contain !important;
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+    border-radius: 22.5%;
+    filter: 
+        drop-shadow(0 14px 28px rgba(0, 0, 0, 0.5))
+        brightness(1.04)
+        contrast(1.02);
     user-select: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
 /* EFFEK GERAK ANIMASI DINAMIS & SMOOTH (FLOATING MOTION) */
