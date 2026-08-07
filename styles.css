@@ -214,11 +214,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   APPLE PRODUCT PAGE BUTTON SYSTEM (WHIITEROSE/APPLE STYLE - CLEAN ORANGE HIGHLIGHT)
+   MINIMALIST NAVY GLASS BUTTON SYSTEM (TRANSLUCENT NAVY WITH OPACITY)
    - Ultra-clean pill shapes (border-radius: 9999px)
-   - Hover highlight: STRICTLY APPLE BRAND ORANGE (#FF9500 / #FF9800), NO RAINBOW/COLORFUL
-   - Primary: Solid Apple Orange (#FF9500)
-   - Secondary: Frosted dark pill with vibrant Apple Orange highlight rim & text glow on hover
+   - Translucent dark navy background with subtle opacity (rgba(11, 28, 56, 0.65))
+   - Clean subtle white glass border rim (no orange border anywhere)
+   - Smooth 0.2s hover/active tactile feedback
    ========================================================================== */
 
 .btn {
@@ -237,11 +237,17 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     user-select: none;
     position: relative;
     outline: none;
+    background: rgba(11, 28, 56, 0.65);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .btn:focus-visible {
-    outline: 2px solid #FF9500;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
     outline-offset: 2px;
 }
 
@@ -260,47 +266,50 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     border-radius: 9999px;
 }
 
-/* PRIMARY ACTION "Daftar SPMB" - SOLID APPLE ORANGE (#FF9500) */
+/* PRIMARY ACTION "Daftar SPMB" - TRANSLUCENT NAVY GLASS WITH OPACITY */
 .btn--pri {
-    background-color: #FF9500;
+    background: rgba(18, 44, 86, 0.85);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 4px 14px rgba(255, 149, 0, 0.35);
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
 .btn--pri:hover {
-    background-color: #FF9F0A;
-    border-color: #FFB340;
+    background: rgba(26, 58, 110, 0.95);
+    border-color: rgba(255, 255, 255, 0.45);
     color: #ffffff;
-    box-shadow: 0 6px 20px rgba(255, 149, 0, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 .btn--pri:active {
     transform: scale(0.97);
-    background-color: #E68600;
-    box-shadow: 0 2px 8px rgba(255, 149, 0, 0.3);
+    background: rgba(11, 28, 56, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* SECONDARY ACTION - FROSTED PILL WITH VIBRANT APPLE ORANGE HOVER HIGHLIGHT */
+/* SECONDARY ACTION - TRANSLUCENT DARK NAVY GLASS PILL */
 .btn--sec {
-    background-color: rgba(255, 255, 255, 0.08);
+    background: rgba(11, 28, 56, 0.45);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn--sec:hover {
-    background-color: rgba(255, 149, 0, 0.12);
-    border-color: #FF9500;
-    color: #FF9500;
-    box-shadow: 0 4px 16px rgba(255, 149, 0, 0.35);
+    background: rgba(18, 42, 80, 0.75);
+    border-color: rgba(255, 255, 255, 0.32);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .btn--sec:active {
     transform: scale(0.97);
-    background-color: rgba(255, 149, 0, 0.18);
+    background: rgba(11, 28, 56, 0.65);
 }
 
 .nav__burger {
@@ -380,7 +389,6 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     object-fit: contain !important;
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
     user-select: none;
-    animation: none !important;
 }
 
 /* EFFEK GERAK ANIMASI DINAMIS & SMOOTH (FLOATING MOTION) */
