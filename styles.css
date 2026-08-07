@@ -143,23 +143,30 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   HEADER & NAVIGASI MOBILE DRAWER
+   HEADER & NAVIGASI FLOATING GLASS PILL (DRIBBBLE SCHOOL EXPLORATION STYLE)
    ========================================================================== */
 
 .nav {
-    background: rgba(11, 28, 56, 0.96);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border-navy);
+    background: rgba(11, 28, 56, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
     position: sticky;
-    top: 0;
+    top: 1rem;
     z-index: 1000;
-    padding: 0.85rem 0;
+    margin: 1rem auto 0;
+    width: calc(100% - 2rem);
+    max-width: 1140px;
+    padding: 0.65rem 1.6rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
 .nav .wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 
 .merek {
@@ -170,10 +177,10 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .merek__m {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     background: #FFFFFF;
-    border-radius: 8px;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,19 +188,20 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .merek__m img {
-    height: 34px;
+    height: 32px;
     width: auto;
 }
 
 .merek__t {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #FFFFFF;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .merek__t span {
-    color: var(--yellow-primary);
+    color: #FFFFFF;
+    opacity: 0.9;
 }
 
 .nav__tautan {
@@ -202,15 +210,62 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .nav__tautan a {
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.88);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.88rem;
-    transition: color 0.2s;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .nav__tautan a:hover {
-    color: var(--yellow-primary);
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   HERO SECTION (DRIBBBLE MODERN SCHOOL EXPLORATION LAYOUT)
+   ========================================================================== */
+
+.hero {
+    padding: 7.5rem 0 8rem;
+    text-align: center;
+    background: radial-gradient(circle at 50% 30%, rgba(20, 50, 95, 0.6) 0%, #061124 75%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__isi {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.hero__judul {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size: clamp(2.5rem, 5.8vw, 4.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+.lead {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.6;
+    margin-bottom: 2.2rem;
+    font-weight: 400;
+}
+
+.hero__cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
 /* ==========================================================================
