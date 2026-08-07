@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Animated Photo Slideshow Gallery Handler
+    // 3. Animated Photo Slideshow Gallery Handler (Horizontal Sliding Track)
+    const track = document.getElementById('galeriTrack');
     const slides = document.querySelectorAll('.galeri-slide');
     const dotsContainer = document.getElementById('sliderDots');
     const prevBtn = document.getElementById('prevSlide');
@@ -61,10 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval;
 
     function showSlide(index) {
-        if (!slides.length) return;
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
+        if (!slides.length || !track) return;
+        track.style.transform = `translateX(-${index * 100}%)`;
         const dots = document.querySelectorAll('.slider-dots .dot');
         dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
@@ -107,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slideInterval = setInterval(() => {
                 let next = (currentSlide + 1) % slides.length;
                 showSlide(next);
-            }, 3500);
+            }, 3600);
         }
 
         function resetTimer() {
