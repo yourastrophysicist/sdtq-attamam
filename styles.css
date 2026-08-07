@@ -1468,23 +1468,31 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     50% { border-color: var(--yellow-primary); }
 }
 
-mark.typo-highlight {
-    background: rgba(0, 200, 255, 0.18);
+span.hl-cyan {
     color: #00E5FF;
-    padding: 2px 8px;
-    border-radius: 4px;
     font-style: italic;
     font-weight: 700;
+    transition: background 0.3s ease, padding 0.3s ease;
 }
 
-mark.typo-gold {
-    background: rgba(255, 214, 0, 0.25);
-    color: var(--yellow-primary);
-    padding: 2px 10px;
+span.hl-cyan.hl-active {
+    background: rgba(0, 200, 255, 0.2);
     border-radius: 4px;
+    padding: 2px 8px;
+}
+
+span.hl-gold {
+    color: var(--yellow-primary);
     font-style: italic;
     font-weight: 800;
-    text-shadow: 0 0 10px rgba(255, 214, 0, 0.3);
+    text-shadow: 0 0 10px rgba(255, 214, 0, 0.4);
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+span.hl-gold.hl-active {
+    background: rgba(255, 214, 0, 0.25);
+    border-radius: 4px;
+    padding: 2px 10px;
 }
 
 .editorial-quote-footer {

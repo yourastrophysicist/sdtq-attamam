@@ -117,39 +117,44 @@ document.addEventListener('DOMContentLoaded', () => {
         startTimer();
     }
 
-    // 4. Typewriter Effect for Editorial Quote Showcase
+    // 4. Typewriter Effect for Editorial Quote Showcase (DOM Node Revealer - No Empty Highlight Boxes)
     const quoteElement = document.getElementById('typewriterQuote');
     if (quoteElement) {
-        const fullHTML = quoteElement.innerHTML.trim();
-        quoteElement.innerHTML = '';
-        quoteElement.classList.add('typewriter-active');
+        // Collect all text nodes in order
+        const textNodes = [];
+        const walk = document.createTreeWalker(quoteElement, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+        while ((node = walk.nextNode())) {
+            textNodes.push({
+                node: node,
+                fullText: node.nodeValue,
+                parent: node.parentElement
+            });
+            node.nodeValue = ''; // Clear text content initially
+        }
 
+        let nodeIndex = 0;
         let charIndex = 0;
-        let isTag = false;
-        let tagBuffer = '';
         let hasTyped = false;
 
         function typeNextChar() {
-            if (charIndex < fullHTML.length) {
-                let char = fullHTML.charAt(charIndex);
-                if (char === '<') isTag = true;
+            if (nodeIndex < textNodes.length) {
+                const currentObj = textNodes[nodeIndex];
 
-                if (isTag) {
-                    tagBuffer += char;
-                    if (char === '>') {
-                        isTag = false;
-                        quoteElement.innerHTML += tagBuffer;
-                        tagBuffer = '';
-                    }
-                } else {
-                    quoteElement.innerHTML += char;
+                // Activate highlight background as soon as text inside highlighted span starts typing
+                if (currentObj.parent && (currentObj.parent.classList.contains('hl-cyan') || currentObj.parent.classList.contains('hl-gold'))) {
+                    currentObj.parent.classList.add('hl-active');
                 }
 
+                currentObj.node.nodeValue += currentObj.fullText.charAt(charIndex);
                 charIndex++;
-                setTimeout(typeNextChar, isTag ? 0 : 25);
-            } else {
-                quoteElement.classList.remove('typewriter-active');
-                quoteElement.classList.add('typewriter-finished');
+
+                if (charIndex >= currentObj.fullText.length) {
+                    nodeIndex++;
+                    charIndex = 0;
+                }
+
+                setTimeout(typeNextChar, 25);
             }
         }
 
