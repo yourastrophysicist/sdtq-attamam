@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Malatak-Kelola Layout dengan Aksesori Kuning Cerah & Teks Putih
+   SDTQ ATTAMAM — Responsive HP/Mobile Architecture
    Latar Belakang: All-Navy Blue (#0B1C38 & #061124) + Kuning (#FFD600) + Putih (#FFFFFF)
    ========================================================================== */
 
@@ -53,6 +53,7 @@ body.korowa-all-navy {
     color: #FFFFFF;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 .wrap {
@@ -137,7 +138,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   HEADER & NAVIGASI MALATAK-KELOLA
+   HEADER & NAVIGASI MOBILE DRAWER
    ========================================================================== */
 
 .nav {
@@ -258,6 +259,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    padding: 6px;
 }
 
 .nav__burger span {
@@ -265,10 +267,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     height: 2px;
     background: #FFFFFF;
     border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 /* ==========================================================================
-   HERO MALATAK-KELOLA (DENGAN BATAS MAKSIMAL ELEMEN DEKORATIF KECIL)
+   HERO MALATAK-KELOLA
    ========================================================================== */
 
 .hero {
@@ -287,14 +290,14 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .hero__judul {
-    font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+    font-size: clamp(2.4rem, 5.5vw, 4.5rem);
     line-height: 1.15;
     margin-bottom: 1.5rem;
     color: #FFFFFF;
 }
 
 .lead {
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    font-size: clamp(1.02rem, 1.8vw, 1.25rem);
     color: #FFFFFF;
     line-height: 1.6;
     margin-bottom: 2.5rem;
@@ -337,6 +340,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .seksi__benda--stat6 { top: 10%; left: 4%; transform: rotate(12deg); }
 .seksi__benda--stat10 { top: 12%; right: 4%; transform: rotate(-14deg); }
 .seksi__benda--stat11 { top: 10%; left: 4%; transform: rotate(8deg); }
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(4deg); }
+}
 
 /* PITA RUNNING TICKER KUNING CERAH */
 .pita {
@@ -760,13 +768,92 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* RESPONSIVE */
+/* ==========================================================================
+   RESPONSIVE DESIGN KHUSUS HP & SMARTPHONE (320PX - 990PX)
+   ========================================================================== */
+
 @media (max-width: 990px) {
-    .nav__tautan { display: none; }
     .nav__burger { display: flex; }
-    .fitur, .fitur--balik, .news-highlight-grid { grid-template-columns: 1fr; grid-template-areas: none; }
-    .otak { grid-template-columns: 1fr; }
-    .otak__inti { height: 120px; border-radius: 16px; }
-    .kisi-2, .kaki__atas { grid-template-columns: 1fr; }
-    .hero__dekor { display: none; }
+    
+    /* Overlay Drawer Menu Mobile */
+    .nav__tautan {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #061124;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.8rem 2rem;
+        border-bottom: 3px solid var(--yellow-primary);
+        box-shadow: 0 16px 36px rgba(0,0,0,0.9);
+        z-index: 999;
+    }
+
+    .nav__tautan--active {
+        display: flex !important;
+    }
+
+    .nav__tautan a {
+        font-size: 1.05rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px dashed var(--border-navy);
+    }
+
+    .fitur, .fitur--balik, .news-highlight-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        gap: 2.5rem;
+    }
+
+    .otak {
+        grid-template-columns: 1fr;
+    }
+
+    .otak__inti {
+        height: 110px;
+        border-radius: var(--radius-md);
+    }
+
+    .kisi-2, .kaki__atas {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Penyesuaian Stiker Dekoratif di Layar HP */
+    .hero__benda {
+        max-width: 60px !important;
+        max-height: 60px !important;
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 580px) {
+    .wrap { padding: 0 1.1rem; }
+
+    .merek__t { font-size: 1.05rem; }
+    .merek__arabic { font-size: 0.78rem; }
+    .arabic-hero-title { font-size: 1.6rem; }
+    
+    .hero { padding: 4.5rem 0 5.5rem; }
+    .hero__judul { font-size: 2.1rem; }
+    .lead { font-size: 0.98rem; }
+
+    .btn--lg {
+        width: 100%;
+        padding: 0.85rem 1.4rem;
+        font-size: 0.95rem;
+    }
+
+    .harga { padding: 1.6rem 1.2rem; }
+    .harga__rp { font-size: 1.8rem; }
+    
+    .neat-card-img { height: 220px; }
+
+    .kaki__bawah {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
 }
