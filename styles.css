@@ -5,29 +5,33 @@
 
 :root {
     --font-serif-italic: 'Instrument Serif', Georgia, serif;
-    --font-sans-body: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
+    --font-sans-body: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
     --font-arabic: 'Amiri', Georgia, serif;
     
-    /* Latar Belakang Biru Dongker */
+    /* Latar Belakang Biru Dongker macOS */
     --navy-bg-deep: #061124;
     --navy-bg-main: #0B1C38;
     --navy-card: #122544;
     --navy-card-hover: #19325A;
     
-    /* Aksesori KUNING CERAH (Bukan Emas) */
-    --yellow-primary: #FFD600;
-    --yellow-dark: #EAB308;
-    --yellow-tint: rgba(255, 214, 0, 0.18);
+    /* Aksesori ORANGE BRAND LOGO ATTAMAM (#FF9800) & PUTIH (#FFFFFF) */
+    --orange-primary: #FF9800;
+    --orange-dark: #E65100;
+    --orange-tint: rgba(255, 152, 0, 0.18);
+    
+    --yellow-primary: #FF9800; /* Direct mapping all yellow tokens to warm logo orange */
+    --yellow-dark: #E65100;
+    --yellow-tint: rgba(255, 152, 0, 0.18);
     
     --green-accent: #10B981;
     
-    /* Teks & Elemen Semuanya PUTIH MURNI */
+    /* Teks & Elemen Semuanya PUTIH MURNI (#FFFFFF) & ORANGE */
     --fg-main: #FFFFFF;
     --fg-sub: #FFFFFF;
-    --fg-mute: rgba(255, 255, 255, 0.78);
+    --fg-mute: rgba(255, 255, 255, 0.82);
     
     --border-navy: rgba(255, 255, 255, 0.15);
-    --border-yellow: rgba(255, 214, 0, 0.4);
+    --border-yellow: rgba(255, 152, 0, 0.45);
     
     --radius-sm: 8px;
     --radius-md: 16px;
