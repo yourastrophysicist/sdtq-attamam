@@ -213,65 +213,83 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 0.75rem 1.6rem;
-    border-radius: 50px;
+    gap: 10px;
+    padding: 0.75rem 1.7rem;
+    border-radius: 999px;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
     text-decoration: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
-    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn--sm {
-    padding: 0.5rem 1.1rem;
-    font-size: 0.82rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.84rem;
+    border-radius: 999px;
 }
 
 .btn--lg {
-    padding: 0.9rem 2.2rem;
-    font-size: 1rem;
+    padding: 1rem 2.4rem;
+    font-size: 1.05rem;
+    border-radius: 999px;
 }
 
+/* PRIMARY CTA "Daftar SPMB" - BRAND ORANGE GLASS (LIKE LOGO COLOR) */
 .btn--pri {
-    background: linear-gradient(135deg, #FFD600 0%, #FFB300 100%);
-    color: #061124;
+    background: linear-gradient(135deg, #FF9100 0%, #E65100 100%);
+    color: #FFFFFF;
     font-weight: 800;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 6px 20px rgba(255, 214, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 10px 28px rgba(255, 145, 0, 0.45),
+        inset 0 1.5px 2px rgba(255, 255, 255, 0.7),
+        inset 0 -1.5px 2px rgba(0, 0, 0, 0.25);
 }
 
 .btn--pri:hover {
-    background: linear-gradient(135deg, #FFFFFF 0%, #FFD600 100%);
-    color: #061124;
+    background: linear-gradient(135deg, #FFA726 0%, #F57C00 100%);
+    color: #FFFFFF;
     border-color: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(255, 214, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 14px 35px rgba(255, 145, 0, 0.6),
+        inset 0 2px 3px rgba(255, 255, 255, 0.9);
+}
+
+.btn--pri:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(255, 145, 0, 0.3);
 }
 
 /* MINIMALIST GLASS BUTTON UNTUK SELURUH LINK SEKUNDER */
 .btn--sec {
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     color: rgba(255, 255, 255, 0.92);
     font-weight: 600;
-    box-shadow: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn--sec:hover {
     background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.45);
     color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .btn:hover {
@@ -1813,16 +1831,86 @@ span.hl-gold.hl-active {
     font-size: 0.85rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     /* Sembunyikan stiker dekoratif mengapung di HP & tablet agar 100% bebas tumpang tindih */
     .hero__dekor {
         display: none !important;
     }
+
+    /* Perbaikan Storytelling Card & Grid pada Layar HP/Tablet */
+    .story-grid-portrait {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 1.5rem !important;
+    }
+
+    .story-img-wrap-portrait {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 440px !important;
+        aspect-ratio: 4 / 5 !important;
+    }
+
+    /* Perbaikan Layout Galeri 2 Kolom di Layar HP/Tablet */
+    .galeri-main-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 1.8rem !important;
+    }
+
+    .galeri-slider-wrap {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 520px !important;
+    }
+
+    .slide-split-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 1.2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .slide-img-left {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 380px !important;
+        aspect-ratio: 4 / 5 !important;
+    }
+
+    .slide-story-right {
+        padding-right: 0 !important;
+    }
+
+    .galeri-thumbnails-side {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 1.2rem !important;
+    }
+
+    .side-thumb-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+
+    .side-thumb-grid .galeri-item {
+        height: 100px !important;
+    }
 }
 
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+    }
+
     .media-articles-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .legal-badges-wrap {
@@ -1832,16 +1920,24 @@ span.hl-gold.hl-active {
     }
 
     .editorial-quote-card {
-        padding: 2rem 1.4rem;
+        padding: 1.8rem 1.2rem !important;
     }
 
     .editorial-quote-text {
-        font-size: clamp(1.25rem, 4.5vw, 1.65rem);
+        font-size: clamp(1.2rem, 4.2vw, 1.55rem) !important;
     }
 
     .editorial-quote-footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.2rem;
+    }
+
+    .btn--lg {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 0.95rem !important;
+        padding: 0.9rem 1.4rem !important;
     }
 }
