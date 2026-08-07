@@ -1639,17 +1639,27 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     margin-bottom: 2.8rem;
 }
 
+/* LEGAL BADGES NPSN & SK IZIN OPERASIONAL (LIQUID GLASS PILL BADGES) */
+.legal-badges-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 1.8rem;
+    margin-bottom: 2.8rem;
+}
+
 .legal-badge {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(11, 28, 56, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     color: rgba(255, 255, 255, 0.95);
     font-size: 0.85rem;
     font-weight: 500;
-    padding: 8px 18px;
+    padding: 8px 20px;
     border-radius: 9999px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1659,13 +1669,13 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 
 .legal-badge:hover {
     transform: translateY(-2px);
-    border-color: #FF9500;
-    color: #FF9500;
-    background: rgba(255, 149, 0, 0.1);
-    box-shadow: 0 4px 14px rgba(255, 149, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.45);
+    color: #FFFFFF;
+    background: rgba(20, 50, 95, 0.8);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
 }
 
-/* HERO SPMB CTA BUTTON (CLEAN APPLE ORANGE BUTTON - NO NEON GLOW PULSE) */
+/* HERO SPMB CTA BUTTON (CLEAN LIQUID GLASS BUTTON) */
 .hero__cta {
     margin-top: 0.5rem;
 }
@@ -1696,22 +1706,20 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   MEDIA COVERAGE & ARTICLES SHOWCASE GRID
+   MEDIA COVERAGE & ARTICLES SHOWCASE GRID (LIQUID GLASS PILL CARDS)
    ========================================================================== */
 
-/* EDITORIAL TYPOGRAPHY QUOTE SHOWCASE */
-/* EDITORIAL TYPOGRAPHY QUOTE SHOWCASE (CLEAN APPLE DARK MODE STYLE) */
 .editorial-quote-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-lg);
+    background: rgba(11, 28, 56, 0.6);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 36px;
     padding: 2.4rem 2.8rem;
     max-width: 880px;
     margin: 0 auto 3rem;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
     overflow: hidden;
 }
 
