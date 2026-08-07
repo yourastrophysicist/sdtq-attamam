@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SDTQ ATTAMAM — Responsive HP/Mobile Architecture
+   SDTQ ATTAMAM — Responsive Architecture & Animated Floating Stickers
    Latar Belakang: All-Navy Blue (#0B1C38 & #061124) + Kuning (#FFD600) + Putih (#FFFFFF)
    ========================================================================== */
 
@@ -64,7 +64,6 @@ body.korowa-all-navy {
 
 .pos-relative {
     position: relative;
-    overflow: hidden;
 }
 
 /* Tipografi Heading & Italic (Semua Teks Putih & Aksesori Kuning) */
@@ -90,16 +89,18 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     letter-spacing: 0.08em;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     margin-bottom: 0.8rem;
 }
 
 .eyebrow i {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     background: var(--yellow-primary);
     border-radius: 50%;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .icon-yellow {
@@ -271,7 +272,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   HERO MALATAK-KELOLA
+   HERO & STIKER DEKORATIF BERGERAK (ANIMATED FLOATING STICKERS)
    ========================================================================== */
 
 .hero {
@@ -310,7 +311,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     flex-wrap: wrap;
 }
 
-/* BATASAN STRICT AGAR ELEMEN BENDA / STIKER TIDAK RAKSASA */
+/* ELEMEN DEKORATIF STIKER ANIMASI MELAYANG (ANIMATED MOVING ICONS) */
 .hero__dekor {
     position: absolute;
     top: 0;
@@ -318,32 +319,88 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
     overflow: hidden;
 }
 
 .hero__benda {
     position: absolute;
-    max-width: 120px !important;
-    max-height: 110px !important;
+    max-width: 110px !important;
+    max-height: 100px !important;
     object-fit: contain !important;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-    transition: transform 0.4s ease;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+    user-select: none;
 }
 
-.hero__benda--stat1 { top: 8%; left: 3%; transform: rotate(-12deg); }
-.hero__benda--stat2 { top: 6%; right: 3%; transform: rotate(14deg); }
-.hero__benda--stat3 { bottom: 8%; right: 4%; transform: rotate(-8deg); }
-.hero__benda--stat4 { bottom: 10%; left: 4%; transform: rotate(10deg); }
+/* EFFEK GERAKANIMASI DINAMIS & SMOOTH (FLOATING & BOBBING MOTION) */
+@keyframes floatBobbing {
+    0%, 100% { transform: translateY(0px) rotate(-10deg); }
+    50% { transform: translateY(-16px) rotate(-4deg); }
+}
 
-.seksi__benda--stat5 { top: 12%; right: 4%; transform: rotate(-10deg); }
-.seksi__benda--stat6 { top: 10%; left: 4%; transform: rotate(12deg); }
-.seksi__benda--stat10 { top: 12%; right: 4%; transform: rotate(-14deg); }
-.seksi__benda--stat11 { top: 10%; left: 4%; transform: rotate(8deg); }
+@keyframes wobbleBounce {
+    0%, 100% { transform: translateY(0px) rotate(12deg) scale(1); }
+    50% { transform: translateY(-14px) rotate(6deg) scale(1.08); }
+}
 
-@keyframes floatAnim {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-12px) rotate(4deg); }
+@keyframes floatRotate {
+    0% { transform: translateY(0px) rotate(-6deg); }
+    50% { transform: translateY(-18px) rotate(8deg); }
+    100% { transform: translateY(0px) rotate(-6deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-12px) scale(1.12); }
+}
+
+/* DITAROH DENGAN AMAN LOKASINYA AGAR TIDAK MENUTUPI TEKS SAMA SEKALI */
+.hero__benda--stat1 {
+    top: 5%;
+    left: 1.5%;
+    animation: floatBobbing 4.5s ease-in-out infinite;
+}
+
+.hero__benda--stat2 {
+    top: 4%;
+    right: 1.5%;
+    animation: wobbleBounce 5s ease-in-out infinite 0.5s;
+}
+
+.hero__benda--stat3 {
+    bottom: 6%;
+    right: 2%;
+    animation: floatRotate 5.5s ease-in-out infinite 1s;
+}
+
+.hero__benda--stat4 {
+    bottom: 8%;
+    left: 2%;
+    animation: pulseGlow 4.8s ease-in-out infinite 1.5s;
+}
+
+.seksi__benda--stat5 {
+    top: 8%;
+    right: 2%;
+    animation: floatBobbing 5.2s ease-in-out infinite 0.4s;
+}
+
+.seksi__benda--stat6 {
+    top: 8%;
+    left: 2%;
+    animation: wobbleBounce 4.6s ease-in-out infinite 0.8s;
+}
+
+.seksi__benda--stat10 {
+    top: 10%;
+    right: 2%;
+    animation: floatRotate 5.4s ease-in-out infinite 1.2s;
+}
+
+.seksi__benda--stat11 {
+    top: 8%;
+    left: 2%;
+    animation: pulseGlow 5.1s ease-in-out infinite 0.6s;
 }
 
 /* PITA RUNNING TICKER KUNING CERAH */
@@ -404,11 +461,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   SEKSI BERDERET (SEKSI, FITUR, FITUR--BALIK)
+   SEKSI BERDERET & KARTU FOTO DOKUMENTASI (TIDAK BERBENTROKAN / OVERLAP)
    ========================================================================== */
 
 .seksi {
-    padding: 6rem 0;
+    padding: 5.5rem 0;
 }
 
 .seksi--garis {
@@ -431,13 +488,13 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     color: #FFFFFF;
 }
 
-/* FITUR BLOK MALATAK-KELOLA */
+/* FITUR BLOK LAYOUT BERSIH TANPA TUMPAH TINDIH */
 .fitur {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3.5rem;
     align-items: center;
-    margin-bottom: 5.5rem;
+    margin-bottom: 4.5rem;
 }
 
 .fitur:last-child {
@@ -460,9 +517,9 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .fitur__teks h2 {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    line-height: 1.25;
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
     color: #FFFFFF;
 }
 
@@ -474,8 +531,8 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.98rem;
     color: #FFFFFF;
 }
 
@@ -492,20 +549,22 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     width: 100%;
 }
 
-/* KARTU FOTO KAMPUS TIDAK RAKSASA */
+/* KARTU FOTO KAMPUS RAPIH TANPA DITUMPUK / DICAMPUR TEKS */
 .card-frame-neat {
     width: 100%;
-    max-width: 440px;
+    max-width: 460px;
     background: var(--navy-card);
     border: 1px solid var(--border-navy);
     padding: 10px;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-navy);
+    display: block;
+    margin: 0 auto;
 }
 
 .neat-card-img {
     width: 100%;
-    height: 280px;
+    height: 260px;
     object-fit: cover;
     border-radius: var(--radius-sm);
     display: block;
@@ -769,7 +828,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN KHUSUS HP & SMARTPHONE (320PX - 990PX)
+   RESPONSIVE LAYOUT KHUSUS HP (MENCEGAH TUMPANG TINDIH 100%)
    ========================================================================== */
 
 @media (max-width: 990px) {
@@ -802,17 +861,20 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     }
 
     .fitur, .fitur--balik, .news-highlight-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas: none;
-        gap: 2.5rem;
+        grid-template-columns: 1fr !important;
+        grid-template-areas: none !important;
+        gap: 2.2rem;
     }
+
+    .fitur--balik .fitur__teks { grid-area: auto !important; }
+    .fitur--balik .fitur__gbr { grid-area: auto !important; }
 
     .otak {
         grid-template-columns: 1fr;
     }
 
     .otak__inti {
-        height: 110px;
+        height: 100px;
         border-radius: var(--radius-md);
     }
 
@@ -820,25 +882,23 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
-    /* Penyesuaian Stiker Dekoratif di Layar HP */
-    .hero__benda {
-        max-width: 60px !important;
-        max-height: 60px !important;
-        opacity: 0.8;
-    }
 }
 
-@media (max-width: 580px) {
-    .wrap { padding: 0 1.1rem; }
+/* Sembunyikan Stiker Dekoratif Latar pada Layar HP Kecil agar Tidak Menutupi Teks */
+@media (max-width: 768px) {
+    .hero__dekor {
+        display: none !important; /* Mencegah stiker menutupi teks Arab atau judul di HP */
+    }
 
-    .merek__t { font-size: 1.05rem; }
-    .merek__arabic { font-size: 0.78rem; }
-    .arabic-hero-title { font-size: 1.6rem; }
+    .wrap { padding: 0 1.2rem; }
+
+    .merek__t { font-size: 1.1rem; }
+    .merek__arabic { font-size: 0.8rem; }
+    .arabic-hero-title { font-size: 1.55rem; line-height: 1.3; }
     
-    .hero { padding: 4.5rem 0 5.5rem; }
+    .hero { padding: 3.5rem 0 4.5rem; }
     .hero__judul { font-size: 2.1rem; }
-    .lead { font-size: 0.98rem; }
+    .lead { font-size: 0.98rem; margin-bottom: 1.8rem; }
 
     .btn--lg {
         width: 100%;
@@ -849,7 +909,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     .harga { padding: 1.6rem 1.2rem; }
     .harga__rp { font-size: 1.8rem; }
     
-    .neat-card-img { height: 220px; }
+    .neat-card-img { height: 210px; }
 
     .kaki__bawah {
         flex-direction: column;
