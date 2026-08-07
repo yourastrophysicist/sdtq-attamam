@@ -859,26 +859,30 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .otak__m {
-    background: var(--navy-card);
-    border: 1px solid var(--border-navy);
-    padding: 1.5rem;
-    border-radius: var(--radius-md);
+    background: rgba(11, 28, 56, 0.55);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.6rem 1.8rem;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
 }
 
 .otak__m span {
     width: 44px;
     height: 44px;
-    background: var(--yellow-tint);
-    color: var(--yellow-primary);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .otak__m b {
@@ -895,8 +899,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .otak__inti {
-    background: var(--yellow-primary);
-    color: var(--navy-bg-deep);
+    background: rgba(11, 28, 56, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: #FFFFFF;
     height: 180px;
     border-radius: 50%;
     display: flex;
@@ -904,7 +911,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     justify-content: center;
     text-align: center;
     font-weight: 800;
-    box-shadow: 0 0 40px rgba(255, 214, 0, 0.35);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
 }
 
 .otak__inti b {
@@ -921,7 +928,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   HARGA & KISI CARDS (PPDB & VISI)
+   HARGA & KISI CARDS (PPDB & VISI - LIQUID GLASS PILL CARDS)
    ========================================================================== */
 
 .kisi-2 {
@@ -931,28 +938,35 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 .harga {
-    background: var(--navy-card);
-    border: 1px solid var(--border-navy);
-    border-radius: var(--radius-lg);
+    background: rgba(11, 28, 56, 0.55);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 32px;
     padding: 2.5rem;
     position: relative;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
 }
 
 .harga--unggul {
-    border-color: var(--yellow-primary);
-    background: var(--navy-card-hover);
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(18, 44, 86, 0.65);
 }
 
 .harga__cap {
     position: absolute;
     top: -14px;
     right: 24px;
-    background: var(--yellow-primary);
-    color: var(--navy-bg-deep);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
     font-size: 0.72rem;
     font-weight: 800;
-    padding: 4px 14px;
-    border-radius: 50px;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .harga__nm {
@@ -1843,21 +1857,24 @@ span.hl-gold.hl-active {
 }
 
 .media-card-navy {
-    background: var(--navy-card);
-    border: 1px solid var(--border-navy);
-    border-radius: var(--radius-md);
-    padding: 1.8rem;
+    background: rgba(11, 28, 56, 0.55);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    padding: 2.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: var(--shadow-navy);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .media-card-navy:hover {
     transform: translateY(-4px);
-    border-color: rgba(0, 200, 255, 0.4);
-    box-shadow: 0 16px 36px rgba(0, 180, 255, 0.2);
+    background: rgba(18, 44, 86, 0.75);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
 }
 
 .media-card-header {
@@ -1870,11 +1887,14 @@ span.hl-gold.hl-active {
 .media-tag {
     font-size: 0.78rem;
     font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 50px;
-    background: rgba(11, 28, 56, 0.8);
-    border: 1px solid var(--border-yellow);
-    color: var(--yellow-primary);
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .media-author {
