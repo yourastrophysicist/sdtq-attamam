@@ -150,11 +150,16 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
    HEADER & NAVIGASI FLOATING GLASS PILL (HEAVY BACKDROP BLUR & CLEAN GLASS)
    ========================================================================== */
 
+/* ==========================================================================
+   HEADER & NAVIGASI FLOATING LIQUID GLASS PILL (IYINCHAO/LIQUID-GLASS-STUDIO)
+   - Refraction, Fresnel Rim Reflection & Multi-pass Blur
+   ========================================================================== */
+
 .nav {
-    background: rgba(6, 17, 36, 0.6);
-    backdrop-filter: blur(30px) saturate(200%);
-    -webkit-backdrop-filter: blur(30px) saturate(200%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(32px) saturate(210%) contrast(105%);
+    -webkit-backdrop-filter: blur(32px) saturate(210%) contrast(105%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 9999px;
     position: sticky;
     top: 1rem;
@@ -163,7 +168,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     width: calc(100% - 2rem);
     max-width: 1140px;
     padding: 0.65rem 1.6rem;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45), inset 0 1.5px 0.5px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .nav .wrap {
@@ -183,12 +188,15 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 .merek__m {
     width: 40px;
     height: 40px;
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
 }
 
 .merek__m img {
@@ -273,11 +281,8 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   MINIMALIST CLEAN LIQUID GLASS PILL BUTTON SYSTEM
-   - Ultra-clean pill shapes (border-radius: 9999px)
-   - Translucent dark navy background with subtle opacity (rgba(11, 28, 56, 0.6))
-   - Clean liquid glass rim border with top rim highlight
-   - Smooth 0.2s hover/active tactile feedback
+   IYINCHAO LIQUID GLASS STUDIO BUTTON SYSTEM
+   - Refraction, Fresnel Rim Reflection & Multi-pass Blur
    ========================================================================== */
 
 .btn {
@@ -285,7 +290,7 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 24px;
+    padding: 11px 26px;
     border-radius: 9999px;
     font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-weight: 600;
@@ -296,74 +301,73 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     user-select: none;
     position: relative;
     outline: none;
-    background: rgba(11, 28, 56, 0.6);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(28px) saturate(210%) contrast(105%);
+    -webkit-backdrop-filter: blur(28px) saturate(210%) contrast(105%);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     color: #FFFFFF;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.38), inset 0 1.5px 0.5px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn:focus-visible {
-    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline: 2px solid rgba(255, 255, 255, 0.6);
     outline-offset: 2px;
 }
 
 .btn--sm {
-    padding: 7px 18px;
+    padding: 8px 20px;
     font-size: 13.5px;
     letter-spacing: -0.2px;
     border-radius: 9999px;
 }
 
 .btn--lg {
-    padding: 14px 30px;
+    padding: 15px 32px;
     font-size: 16.5px;
     font-weight: 600;
     letter-spacing: -0.3px;
     border-radius: 9999px;
 }
 
-/* PRIMARY ACTION "Daftar SPMB" - CLEAN LIQUID GLASS PILL */
+/* PRIMARY ACTION "Daftar SPMB" - IYINCHAO LIQUID GLASS PILL */
 .btn--pri {
-    background: rgba(18, 44, 86, 0.82);
+    background: rgba(255, 255, 255, 0.14);
     color: #ffffff;
     font-weight: 700;
-    border: 1px solid rgba(255, 255, 255, 0.32);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), inset 0 1.5px 0.5px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .btn--pri:hover {
-    background: rgba(26, 60, 118, 0.95);
-    border-color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.6);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55), inset 0 2px 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .btn--pri:active {
     transform: scale(0.97);
-    background: rgba(11, 28, 56, 0.95);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.12);
 }
 
-/* SECONDARY ACTION - TRANSLUCENT DARK NAVY GLASS PILL */
+/* SECONDARY ACTION - TRANSLUCENT LIQUID GLASS PILL */
 .btn--sec {
-    background: rgba(11, 28, 56, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     color: #ffffff;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1.5px 0.5px 0 rgba(255, 255, 255, 0.4);
 }
 
 .btn--sec:hover {
-    background: rgba(20, 50, 95, 0.78);
-    border-color: rgba(255, 255, 255, 0.38);
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.45);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), inset 0 1.5px 0.5px 0 rgba(255, 255, 255, 0.55);
 }
 
 .btn--sec:active {
