@@ -1357,6 +1357,102 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
    MEDIA COVERAGE & ARTICLES SHOWCASE GRID
    ========================================================================== */
 
+/* EDITORIAL TYPOGRAPHY QUOTE SHOWCASE */
+.editorial-quote-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(11, 28, 56, 0.98), rgba(6, 17, 36, 0.98));
+    border: 2px solid var(--border-yellow);
+    border-radius: var(--radius-lg);
+    padding: 3rem 3.5rem;
+    max-width: 1080px;
+    margin: 0 auto 3rem;
+    box-shadow: 0 24px 50px rgba(0, 180, 255, 0.22), 0 0 35px rgba(255, 214, 0, 0.15);
+    overflow: hidden;
+}
+
+.editorial-quote-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 214, 0, 0.12);
+    border: 1px solid var(--border-yellow);
+    color: var(--yellow-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+}
+
+.editorial-quote-watermark {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    font-family: var(--font-serif-italic);
+    font-size: 14rem;
+    line-height: 1;
+    color: rgba(255, 214, 0, 0.05);
+    pointer-events: none;
+    user-select: none;
+}
+
+.editorial-quote-text {
+    font-family: var(--font-serif-italic);
+    font-size: clamp(1.35rem, 2.4vw, 2.05rem);
+    line-height: 1.55;
+    color: #FFFFFF;
+    margin-bottom: 2.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+mark.typo-highlight {
+    background: rgba(0, 200, 255, 0.18);
+    color: #00E5FF;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+mark.typo-gold {
+    background: rgba(255, 214, 0, 0.25);
+    color: var(--yellow-primary);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-style: italic;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(255, 214, 0, 0.3);
+}
+
+.editorial-quote-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.editorial-author-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial-author-group .author-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.editorial-author-group .author-title {
+    font-size: 0.88rem;
+    color: var(--fg-mute);
+}
+
 .media-articles-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
