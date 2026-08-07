@@ -214,11 +214,11 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
 }
 
 /* ==========================================================================
-   APPLE PRODUCT PAGE BUTTON SYSTEM (WHIITEROSE/APPLE DESIGN STYLE)
-   - Ultra-clean 3D/glassmorphism pill shapes (border-radius: 9999px)
-   - Primary: Brand Orange (#FF9500 / #FF9800) matching logo with smooth 0.25s spring transition
-   - Secondary: Frosted translucent material with 16px backdrop blur & thin white border rim
-   - Typography: Apple SF Pro Display / SF Pro Text hierarchy
+   APPLE PRODUCT PAGE BUTTON SYSTEM (WHIITEROSE/APPLE STYLE - CLEAN ORANGE HIGHLIGHT)
+   - Ultra-clean pill shapes (border-radius: 9999px)
+   - Hover highlight: STRICTLY APPLE BRAND ORANGE (#FF9500 / #FF9800), NO RAINBOW/COLORFUL
+   - Primary: Solid Apple Orange (#FF9500)
+   - Secondary: Frosted dark pill with vibrant Apple Orange highlight rim & text glow on hover
    ========================================================================== */
 
 .btn {
@@ -237,7 +237,12 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     user-select: none;
     position: relative;
     outline: none;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #FF9500;
+    outline-offset: 2px;
 }
 
 .btn--sm {
@@ -255,19 +260,19 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     border-radius: 9999px;
 }
 
-/* PRIMARY ACTION "Daftar SPMB" - WHIITEROSE APPLE BRAND ORANGE (#FF9500) */
+/* PRIMARY ACTION "Daftar SPMB" - SOLID APPLE ORANGE (#FF9500) */
 .btn--pri {
     background-color: #FF9500;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 14px rgba(255, 149, 0, 0.35);
 }
 
 .btn--pri:hover {
     background-color: #FF9F0A;
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(255, 149, 0, 0.5);
+    border-color: #FFB340;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(255, 149, 0, 0.5);
 }
 
 .btn--pri:active {
@@ -276,27 +281,26 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     box-shadow: 0 2px 8px rgba(255, 149, 0, 0.3);
 }
 
-/* SECONDARY ACTION - WHIITEROSE APPLE FROSTED GLASS PILL */
+/* SECONDARY ACTION - FROSTED PILL WITH VIBRANT APPLE ORANGE HOVER HIGHLIGHT */
 .btn--sec {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .btn--sec:hover {
-    background-color: rgba(255, 255, 255, 0.18);
-    border-color: rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 149, 0, 0.12);
+    border-color: #FF9500;
+    color: #FF9500;
+    box-shadow: 0 4px 16px rgba(255, 149, 0, 0.35);
 }
 
 .btn--sec:active {
     transform: scale(0.97);
-    background-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 149, 0, 0.18);
 }
 
 .nav__burger {
@@ -369,13 +373,14 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     overflow: hidden;
 }
 
-.hero__benda {
+.hero__benda, .seksi__benda, .hero__benda--quran, .seksi__benda--quran-tentang, .seksi__benda--quran-kisah {
     position: absolute;
     max-width: 110px !important;
     max-height: 100px !important;
     object-fit: contain !important;
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
     user-select: none;
+    animation: none !important;
 }
 
 /* EFFEK GERAK ANIMASI DINAMIS & SMOOTH (FLOATING MOTION) */
