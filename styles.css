@@ -1448,6 +1448,24 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     margin-bottom: 2.2rem;
     position: relative;
     z-index: 2;
+    min-height: 140px;
+}
+
+/* TYPEWRITER CURSOR & ANIMATION */
+.typewriter-active {
+    border-right: 4px solid var(--yellow-primary);
+    padding-right: 6px;
+    animation: blinkCursor 0.75s step-end infinite;
+}
+
+.typewriter-finished {
+    border-right: none !important;
+    padding-right: 0 !important;
+}
+
+@keyframes blinkCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--yellow-primary); }
 }
 
 mark.typo-highlight {

@@ -116,4 +116,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startTimer();
     }
+
+    // 4. Typewriter Effect for Editorial Quote Showcase
+    const quoteElement = document.getElementById('typewriterQuote');
+    if (quoteElement) {
+        const fullHTML = quoteElement.innerHTML.trim();
+        quoteElement.innerHTML = '';
+        quoteElement.classList.add('typewriter-active');
+
+        let charIndex = 0;
+        let isTag = false;
+        let tagBuffer = '';
+        let hasTyped = false;
+
+        function typeNextChar() {
+            if (charIndex < fullHTML.length) {
+                let char = fullHTML.charAt(charIndex);
+                if (char === '<') isTag = true;
+
+                if (isTag) {
+                    tagBuffer += char;
+                    if (char === '>') {
+                        isTag = false;
+                        quoteElement.innerHTML += tagBuffer;
+                        tagBuffer = '';
+                    }
+                } else {
+                    quoteElement.innerHTML += char;
+                }
+
+                charIndex++;
+                setTimeout(typeNextChar, isTag ? 0 : 25);
+            } else {
+                quoteElement.classList.remove('typewriter-active');
+                quoteElement.classList.add('typewriter-finished');
+            }
+        }
+
+        // Trigger typewriter when section enters viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasTyped) {
+                    hasTyped = true;
+                    typeNextChar();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        observer.observe(quoteElement);
+    }
 });
