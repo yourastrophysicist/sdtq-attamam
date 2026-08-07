@@ -403,6 +403,82 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     animation: pulseGlow 5.1s ease-in-out infinite 0.6s;
 }
 
+/* AL-QUR'AN & TASBIH STICKER FLOATING ANIMATIONS (POSISI BEBAS OVERLAP) */
+.hero__benda--quran {
+    top: 18%;
+    right: 3%;
+    max-width: 125px !important;
+    max-height: 125px !important;
+    filter: drop-shadow(0 14px 28px rgba(0, 200, 255, 0.3));
+    animation: floatQuran 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seksi__benda--quran-kisah {
+    top: 12%;
+    left: 2.5%;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    filter: drop-shadow(0 14px 28px rgba(255, 214, 0, 0.25));
+    animation: floatQuran 5.5s ease-in-out infinite 0.7s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seksi__benda--quran-pilar {
+    bottom: 8%;
+    right: 2.5%;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    filter: drop-shadow(0 14px 28px rgba(0, 200, 255, 0.3));
+    animation: floatQuran 4.8s ease-in-out infinite 1.2s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seksi__benda--quran-kekhasan {
+    top: 8%;
+    right: 2%;
+    max-width: 115px !important;
+    max-height: 115px !important;
+    filter: drop-shadow(0 14px 28px rgba(255, 214, 0, 0.25));
+    animation: floatQuran 5.2s ease-in-out infinite 0.4s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seksi__benda--quran-kegiatan {
+    top: 5%;
+    left: 2%;
+    max-width: 115px !important;
+    max-height: 115px !important;
+    filter: drop-shadow(0 14px 28px rgba(0, 200, 255, 0.3));
+    animation: floatQuran 5.6s ease-in-out infinite 1s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.seksi__benda--quran-spmb {
+    top: 6%;
+    right: 3%;
+    max-width: 125px !important;
+    max-height: 125px !important;
+    filter: drop-shadow(0 14px 28px rgba(255, 214, 0, 0.3));
+    animation: floatQuran 5.1s ease-in-out infinite 0.5s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatQuran {
+    0%, 100% {
+        transform: translateY(0px) rotate(-4deg) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) rotate(6deg) scale(1.05);
+    }
+}
+
 /* PITA RUNNING TICKER KUNING CERAH */
 .pita {
     background: #030A17;
