@@ -1352,3 +1352,96 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     .galeri-grid-6 { grid-template-columns: repeat(3, 1fr) !important; }
     .galeri-item { height: 85px !important; }
 }
+
+/* ==========================================================================
+   MEDIA COVERAGE & ARTICLES SHOWCASE GRID
+   ========================================================================== */
+
+.media-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.media-card-navy {
+    background: var(--navy-card);
+    border: 1px solid var(--border-navy);
+    border-radius: var(--radius-md);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-navy);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card-navy:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 200, 255, 0.4);
+    box-shadow: 0 16px 36px rgba(0, 180, 255, 0.2);
+}
+
+.media-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.media-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(11, 28, 56, 0.8);
+    border: 1px solid var(--border-yellow);
+    color: var(--yellow-primary);
+}
+
+.media-author {
+    font-size: 0.8rem;
+    color: var(--fg-mute);
+}
+
+.media-card-navy h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin-bottom: 0.8rem;
+}
+
+.media-excerpt {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 1.4rem;
+}
+
+.media-quote {
+    font-family: var(--font-serif-italic);
+    font-style: italic;
+    color: var(--yellow-primary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: rgba(255, 214, 0, 0.08);
+    border-left: 3px solid var(--yellow-primary);
+    padding: 0.8rem 1rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 1rem;
+}
+
+.media-link-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .media-articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
