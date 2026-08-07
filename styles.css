@@ -385,22 +385,81 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     animation: floatBobbing 5.2s ease-in-out infinite 0.4s;
 }
 
+.seksi__benda--stat7 {
+    bottom: 6%;
+    right: 2%;
+    animation: floatRotate 5.4s ease-in-out infinite 1.2s;
+}
+
 .seksi__benda--stat6 {
     top: 6%;
     left: 2%;
     animation: wobbleBounce 4.6s ease-in-out infinite 0.8s;
 }
 
-.seksi__benda--stat10 {
-    top: 8%;
+.seksi__benda--stat8 {
+    top: 6%;
     right: 2%;
+    animation: floatBobbing 5.1s ease-in-out infinite 0.3s;
+}
+
+.seksi__benda--stat9 {
+    top: 6%;
+    left: 2%;
+    animation: pulseGlow 4.9s ease-in-out infinite 0.9s;
+}
+
+.seksi__benda--stat10 {
+    bottom: 8%;
+    left: 2%;
     animation: floatRotate 5.4s ease-in-out infinite 1.2s;
+}
+
+.seksi__benda--stat1-kegiatan {
+    top: 6%;
+    right: 2%;
+    animation: floatBobbing 4.8s ease-in-out infinite 0.5s;
+}
+
+.seksi__benda--stat3-kegiatan {
+    bottom: 6%;
+    left: 2%;
+    animation: floatRotate 5.3s ease-in-out infinite 1.1s;
+}
+
+.seksi__benda--stat2-tentang {
+    top: 6%;
+    left: 2%;
+    animation: wobbleBounce 4.7s ease-in-out infinite 0.6s;
+}
+
+.seksi__benda--stat4-tentang {
+    bottom: 8%;
+    right: 2%;
+    animation: pulseGlow 5.2s ease-in-out infinite 0.8s;
+}
+
+.seksi__benda--quran-tentang {
+    top: 6%;
+    right: 2.5%;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    filter: drop-shadow(0 14px 28px rgba(0, 200, 255, 0.3));
+    animation: floatQuran 5s ease-in-out infinite 0.4s;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .seksi__benda--stat11 {
     top: 6%;
     left: 2%;
     animation: pulseGlow 5.1s ease-in-out infinite 0.6s;
+}
+
+.seksi__benda--stat8-spmb {
+    bottom: 6%;
+    left: 2%;
+    animation: floatRotate 5.3s ease-in-out infinite 1s;
 }
 
 /* AL-QUR'AN & TASBIH STICKER FLOATING ANIMATIONS (POSISI BEBAS OVERLAP) */
