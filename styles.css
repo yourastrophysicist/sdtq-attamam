@@ -1264,13 +1264,43 @@ h1 em, h2 em, h3 em, p em, .visi-text-quote em {
     opacity: 1;
 }
 
-@media (max-width: 990px) {
-    .story-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .story-img { height: 260px; }
+/* LEGAL BADGES NPSN & SK IZIN OPERASIONAL */
+.legal-badges-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
-    .galeri-slider-wrap { height: 320px; }
-    .galeri-grid { grid-template-columns: repeat(2, 1fr); }
-    .galeri-item { height: 110px; }
+.legal-badge {
+    background: rgba(11, 28, 56, 0.85);
+    border: 1px solid rgba(0, 200, 255, 0.35);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.img-tone-matched {
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    filter: brightness(0.98) contrast(1.03);
+}
+
+.galeri-grid-6 {
+    grid-template-columns: repeat(6, 1fr) !important;
+}
+
+@media (max-width: 990px) {
+    .galeri-grid-6 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+@media (max-width: 600px) {
+    .galeri-grid-6 { grid-template-columns: repeat(3, 1fr) !important; }
+    .galeri-item { height: 85px !important; }
 }
