@@ -1,7 +1,7 @@
 /* ==========================================================================
    SDTQ ATTAMAM — gaya scrapbook ceria & islami
-   Kertas putih gading, navy, kuning. Emoji 3D: Microsoft Fluent Emoji (MIT),
-   lisensi di images/emoji/LICENSE-fluentui-emoji.txt
+   Kertas putih gading, navy, kuning. Semua emoji berupa karakter asli perangkat
+   (di iPhone/Mac tampil sebagai emoji iOS).
    ========================================================================== */
 
 :root {
@@ -109,8 +109,9 @@ a {
     font-weight: 700;
 }
 
-/* Emoji asli perangkat (di iPhone tampil sebagai emoji iOS) di tengah kalimat */
-.emo {
+/* Emoji asli perangkat (di iPhone tampil sebagai emoji iOS): .emo di kalimat, .ej untuk ikon */
+.emo,
+.ej {
     font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -121,6 +122,19 @@ a {
 .nowrap {
     white-space: nowrap;
 }
+
+/* ikon emoji: ukurannya lewat font-size, bukan lebar gambar */
+.ej {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.stiker.ej { font-size: var(--w, 90px); width: auto; max-height: none; }
+.klip.ej { font-size: 38px; width: auto; }
+.kartu-kertas .ikon.ej { font-size: 56px; width: auto; }
+.buku > .ikon.ej { font-size: 64px; width: auto; }
 
 .emo {
     display: inline-block;
@@ -693,17 +707,17 @@ a {
     text-decoration: none;
 }
 
-.map img {
-    width: 160px;
+.map .ej {
+    font-size: 128px;
     filter: drop-shadow(0 10px 14px rgba(11, 28, 56, 0.18));
     transition: transform 0.2s ease;
 }
 
-.map:hover img {
+.map:hover .ej {
     transform: translateY(-6px) rotate(-3deg);
 }
 
-.map span {
+.map span:not(.ej) {
     font-family: var(--mono);
     font-weight: 700;
     background: var(--kertas);
@@ -901,8 +915,8 @@ a {
     padding: 0.9rem 1.4rem;
 }
 
-.catatan-kecil img {
-    width: 44px;
+.catatan-kecil .ej {
+    font-size: 38px;
     flex: none;
 }
 
@@ -1190,8 +1204,8 @@ a {
     line-height: 1.25;
 }
 
-.buku li img {
-    width: 26px;
+.buku li .ej {
+    font-size: 22px;
     flex: none;
 }
 
@@ -1359,8 +1373,8 @@ a {
     box-shadow: var(--bayang);
 }
 
-.lokasi img {
-    width: 64px;
+.lokasi .ej {
+    font-size: 54px;
     flex: none;
 }
 
@@ -1600,11 +1614,11 @@ a {
         max-width: none;
     }
 
-    .map img {
-        width: 120px;
+    .map .ej {
+        font-size: 96px;
     }
 
-    .map span {
+    .map span:not(.ej) {
         font-size: 0.85rem;
         white-space: nowrap;
         padding: 0.3rem 0.7rem;
