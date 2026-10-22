@@ -259,6 +259,8 @@ a {
 .merek img {
     height: 54px;
     width: auto;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(11, 28, 56, 0.15);
 }
 
 .merek__nama {
@@ -932,6 +934,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    align-items: start; /* papan tanpa foto tidak ikut setinggi papan berfoto */
 }
 
 .papan {
@@ -974,10 +977,54 @@ a {
     padding: 0 1rem 1.2rem;
 }
 
+/* Foto potongan (tanpa latar) di lingkaran kuning, kepala menyembul ke atas */
+.papan__foto {
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 2.6rem auto 0;
+    border-radius: 50%;
+    background: var(--kuning-muda);
+    box-shadow: inset 0 0 0 3px var(--kuning);
+    clip-path: inset(-70px 0 0 0 round 0 0 70px 70px);
+}
+
+.papan__foto img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 118%;
+    max-width: none;
+    transform: translateX(-50%);
+}
+
 .papan--ketua {
-    max-width: 560px;
+    max-width: 640px;
     margin: 0 auto 3rem;
     transform: rotate(-1deg);
+}
+
+.papan--ketua .papan__isi {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 0 1.8rem 0.4rem;
+    text-align: left;
+}
+
+.papan--ketua .papan__foto {
+    flex: none;
+    width: 170px;
+    height: 170px;
+    margin: 3.2rem 0 1.2rem;
+    clip-path: inset(-80px 0 0 0 round 0 0 85px 85px);
+}
+
+.papan--ketua .papan__nama,
+.papan--ketua .papan__peran {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .papan--ketua .papan__atas {
@@ -1366,8 +1413,11 @@ a {
     color: var(--teks);
 }
 
-.kaki .merek {
-    order: 0;
+.kaki__logo img {
+    width: 130px;
+    border-radius: 12px;
+    box-shadow: var(--bayang);
+    transform: rotate(-3deg);
 }
 
 .kaki p {
@@ -1587,6 +1637,16 @@ a {
         text-align: center;
     }
 
+    .papan--ketua .papan__isi {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .papan--ketua .papan__foto {
+        margin: 3rem auto 0;
+    }
+
     .kaki__tengah {
         grid-template-columns: 1fr;
         gap: 1.2rem;
@@ -1597,8 +1657,8 @@ a {
         justify-content: center;
     }
 
-    .kaki .merek {
-        justify-content: center;
+    .kaki__logo {
+        justify-self: center;
         grid-row: 1;
     }
 
