@@ -15,8 +15,9 @@
     --kraft: #D3C2A3;
     --teks: #3A4560;
     --garis: #DED6C6;
-    /* sama dengan template Instagram: Fredoka (judul) + Nunito (teks), bulat seperti emoji iOS */
-    --serif: 'Fredoka', 'Nunito', system-ui, sans-serif;
+    /* Baloo 2 (judul) + Nunito (teks), bulat seperti emoji iOS.
+       Bukan Fredoka: huruf T-nya pendek sehingga "ATTAMAM" terbaca "AT TAMAM". */
+    --serif: 'Baloo 2', 'Nunito', system-ui, sans-serif;
     --mono: 'Nunito', system-ui, sans-serif;
     --sans: 'Nunito', system-ui, sans-serif;
     --tulis: 'Caveat', cursive;
@@ -50,7 +51,7 @@ img {
 
 h1, h2, h3 {
     font-family: var(--serif);
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1.05;
     letter-spacing: -0.01em;
     margin: 0;
