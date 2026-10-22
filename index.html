@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>SDTQ ATTAMAM — Sekolah Dasar Tahfidz Qur’an Garut</title>
     <meta name="description" content="Sekolah Dasar Tahfidz Qur’an (SDTQ) ATTAMAM Garut. Pendidikan unggulan berbasis Aqidah Sohihah, Adab Hasanah, dan Hafalan Al-Qur'an. Full Day School T.A. 2027-2028.">
-    <meta name="theme-color" content="#1F7A5A">
+    <meta name="theme-color" content="#0B1C38">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Pratinjau link saat dibagikan di WhatsApp / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sdtq-attamam.com/">
     <meta property="og:title" content="SDTQ ATTAMAM Garut — Sekolah Dasar Tahfidz Qur'an">
@@ -19,322 +17,188 @@
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="id_ID">
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Baloo 2 (judul ceria), Plus Jakarta Sans (teks), Amiri (Arab) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=4.1">
+    <link rel="stylesheet" href="styles.css?v=5.0">
 </head>
 <body>
 
-    <header class="nav" id="header">
+    <div class="garis-atas"></div>
+    <header class="nav">
         <div class="wrap nav__isi">
-            <a class="merek" href="#atas">
-                <img class="merek__logo" src="images/logo.png" alt="Logo SDTQ ATTAMAM" width="83" height="96">
-                <span class="merek__teks">
-                    <span class="merek__nama">SDTQ ATTAMAM</span>
-                    <span class="merek__arab" lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</span>
-                </span>
+            <a class="merek" href="index.html">
+                <img src="images/logo.png" alt="" width="83" height="96">
+                <span class="merek__nama">SDTQ ATTAMAM<small lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</small></span>
             </a>
-            <nav class="nav__tautan" id="navTautan">
-                <a href="#pilar">Pilar</a>
-                <a href="#kekhasan">Program</a>
-                <a href="#kegiatan">Kegiatan</a>
-                <a href="#tentang">Guru</a>
-                <a href="#spmb">SPMB 2027-2028</a>
-                <a class="btn btn--wa nav__mobile-cta" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Daftar SPMB T.A. 2027–2028</a>
+            <nav id="navTautan" aria-label="Menu utama">
+                <div class="nav__grup nav__grup--kiri">
+                    <a href="tentang.html">tentang kami</a>
+                    <a href="program.html">program</a>
+                    <a href="kegiatan.html">kegiatan</a>
+                </div>
+                <div class="nav__grup nav__grup--kanan">
+                    <a href="spmb.html">spmb 2027–2028</a>
+                    <a class="btn btn--wa" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> daftar</a>
+                </div>
             </nav>
-            <div class="nav__aksi">
-                <a class="btn btn--wa btn--sm" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Daftar SPMB</a>
-                <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navTautan">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+            <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navTautan">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <main id="atas">
+    <main>
 
-        <!-- HERO -->
-        <section class="hero pola">
-            <div class="wrap hero__grid">
-                <div class="hero__teks">
-                    <p class="basmalah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
-                    <p class="hero__arab" lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</p>
-                    <span class="label">Sekolah Dasar Tahfidz Qur'an · Garut</span>
-                    <h1>Melahirkan Generasi <span class="w-hijau">Beriman</span>, <span class="w-oranye">Beradab</span>, &amp; <span class="w-biru">Berilmu</span></h1>
-                    <p class="lead">
-                        Hadir dengan konsep Full Day School berafiliasi resmi ke Dinas Pendidikan. Menyelenggarakan pendidikan islami yang memadukan Tahfidz Qur'an, pelajaran Al-’Ulumul Fardhu ‘Ain (PAI), dan Al-’Ulumul Fardhu Kifayah (Pelajaran Umum) di bawah sejuknya Objek Wisata Cipanas Garut.
-                    </p>
-                    <div class="hero__cta">
-                        <a class="btn btn--wa btn--lg" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Daftar SPMB T.A. 2027–2028</a>
-                        <a class="btn btn--garis btn--lg" href="#kekhasan">Lihat Program</a>
+        <!-- HERO + KARTU SANTRI -->
+        <section class="hero">
+            <img class="stiker stiker--lebar" src="images/stickers/crayon_red.png" alt="" style="--t:6%;--l:3%;--w:120px;--r:-25deg">
+            <img class="stiker stiker--lebar" src="images/stickers/star_button.png" alt="" style="--t:10%;--ka:4%;--w:100px;--r:14deg;--d:1.2s">
+            <img class="stiker stiker--lebar" src="images/stickers/eraser.png" alt="" style="--b:12%;--l:6%;--w:110px;--r:12deg;--d:2s">
+            <img class="stiker stiker--lebar" src="images/emoji/sparkles.png" alt="" style="--b:30%;--ka:8%;--w:70px;--d:.6s">
+
+            <div class="wrap">
+                <p class="hero__arab arab" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                <h1>melahirkan <img class="emo" src="images/emoji/crescent.png" alt="" style="--r:-18deg">generasi beriman, <img class="emo" src="images/emoji/open_book.png" alt="" style="--r:8deg">beradab <img class="emo" src="images/emoji/palms.png" alt="" style="--r:-6deg">&amp; berilmu<img class="emo" src="images/emoji/pencil.png" alt="" style="--r:12deg"></h1>
+
+                <div class="hero__panggung">
+                    <a class="btn" href="kegiatan.html">kegiatan santri</a>
+
+                    <div class="idcard">
+                        <div class="idcard__isi">
+                            <div>
+                                <p class="idcard__judul">SDTQ ATTAMAM</p>
+                                <p class="idcard__ket">Kartu Santri · T.A. 2027–2028</p>
+                                <dl>
+                                    <div><dt>Sekolah:</dt><dd>SD Tahfidz Qur'an</dd></div>
+                                    <div><dt>Lokasi:</dt><dd>Cipanas, Garut</dd></div>
+                                    <div><dt>Target:</dt><dd>4 Juz &amp; 100 Hadits</dd></div>
+                                </dl>
+                                <p class="idcard__motto">Motto: Iman, Adab, Ilmu</p>
+                            </div>
+                            <div class="idcard__kanan">
+                                <p class="idcard__no">NPSN 70063460</p>
+                                <span class="idcard__stempel" aria-hidden="true">ANGKATAN<br>KE-5</span>
+                                <img src="images/galeri_3.jpg" alt="Santri SDTQ ATTAMAM melambai di panggung Kreasi Seni Islami" width="1280" height="960">
+                                <span class="idcard__barcode" aria-hidden="true"></span>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="legal">
-                        <li><i class="fas fa-certificate"></i> <strong>NPSN:</strong> 70063460</li>
-                        <li><i class="fas fa-file-contract"></i> <strong>SK Izin Operasional:</strong> 500.16.7.2/1417/023/IPSPD-SD/DPMPTSP/2026</li>
-                    </ul>
+
+                    <a class="btn btn--wa" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> daftar sekarang</a>
                 </div>
-                <figure class="hero__foto">
-                    <img class="lengkung" src="images/galeri_3.jpg" alt="Santri SDTQ ATTAMAM tersenyum dan melambai di panggung Kreasi Seni Islami" width="1280" height="960">
-                    <figcaption class="hero__lencana"><i class="fas fa-book-quran"></i> Hafal minimal 4 Juz</figcaption>
-                </figure>
             </div>
         </section>
 
         <div class="pita" aria-hidden="true">
-            <div class="pita__t"><span>✦ BERAQIDAH SOHIHAH ✦ BERADAB HASANAH ✦ HAFAL MINIMAL 4 JUZ ✦ HAFAL 100 HADITS ✦ OBJEK WISATA CIPANAS GARUT&nbsp;</span><span>✦ BERAQIDAH SOHIHAH ✦ BERADAB HASANAH ✦ HAFAL MINIMAL 4 JUZ ✦ HAFAL 100 HADITS ✦ OBJEK WISATA CIPANAS GARUT&nbsp;</span></div>
+            <div class="pita__t"><span>pendaftaran SPMB 2027–2028 dibuka<img src="images/emoji/heart.png" alt="">hafal minimal 4 juz<img src="images/emoji/heart.png" alt="">hafal 100 hadits<img src="images/emoji/heart.png" alt="">full day school<img src="images/emoji/heart.png" alt="">objek wisata cipanas garut<img src="images/emoji/heart.png" alt=""></span><span>pendaftaran SPMB 2027–2028 dibuka<img src="images/emoji/heart.png" alt="">hafal minimal 4 juz<img src="images/emoji/heart.png" alt="">hafal 100 hadits<img src="images/emoji/heart.png" alt="">full day school<img src="images/emoji/heart.png" alt="">objek wisata cipanas garut<img src="images/emoji/heart.png" alt=""></span></div>
         </div>
 
-        <!-- VISI & 3 PILAR -->
-        <section class="seksi" id="pilar">
-            <div class="wrap">
-                <div class="kepala">
+        <!-- SAMBUTAN -->
+        <section class="seksi">
+            <div class="wrap dua-kolom">
+                <div class="kolase">
+                    <div class="kolase__kertas">
+                        <div>
+                            <span class="label">SDTQ ATTAMAM · Garut</span>
+                            <p class="kolase__sapa">ahlan wa sahlan di attamam</p>
+                        </div>
+                        <dl class="kolase__form">
+                            <div><dt>Ketua yayasan:</dt><dd>Drs. Imam Tamamu Taufiq, M.Pd</dd></div>
+                            <div><dt>Lokasi:</dt><dd>Objek Wisata Cipanas</dd></div>
+                            <div><dt>Motto:</dt><dd>Iman, Adab, Ilmu</dd></div>
+                        </dl>
+                    </div>
+                    <div class="kolase__map">
+                        <figure class="polaroid">
+                            <img class="klip" src="images/emoji/paperclip.png" alt="">
+                            <img src="images/galeri_1.jpg" alt="Santri menerima selempang Hafidzah dan Hafidz Juz 30" width="1280" height="961" loading="lazy">
+                            <figcaption>hafidz juz 30!</figcaption>
+                        </figure>
+                        <figure class="polaroid">
+                            <img src="images/galeri_6.jpg" alt="Santri tersenyum memegang sertifikat hafalan" width="1200" height="1600" loading="lazy">
+                            <figcaption>senyum bangga</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="label">Assalamu'alaikum</span>
+                    <h2>senang berkenalan dengan Anda!</h2>
+                    <p class="lead" style="margin-top:1.2rem">SDTQ ATTAMAM hadir dengan konsep Full Day School berafiliasi resmi ke Dinas Pendidikan. Kami menyelenggarakan pendidikan islami yang memadukan Tahfidz Qur'an, pelajaran Al-’Ulumul Fardhu ‘Ain (PAI), dan Al-’Ulumul Fardhu Kifayah (Pelajaran Umum) di bawah sejuknya Objek Wisata Cipanas Garut.</p>
+                    <p>Pembimbingan hafalan metode Sima'i dilakukan dalam ruang kelas yang nyaman dan terang, di mana setiap santri mendapatkan perhatian penuh sesuai kecepatan dan potensi terbaik masing-masing.</p>
+                    <a class="btn" href="tentang.html">baca selengkapnya</a><svg class="panah" viewBox="0 0 74 70" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M70 4 C 64 30 42 50 10 58"/><path d="M20 47 L10 58 L23 64"/></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP MENUJU HALAMAN -->
+        <section class="seksi seksi--kuning">
+            <img class="stiker stiker--lebar" src="images/emoji/books.png" alt="" style="--t:-46px;--ka:8%;--w:110px;--r:10deg">
+            <div class="wrap dua-kolom">
+                <div>
                     <span class="label">Visi &amp; Motto</span>
-                    <h2>Iman, Adab, Ilmu</h2>
-                    <p class="lead">Terwujudnya penyelenggara pendidikan yang melahirkan peserta didik yang beriman, beradab, berilmu sesuai panduan Al-Qur’an.</p>
+                    <h2>iman, adab, ilmu.</h2>
+                    <p class="lead" style="margin-top:1.2rem">Terwujudnya penyelenggara pendidikan yang melahirkan peserta didik yang beriman, beradab, berilmu sesuai panduan Al-Qur’an.</p>
+                    <p>Tahfidz Qur'an, Al-’Ulumul Fardhu ‘Ain (PAI), dan Al-’Ulumul Fardhu Kifayah (Pelajaran Umum) dalam satu sekolah.</p>
+                    <a class="btn btn--wa" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> daftar sekarang</a>
                 </div>
-
-                <div class="pilar">
-                    <article class="pilar__kartu pilar__kartu--hijau">
-                        <span class="ikon"><i class="fas fa-heart"></i></span>
-                        <span class="pilar__no">Pilar 1</span>
-                        <h3>Aqidah Sohihah</h3>
-                        <p>Menanamkan kecintaan dan iman yang kokoh kepada Allah SWT.</p>
-                    </article>
-                    <article class="pilar__kartu pilar__kartu--kuning">
-                        <span class="ikon"><i class="fas fa-hands-praying"></i></span>
-                        <span class="pilar__no">Pilar 2</span>
-                        <h3>Adab Hasanah</h3>
-                        <p>Membentuk akhlakul karimah, wudhu syar'i, dan etika kesantunan.</p>
-                    </article>
-                    <article class="pilar__kartu pilar__kartu--biru">
-                        <span class="ikon"><i class="fas fa-book-quran"></i></span>
-                        <span class="pilar__no">Pilar 3</span>
-                        <h3>Tahfidz Qur'an &amp; Hadits</h3>
-                        <p>Hafalan Al-Qur'an metode Sima'i &amp; 100 Hadits pilihan.</p>
-                    </article>
-                </div>
-                <p class="pilar__plus"><i class="fas fa-graduation-cap"></i> <strong>Ditambah Pelajaran Umum (Disdik):</strong> kurikulum Fardhu Kifayah berafiliasi Dinas Pendidikan.</p>
-            </div>
-        </section>
-
-        <aside class="ayat pola">
-            <p class="ayat__arab" lang="ar" dir="rtl">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</p>
-            <p class="ayat__arti">“Bacalah dengan (menyebut) nama Tuhanmu yang menciptakan.”</p>
-            <p class="ayat__sumber">QS. Al-‘Alaq: 1</p>
-        </aside>
-
-        <!-- PROGRAM & SKL -->
-        <section class="seksi seksi--biru" id="kekhasan">
-            <div class="wrap">
-                <div class="kepala">
-                    <span class="label">Program &amp; Target Lulusan</span>
-                    <h2>Apa yang Dipelajari Ananda?</h2>
-                    <p class="lead">Dirancang secara holistik untuk melahirkan generasi tahfidz berakhlak mulia.</p>
-                </div>
-
-                <div class="program">
-                    <h3>5 Program Kekhasan Sekolah</h3>
-                    <ol class="program__list">
-                        <li><span>1</span> Bina Pribadi Islami</li>
-                        <li><span>2</span> Tahfidz Qur’an dengan metode Sima’i</li>
-                        <li><span>3</span> Tahfidz Hadits Pilihan</li>
-                        <li><span>4</span> Pembiasaan Ibadah Harian</li>
-                        <li><span>5</span> Olah raga Sunnah</li>
-                    </ol>
-                </div>
-
-                <h3 class="sub">8 Target Kelulusan Santri (SKL)</h3>
-                <ul class="skl">
-                    <li><i class="fas fa-heart"></i><span>Beraqidah Sohihah</span></li>
-                    <li><i class="fas fa-hand-holding-heart"></i><span>Beradab Hasanah</span></li>
-                    <li><i class="fas fa-flag"></i><span>Berwarga negara yang baik</span></li>
-                    <li><i class="fas fa-person-praying"></i><span>Memahami fiqih ibadah dasar</span></li>
-                    <li><i class="fas fa-book-quran"></i><span>Hafal minimal 4 juz Al-Qur’an</span></li>
-                    <li><i class="fas fa-scroll"></i><span>Hafal minimal 100 hadits</span></li>
-                    <li><i class="fas fa-hands-praying"></i><span>Hafal do’a dan dzikir harian</span></li>
-                    <li><i class="fas fa-pencil"></i><span>Mampu baca, tulis, dan hitung (Calistung)</span></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- KEGIATAN SANTRI -->
-        <section class="seksi" id="kegiatan">
-            <div class="wrap">
-                <div class="kepala">
-                    <span class="label">Cerita &amp; Dokumentasi Santri</span>
-                    <h2>Tumbuh Beriman &amp; Beradab di Cipanas Garut</h2>
-                    <p class="lead">Mengintip hangatnya kebersamaan, senyum bahagia, dan bimbingan hafalan santri SDTQ ATTAMAM Garut.</p>
-                </div>
-
-                <div class="galeri">
-                    <figure class="galeri__item">
-                        <img class="lengkung" src="images/galeri_1.jpg" alt="Santri mengenakan selempang Hafidzah dan Hafidz Juz 30 bersama Ketua Yayasan dan guru" width="1280" height="961" loading="lazy">
-                        <figcaption>
-                            <h3>Apresiasi Hafalan Juz 30</h3>
-                            <p>Penyerahan selempang <strong>Hafidzah &amp; Hafidz Juz 30</strong>, didampingi Ketua Yayasan Drs. Imam Tamamu Taufiq, M.Pd, Ustadz H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag, dan dewan guru.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="galeri__item">
-                        <img class="lengkung" src="images/galeri_2.jpg" alt="Santri merayakan 17 Agustus dengan balon merah-putih" width="720" height="1280" loading="lazy">
-                        <figcaption>
-                            <h3>Perayaan 17 Agustus</h3>
-                            <p>Hiasan balon merah-putih dan lomba kebersamaan yang menanamkan rasa cinta tanah air sejak dini.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="galeri__item">
-                        <img class="lengkung" src="images/galeri_6.jpg" alt="Santri tersenyum memegang sertifikat capaian hafalan" width="1200" height="1600" loading="lazy">
-                        <figcaption>
-                            <h3>Senyum Bangga Santri</h3>
-                            <p>Menerima sertifikat capaian hafalan dan prestasi belajar di ruang kelas SDTQ ATTAMAM.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="galeri__item">
-                        <img class="lengkung" src="images/galeri_4.jpg" alt="Santri berbaris pagi di halaman sekolah" width="1280" height="960" loading="lazy">
-                        <figcaption>
-                            <h3>Baris Pagi &amp; Olah Raga Sunnah</h3>
-                            <p>Santri belajar disiplin, kerapian barisan, dan kebersamaan sebelum masuk kelas.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="galeri__item">
-                        <img class="lengkung" src="images/galeri_5.jpg" alt="Santri belajar bersama guru di halaman sekolah" width="1280" height="960" loading="lazy">
-                        <figcaption>
-                            <h3>Belajar di Halaman Sejuk Cipanas</h3>
-                            <p>Suasana belajar di luar kelas dengan udara sejuk Cipanas, menyimak bimbingan guru dan berdoa bersama.</p>
-                        </figcaption>
-                    </figure>
+                <div class="map-grid">
+                    <a class="map" href="tentang.html"><img src="images/emoji/folder.png" alt=""><span>tentang kami</span></a>
+                    <a class="map" href="program.html"><img src="images/emoji/folder.png" alt=""><span>program &amp; SKL</span></a>
+                    <a class="map" href="kegiatan.html"><img src="images/emoji/folder.png" alt=""><span>kegiatan santri</span></a>
+                    <a class="map" href="spmb.html"><img src="images/emoji/folder.png" alt=""><span>spmb 2027–2028</span></a>
                 </div>
             </div>
         </section>
 
-        <aside class="ayat pola">
-            <p class="ayat__arab" lang="ar" dir="rtl">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
-            <p class="ayat__arti">“Sebaik-baik kalian adalah orang yang belajar Al-Qur’an dan mengajarkannya.”</p>
-            <p class="ayat__sumber">HR. Bukhari</p>
-        </aside>
-
-        <!-- KETUA YAYASAN & DEWAN GURU -->
-        <section class="seksi seksi--hijau" id="tentang">
+        <!-- DERETAN FOTO -->
+        <section class="seksi">
+            <div class="deret" tabindex="0" aria-label="Foto kegiatan santri, geser ke samping">
+                <img src="images/galeri_3.jpg" alt="Panggung Kreasi Seni Islami" width="1280" height="960" loading="lazy">
+                <img src="images/galeri_1.jpg" alt="Apresiasi hafalan Juz 30" width="1280" height="961" loading="lazy">
+                <img src="images/galeri_2.jpg" alt="Perayaan 17 Agustus" width="720" height="1280" loading="lazy">
+                <img src="images/galeri_6.jpg" alt="Santri memegang sertifikat hafalan" width="1200" height="1600" loading="lazy">
+                <img src="images/galeri_5.jpg" alt="Belajar di halaman sekolah" width="1280" height="960" loading="lazy">
+                <img src="images/galeri_4.jpg" alt="Baris pagi di halaman sekolah" width="1280" height="960" loading="lazy">
+            </div>
             <div class="wrap">
-                <div class="kepala">
-                    <span class="label">Pengurus &amp; Pendidik</span>
-                    <h2>Ketua Yayasan &amp; Dewan Guru</h2>
-                    <p class="lead">Pengasuh dan tenaga pendidik berdedikasi membimbing para santri.</p>
-                </div>
-
-                <div class="ketua">
-                    <span class="avatar avatar--besar" aria-hidden="true">IT</span>
-                    <div>
-                        <span class="ketua__peran">Ketua Yayasan ATTAMAM Garut</span>
-                        <h3>Drs. Imam Tamamu Taufiq, M.Pd</h3>
-                    </div>
-                </div>
-
-                <ul class="guru">
-                    <li><span class="avatar" aria-hidden="true">IK</span><span><strong>H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag</strong><small>Staff Pengajar &amp; Guru Kelas</small></span></li>
-                    <li><span class="avatar" aria-hidden="true">TN</span><span><strong>Teti Nuryanti, S.Pd.I</strong><small>Staff Pengajar &amp; Guru Kelas</small></span></li>
-                    <li><span class="avatar" aria-hidden="true">AR</span><span><strong>Alliyah Rasyidah, S.Ag</strong><small>Staff Pengajar &amp; Guru Kelas</small></span></li>
-                    <li><span class="avatar" aria-hidden="true">IL</span><span><strong>Illah Lathifah, S.Pd</strong><small>Staff Pengajar &amp; Guru Kelas</small></span></li>
-                    <li><span class="avatar" aria-hidden="true">F</span><span><strong>Fitriani, S.Pd</strong><small>Staff Pengajar &amp; Guru Kelas</small></span></li>
-                    <li><span class="avatar" aria-hidden="true">RQ</span><span><strong>Rosalin Qurota Ayunin, SH</strong><small>Staff Pengajar &amp; Guru Kelas</small></span></li>
-                </ul>
+                <a class="judul-tautan" href="kegiatan.html"><h2>kegiatan . cerita &amp; dokumentasi santri</h2><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </section>
 
-        <!-- KATA ORANG TUA & LIPUTAN MEDIA -->
-        <section class="seksi" id="kisah">
-            <div class="wrap">
-                <div class="kepala">
-                    <span class="label">Kata Orang Tua</span>
-                    <h2>Kenapa Memilih ATTAMAM?</h2>
+        <!-- KUTIPAN WALI MURID -->
+        <section class="seksi seksi--gradasi">
+            <div class="wrap dua-kolom">
+                <div class="gugus" aria-hidden="true">
+                    <img class="stiker" src="images/stickers/quran_rehal.png" alt="" style="--t:16%;--l:20%;--w:250px;--r:-4deg">
+                    <img class="stiker" src="images/stickers/crayon_blue.png" alt="" style="--t:2%;--l:2%;--w:170px;--r:28deg;--d:.8s">
+                    <img class="stiker" src="images/stickers/quran_tasbih.png" alt="" style="--b:2%;--ka:10%;--w:130px;--r:-12deg;--d:1.5s">
+                    <img class="stiker" src="images/stickers/star_button.png" alt="" style="--b:6%;--l:4%;--w:105px;--r:10deg;--d:2.2s">
+                    <img class="stiker" src="images/emoji/beads.png" alt="" style="--t:6%;--ka:6%;--w:90px;--r:12deg;--d:.4s">
+                    <img class="stiker" src="images/emoji/sparkles.png" alt="" style="--t:48%;--ka:0%;--w:60px;--d:1s">
                 </div>
-
-                <figure class="kutipan">
+                <figure class="kutipan" style="margin:0">
+                    <span class="label">Kata orang tua</span>
                     <blockquote>
-                        <p>Saya ini bukan orang yang tinggi ilmunya. Tapi saya tahu betul, dunia ini makin hari makin gaduh. Saya takut anak saya pintar tapi <mark>tak punya adab</mark>. Saya takut dia sukses, tapi <mark>kosong jiwanya</mark>.</p>
-                        <p>Karena itu saya cari sekolah yang pertama-tama ngajarin dia jadi <mark>manusia yang tahu arah</mark>—bukan cuma yang bisa baca tulis hitung.</p>
+                        <p class="kutipan__besar">“…saya cari sekolah yang pertama-tama ngajarin dia jadi manusia yang tahu arah.”</p>
+                        <p class="kutipan__penuh">“Saya ini bukan orang yang tinggi ilmunya. Tapi saya tahu betul, dunia ini makin hari makin gaduh. Saya takut anak saya pintar tapi tak punya adab. Saya takut dia sukses, tapi kosong jiwanya. Karena itu saya cari sekolah yang pertama-tama ngajarin dia jadi manusia yang tahu arah—bukan cuma yang bisa baca tulis hitung.”</p>
                     </blockquote>
-                    <figcaption>
-                        <strong>Pak Hidayat</strong>, Wali Murid Naila ·
-                        <a href="https://beritadisdik.com/news/unggul/di-bawah-sejuknya-udara-di-halaman-sekolah-dasar-tahfidz-quran--sdtq-attamam-di-objek-wisata-cipanas-tarkal-garut" target="_blank" rel="noopener">dikutip dari BeritaDisdik.com</a>
-                    </figcaption>
+                    <figcaption>Pak Hidayat · Wali Murid Naila · dikutip dari BeritaDisdik.com</figcaption>
+                    <a class="btn" href="https://beritadisdik.com/news/unggul/di-bawah-sejuknya-udara-di-halaman-sekolah-dasar-tahfidz-quran--sdtq-attamam-di-objek-wisata-cipanas-tarkal-garut" target="_blank" rel="noopener">baca liputan</a><svg class="panah" viewBox="0 0 74 70" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M70 4 C 64 30 42 50 10 58"/><path d="M20 47 L10 58 L23 64"/></svg>
                 </figure>
-
-                <div class="media">
-                    <p>Diliput oleh</p>
-                    <ul>
-                        <li><a href="https://www.kompasiana.com/kangaips3573/6a0a5f76c925c4668668b8f4/saat-saya-bersujud-di-masjid-attamam-saya-paham-di-sini-peradaban-sedang-dibangun" target="_blank" rel="noopener" title="Saat Saya Bersujud di Masjid ATTAMAM, Saya Paham di Sini Peradaban Sedang Dibangun"><i class="fas fa-newspaper"></i> Kompasiana</a></li>
-                        <li><a href="https://dejurnal.com/2021/06/yayasan-attamam-mempertahankan-eksistensi-syiar-islam-dalam-hiruk-pikuk-wisata-cipanas-garut/" target="_blank" rel="noopener" title="Yayasan ATTAMAM Mempertahankan Eksistensi Syiar Islam dalam Hiruk Pikuk Wisata Cipanas"><i class="fas fa-globe"></i> Dejurnal.com</a></li>
-                        <li><a href="https://www.koranmandala.com/edukasi/79046/pendidikan-islami-berkembang-di-kawasan-wisata-cipanas-garut/" target="_blank" rel="noopener" title="Pendidikan Islami Berkembang Pesat di Kawasan Wisata Cipanas Garut"><i class="fas fa-graduation-cap"></i> KoranMandala.com</a></li>
-                        <li><a href="https://beritadisdik.com/news/unggul/di-bawah-sejuknya-udara-di-halaman-sekolah-dasar-tahfidz-quran--sdtq-attamam-di-objek-wisata-cipanas-tarkal-garut" target="_blank" rel="noopener" title="Di Bawah Sejuknya Udara Halaman SDTQ ATTAMAM Cipanas Garut"><i class="fas fa-pen-nib"></i> BeritaDisdik.com</a></li>
-                    </ul>
-                </div>
             </div>
         </section>
 
-        <!-- SPMB 2027-2028 -->
-        <section class="seksi seksi--kuning" id="spmb">
-            <div class="wrap">
-                <div class="kepala">
-                    <span class="label">SPMB T.A. 2027-2028 · Angkatan ke-5</span>
-                    <h2>Yuk, Daftarkan Ananda!</h2>
-                    <p class="lead">Mari mendaftarkan putra-putri Anda di Sekolah Dasar Tahfidz Qur'an ATTAMAM Garut.</p>
+        <section class="ajakan">
+            <div class="wrap ajakan__isi">
+                <img src="images/stickers/quran_rehal.png" alt="">
+                <div>
+                    <h2>siap menjadi bagian dari keluarga attamam?</h2>
+                    <a class="btn btn--terang btn--wa" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> daftar via whatsapp</a>
                 </div>
-
-                <ol class="langkah">
-                    <li>
-                        <span class="langkah__no">1</span>
-                        <h3>Daftar &amp; Isi Formulir</h3>
-                        <p><strong>Gelombang 1:</strong> 8 Jan – 28 Mar 2027<br><strong>Gelombang 2:</strong> 21 April – 16 Juni 2027</p>
-                    </li>
-                    <li>
-                        <span class="langkah__no">2</span>
-                        <h3>Serahkan Berkas</h3>
-                        <p>Fotokopi KK, akta kelahiran, KTP orang tua, ijazah TK, dan pas foto. Rincian di bawah.</p>
-                    </li>
-                    <li>
-                        <span class="langkah__no">3</span>
-                        <h3>Daftar Ulang</h3>
-                        <p><strong>Gelombang 1:</strong> 17–18 April 2027 (Senin–Kamis 08.00–12.00 WIB)<br><strong>Gelombang 2:</strong> 19–20 Juni 2027</p>
-                    </li>
-                </ol>
-
-                <div class="spmb__grid">
-                    <div class="kartu">
-                        <h3>Persyaratan Berkas</h3>
-                        <ul class="berkas">
-                            <li><i class="fas fa-file-alt"></i> Mengisi formulir pendaftaran</li>
-                            <li><i class="fas fa-file-alt"></i> FC Kartu Keluarga (2 lembar)</li>
-                            <li><i class="fas fa-file-alt"></i> FC Akta Kelahiran (2 lembar)</li>
-                            <li><i class="fas fa-file-alt"></i> FC Ijazah TK 2 lembar (bagi yang memiliki)</li>
-                            <li><i class="fas fa-file-alt"></i> FC KTP kedua orang tua (@ 2 lembar)</li>
-                            <li><i class="fas fa-file-alt"></i> Pas Foto 3x4 &amp; 2x3 (@ 2 lembar)</li>
-                        </ul>
-                    </div>
-
-                    <div class="kartu">
-                        <h3>Biaya Pendidikan Siswa Baru</h3>
-                        <p class="biaya__total">Rp 1.990.000 <small>total</small></p>
-                        <ul class="biaya">
-                            <li><span>Buku Paket 1 Tahun &amp; Media</span><strong>Rp 570.000</strong></li>
-                            <li><span>Seragam 2 Stel (Batik &amp; Olah Raga)</span><strong>Rp 320.000</strong></li>
-                            <li><span>Dana Sumbangan Pendidikan (DSP)</span><strong>Rp 1.000.000</strong></li>
-                            <li><span>SPP 1 Bulan (Juli)</span><strong>Rp 100.000</strong></li>
-                        </ul>
-                        <a class="btn btn--wa btn--lg btn--penuh" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i> Hubungi Panitia SPMB (WhatsApp)
-                        </a>
-                    </div>
-                </div>
-
-                <div class="lokasi">
-                    <span class="ikon"><i class="fas fa-map-marker-alt"></i></span>
-                    <p><strong>Lokasi Sekolah:</strong> Objek Wisata Cipanas (Belakang kolam renang PURBASARI) RT/RW 05/06 Ds. Rancabango Kec. Tarogong Kaler Kab. Garut</p>
-                    <a href="https://maps.app.goo.gl/VsmUSFrKCvpzm6Zo8" target="_blank" rel="noopener" class="btn btn--garis btn--sm"><i class="fas fa-directions"></i> Buka Google Maps</a>
-                </div>
+                <img src="images/stickers/quran_tasbih.png" alt="">
             </div>
         </section>
 
@@ -342,33 +206,30 @@
 
     <footer class="kaki">
         <div class="wrap">
-            <div class="kaki__atas">
-                <div>
-                    <a class="merek" href="#atas">
-                        <img class="merek__logo" src="images/logo.png" alt="" width="83" height="96">
-                        <span class="merek__nama">SDTQ ATTAMAM</span>
-                    </a>
-                    <p class="kaki__arab" lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</p>
-                    <p>Sekolah Dasar Tahfidz Qur'an Garut · Full Day School Terintegrasi Dinas Pendidikan &amp; Tahfidz Al-Qur'an.</p>
+            <nav class="kaki__nav" aria-label="Menu bawah">
+                <a href="index.html">beranda</a>
+                <a href="tentang.html">tentang kami</a>
+                <a href="program.html">program &amp; SKL</a>
+                <a href="kegiatan.html">kegiatan</a>
+                <a href="spmb.html">spmb 2027–2028</a>
+            </nav>
+            <div class="kaki__tengah">
+                <div class="kaki__ikon">
+                    <a href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener" aria-label="WhatsApp Panitia SPMB"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+6285323278472" aria-label="Telepon 0853-2327-8472"><i class="fas fa-phone"></i></a>
                 </div>
-                <div>
-                    <h4>Navigasi Halaman</h4>
-                    <a href="#pilar">3 Pilar Utama</a>
-                    <a href="#kekhasan">Program Kekhasan &amp; SKL</a>
-                    <a href="#kegiatan">Kegiatan Santri</a>
-                    <a href="#tentang">Ketua Yayasan &amp; Guru</a>
-                    <a href="#kisah">Kata Orang Tua &amp; Media</a>
-                    <a href="#spmb">SPMB 2027-2028</a>
-                </div>
-                <div>
-                    <h4>Kontak &amp; Lokasi</h4>
-                    <p>Objek Wisata Cipanas (Belakang kolam renang PURBASARI), RT/RW 05/06 Ds. Rancabango, Kec. Tarogong Kaler, Kab. Garut.</p>
-                    <p><strong>NPSN:</strong> 70063460<br><strong>SK Izin Operasional:</strong> 500.16.7.2/1417/023/IPSPD-SD/DPMPTSP/2026</p>
-                    <a href="tel:+6285323278472"><i class="fas fa-phone"></i> 0853-2327-8472</a>
-                    <a class="kaki__wa" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Hubungi Panitia SPMB via WhatsApp</a>
+                <a class="merek" href="index.html">
+                    <img src="images/logo.png" alt="" width="83" height="96">
+                    <span class="merek__nama">SDTQ ATTAMAM<small lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</small></span>
+                </a>
+                <div class="kaki__ikon">
+                    <a href="https://maps.app.goo.gl/VsmUSFrKCvpzm6Zo8" target="_blank" rel="noopener" aria-label="Lokasi di Google Maps"><i class="fas fa-map-location-dot"></i></a>
+                    <a href="spmb.html" aria-label="Info SPMB 2027–2028"><i class="fas fa-school"></i></a>
                 </div>
             </div>
-            <div class="kaki__bawah">© SDTQ ATTAMAM Garut</div>
+            <p>Objek Wisata Cipanas (Belakang kolam renang PURBASARI), RT/RW 05/06 Ds. Rancabango, Kec. Tarogong Kaler, Kab. Garut · <a href="tel:+6285323278472">0853-2327-8472</a></p>
+            <p>NPSN: 70063460 · SK Izin Operasional: 500.16.7.2/1417/023/IPSPD-SD/DPMPTSP/2026</p>
+            <p class="kaki__hak">© SDTQ ATTAMAM Garut · emoji 3D: Microsoft Fluent Emoji (MIT)</p>
         </div>
     </footer>
 
