@@ -732,15 +732,16 @@ a {
 }
 
 .judul-tautan {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.2rem;
+    display: inline-block;
     text-decoration: none;
     margin-top: 1.5rem;
 }
 
+/* panah ikut di ujung kalimat, tidak terpisah ke pinggir */
 .judul-tautan i {
-    font-size: 1.8rem;
+    font-size: 0.55em;
+    vertical-align: middle;
+    margin-left: 0.2em;
 }
 
 .judul-tautan:hover h2 {
@@ -1603,12 +1604,27 @@ a {
         width: 120px;
     }
 
+    .map span {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding: 0.3rem 0.7rem;
+    }
+
     .map-grid {
         gap: 2rem 1rem;
     }
 
+    /* di HP gugus stiker jadi hiasan kecil di atas kutipan, bukan satu layar penuh */
     .gugus {
-        min-height: 300px;
+        min-height: 220px;
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto -1.5rem;
+    }
+
+    .gugus .stiker {
+        width: calc(var(--w, 90px) * 0.55);
+        max-height: 100px;
     }
 
     .ajakan__isi {
@@ -1663,19 +1679,20 @@ a {
         margin: 3rem auto 0;
     }
 
+    /* logo di atas, keempat ikon kontak satu baris di bawahnya */
     .kaki__tengah {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem 1.4rem;
     }
 
-    .kaki__ikon,
     .kaki__ikon:first-child {
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     .kaki__logo {
         justify-self: center;
         grid-row: 1;
+        grid-column: 1 / -1;
     }
 
     /* di HP stiker besar disembunyikan sebagian agar tidak menutupi teks */
