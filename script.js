@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Navigation Menu Drawer Handler
     const navBurger = document.getElementById('navBurger');
     const navTautan = document.getElementById('navTautan');
-    const menuToggle = document.getElementById('menu-toggle');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function toggleMobileMenu() {
         if (navTautan) {
@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navBurger) {
         navBurger.addEventListener('click', toggleMobileMenu);
     }
-    if (menuToggle) {
-        menuToggle.addEventListener('click', toggleMobileMenu);
-    }
 
     // Close mobile menu when clicking any nav link
     document.querySelectorAll('.nav__tautan a').forEach(link => {
@@ -31,26 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Smooth Scroll Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId && targetId.startsWith('#') && targetId.length > 1) {
-                e.preventDefault();
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const navHeight = document.querySelector('.nav')?.offsetHeight || 70;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
+    // 2. Smooth scroll ditangani CSS (scroll-behavior + scroll-padding-top di styles.css)
 
     // 3. Animated Photo Slideshow Gallery Handler (Horizontal Sliding Track)
     const track = document.getElementById('galeriTrack');
@@ -103,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function startTimer() {
+            if (reduceMotion) return;
             slideInterval = setInterval(() => {
                 let next = (currentSlide + 1) % slides.length;
                 showSlide(next);
@@ -119,7 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Typewriter Effect for Editorial Quote Showcase (DOM Node Revealer - No Empty Highlight Boxes)
     const quoteElement = document.getElementById('typewriterQuote');
-    if (quoteElement) {
+    if (quoteElement && reduceMotion) {
+        quoteElement.querySelectorAll('.hl-cyan, .hl-gold').forEach(el => el.classList.add('hl-active'));
+    } else if (quoteElement) {
         // Collect all text nodes in order
         const textNodes = [];
         const walk = document.createTreeWalker(quoteElement, NodeFilter.SHOW_TEXT, null, false);

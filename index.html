@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>SDTQ ATTAMAM — Sekolah Dasar Tahfidz Qur’an Garut</title>
     <meta name="description" content="Sekolah Dasar Tahfidz Qur’an (SDTQ) ATTAMAM Garut. Pendidikan unggulan berbasis Aqidah Sohihah, Adab Hasanah, dan Hafalan Al-Qur'an. Full Day School T.A. 2027-2028.">
-    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Pratinjau link saat dibagikan di WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sdtq-attamam.vercel.app/">
+    <meta property="og:title" content="SDTQ ATTAMAM Garut — Sekolah Dasar Tahfidz Qur'an">
+    <meta property="og:description" content="Full Day School berbasis Aqidah Sohihah, Adab Hasanah, dan Hafalan Al-Qur'an di Cipanas Garut. Pendaftaran SPMB T.A. 2027-2028 dibuka.">
+    <meta property="og:image" content="https://sdtq-attamam.vercel.app/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Google Fonts: Instrument Serif (Italic) + Plus Jakarta Sans + Amiri (Arabic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=3.1">
+    <link rel="stylesheet" href="styles.css?v=3.2">
 </head>
 <body class="korowa-all-navy">
 
@@ -22,19 +35,19 @@
                 <span class="merek__m"><img src="images/logo.png" alt="Logo SDTQ ATTAMAM"></span>
                 <div class="merek-text-group">
                     <span class="merek__t">SDTQ <span>ATTAMAM</span></span>
-                    <span class="merek__arabic">مدرسة التمام الإبتدائية لتحفيظ القرأن</span>
+                    <span class="merek__arabic" lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</span>
                 </div>
             </a>
             <nav class="nav__tautan" id="navTautan">
-                <a href="#tentang">Tentang Kami</a>
                 <a href="#pilar">3 Pilar Utama</a>
                 <a href="#kekhasan">Kekhasan & SKL</a>
                 <a href="#kegiatan">Kegiatan Santri</a>
+                <a href="#tentang">Tentang Kami</a>
                 <a href="#spmb">SPMB 2027-2028</a>
-                <a class="btn btn--pri nav__mobile-cta" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank"><i class="fab fa-whatsapp"></i> Daftar SPMB T.A. 2027–2028</a>
+                <a class="btn btn--pri nav__mobile-cta" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Daftar SPMB T.A. 2027–2028</a>
             </nav>
             <div class="nav__aksi">
-                <a class="btn btn--sm btn--pri" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank"><i class="fab fa-whatsapp"></i> Daftar SPMB</a>
+                <a class="btn btn--sm btn--pri" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Daftar SPMB</a>
                 <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
@@ -48,8 +61,8 @@
         <section class="hero pos-relative">
             <!-- STIKER DEKORATIF ALAT TULIS PROPORSIONAL -->
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda hero__benda--stat1" src="images/stat/stat_1.png" alt="Stiker 1" />
-                <img class="hero__benda hero__benda--quran" src="images/stat/stat_quran.png" alt="Stiker Al-Qur'an Tasbih" />
+                <img class="hero__benda hero__benda--stat1" src="images/stat/stat_1.png" alt="" loading="lazy" />
+                <img class="hero__benda hero__benda--quran" src="images/stat/stat_quran.png" alt="" loading="lazy" />
                 
                 <!-- PAPER PLANE ANIMATION (POSTMODERNPAST GIST 2FBAC5B92470A947B5D5AE9D2163307B) -->
                 <div class="plane-container">
@@ -62,7 +75,7 @@
 
             <div class="wrap">
                 <div class="hero__isi">
-                    <div class="arabic-hero-title">مدرسة التمام الإبتدائية لتحفيظ القرأن</div>
+                    <div class="arabic-hero-title" lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</div>
                     <span class="eyebrow"><i></i>SEKOLAH DASAR TAHFIDZ QUR'AN (SDTQ) ATTAMAM</span>
                     
                     <div class="hero__baris">
@@ -79,7 +92,7 @@
                         <span class="legal-badge"><i class="fas fa-file-contract icon-yellow"></i> <strong>SK Izin Operasional:</strong> 500.16.7.2/1417/023/IPSPD-SD/DPMPTSP/2026</span>
                     </div>
                     <div class="hero__cta">
-                        <a class="btn btn--pri btn--lg" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank"><i class="fab fa-whatsapp"></i> Daftar SPMB T.A. 2027–2028</a>
+                        <a class="btn btn--pri btn--lg" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Daftar SPMB T.A. 2027–2028</a>
                     </div>
                 </div>
             </div>
@@ -93,8 +106,8 @@
         <!-- HIGHLIGHT LIPUTAN MEDIA & STORYTELLING RESMI YAYASAN ATTAMAM -->
         <section class="seksi seksi--garis pos-relative" id="kisah">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat5" src="images/stat/stat_5.png" alt="Stiker 5" />
-                <img class="hero__benda seksi__benda--stat3-kegiatan" src="images/stat/stat_3.png" alt="Stiker 3" />
+                <img class="hero__benda seksi__benda--stat5" src="images/stat/stat_5.png" alt="" loading="lazy" />
+                <img class="hero__benda seksi__benda--stat3-kegiatan" src="images/stat/stat_3.png" alt="" loading="lazy" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -128,7 +141,6 @@
                 <div class="media-articles-grid">
                     <!-- ARTIKEL 1: KOMPASIANA -->
                     <div class="media-card-navy">
-                        <div class="mac-traffic-lights"><span class="mac-dot mac-red"></span><span class="mac-dot mac-yellow"></span><span class="mac-dot mac-green"></span></div>
                         <div class="media-card-header">
                             <span class="media-tag tag-kompasiana"><i class="fas fa-newspaper icon-yellow"></i> Kompasiana</span>
                             <span class="media-author">Kang Aip</span>
@@ -144,7 +156,6 @@
 
                     <!-- ARTIKEL 2: DEJURNAL.COM -->
                     <div class="media-card-navy">
-                        <div class="mac-traffic-lights"><span class="mac-dot mac-red"></span><span class="mac-dot mac-yellow"></span><span class="mac-dot mac-green"></span></div>
                         <div class="media-card-header">
                             <span class="media-tag tag-dejurnal"><i class="fas fa-globe icon-yellow"></i> Dejurnal.com</span>
                             <span class="media-author">Berita Garut</span>
@@ -160,7 +171,6 @@
 
                     <!-- ARTIKEL 3: KORANMANDALA.COM -->
                     <div class="media-card-navy">
-                        <div class="mac-traffic-lights"><span class="mac-dot mac-red"></span><span class="mac-dot mac-yellow"></span><span class="mac-dot mac-green"></span></div>
                         <div class="media-card-header">
                             <span class="media-tag tag-koranmandala"><i class="fas fa-graduation-cap icon-yellow"></i> KoranMandala.com</span>
                             <span class="media-author">Kanal Edukasi</span>
@@ -176,7 +186,6 @@
 
                     <!-- ARTIKEL 4: BERITADISDIK.COM -->
                     <div class="media-card-navy">
-                        <div class="mac-traffic-lights"><span class="mac-dot mac-red"></span><span class="mac-dot mac-yellow"></span><span class="mac-dot mac-green"></span></div>
                         <div class="media-card-header">
                             <span class="media-tag tag-disdik"><i class="fas fa-pen-nib icon-yellow"></i> BeritaDisdik.com</span>
                             <span class="media-author">Arif al-Garuti</span>
@@ -196,8 +205,8 @@
         <!-- VISI, MOTTO, DAN 3 PILAR FONDASI -->
         <section class="seksi seksi--garis seksi--gelap pos-relative" id="pilar">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat6" src="images/stat/stat_6.png" alt="Stiker 6" />
-                <img class="hero__benda seksi__benda--stat10" src="images/stat/stat_10.png" alt="Stiker 10" />
+                <img class="hero__benda seksi__benda--stat6" src="images/stat/stat_6.png" alt="" loading="lazy" />
+                <img class="hero__benda seksi__benda--stat10" src="images/stat/stat_10.png" alt="" loading="lazy" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -210,7 +219,7 @@
                     <div class="otak__kol">
                         <div class="otak__m">
                             <span><i class="fas fa-heart-pulse"></i></span>
-                            <div><b>Pilar 01 &bull; Aqidah Sohihah</b><em>Menanamkan kecintaan dan imman yang kokoh kepada Allah SWT.</em></div>
+                            <div><b>Pilar 01 &bull; Aqidah Sohihah</b><em>Menanamkan kecintaan dan iman yang kokoh kepada Allah SWT.</em></div>
                         </div>
                         <div class="otak__m">
                             <span><i class="fas fa-hands-praying"></i></span>
@@ -242,8 +251,8 @@
         <!-- PROGRAM KEKHASAN SEKOLAH & TARGET LULUSAN (SKL) -->
         <section class="seksi seksi--garis pos-relative" id="kekhasan">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat9" src="images/stat/stat_9.png" alt="Stiker 9" />
-                <img class="hero__benda seksi__benda--stat7" src="images/stat/stat_7.png" alt="Stiker 7" />
+                <img class="hero__benda seksi__benda--stat9" src="images/stat/stat_9.png" alt="" loading="lazy" />
+                <img class="hero__benda seksi__benda--stat7" src="images/stat/stat_7.png" alt="" loading="lazy" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -254,7 +263,6 @@
 
                 <div class="kisi-2">
                     <div class="harga">
-                        <div class="mac-traffic-lights"><span class="mac-dot mac-red"></span><span class="mac-dot mac-yellow"></span><span class="mac-dot mac-green"></span></div>
                         <div class="harga__nm">Program Kekhasan Sekolah</div>
                         <div class="harga__ket">5 Program utama pembentukan karakter santri:</div>
                         <ul>
@@ -267,7 +275,6 @@
                     </div>
 
                     <div class="harga harga--unggul">
-                        <div class="mac-traffic-lights"><span class="mac-dot mac-red"></span><span class="mac-dot mac-yellow"></span><span class="mac-dot mac-green"></span></div>
                         <span class="harga__cap">STANDAR KELULUSAN (SKL)</span>
                         <div class="harga__nm">Target Kelulusan Santri</div>
                         <div class="harga__ket">8 Capaian utama santri lulusan SDTQ ATTAMAM:</div>
@@ -289,8 +296,8 @@
         <!-- DOKUMENTASI & HIGHLIGHT CERITA SANTRI DENGAN SLIDESHOW ANIMASI SLIDE -->
         <section class="seksi seksi--garis seksi--gelap pos-relative" id="kegiatan">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat2-tentang" src="images/stat/stat_2.png" alt="Stiker 2" />
-                <img class="hero__benda seksi__benda--quran-tentang" src="images/stat/stat_quran.png" alt="Stiker Quran" />
+                <img class="hero__benda seksi__benda--stat2-tentang" src="images/stat/stat_2.png" alt="" loading="lazy" />
+                <img class="hero__benda seksi__benda--quran-tentang" src="images/stat/stat_quran.png" alt="" loading="lazy" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -303,14 +310,14 @@
                 <div class="story-highlight-card mb-5">
                     <div class="story-grid story-grid-portrait">
                         <div class="story-img-wrap story-img-wrap-portrait">
-                            <img src="images/galeri_1.jpg" alt="Penyerahan Selempang Prestasi Hafidzah & Hafidz Santri SDTQ ATTAMAM" class="story-img story-img-portrait" />
+                            <img src="images/galeri_1.jpg" alt="Penyerahan Selempang Prestasi Hafidzah & Hafidz Santri SDTQ ATTAMAM" class="story-img story-img-portrait" loading="lazy" />
                             <div class="story-badge"><i class="fas fa-award icon-yellow"></i> Prestasi Santri SDTQ ATTAMAM</div>
                         </div>
                         <div class="story-content">
                             <span class="eyebrow"><i></i>APRESIASI HAFALAN & KELAS INKLUSIF TERBIMBING</span>
                             <h3>"Kebahagiaan Santri Saat Menerima Selempang Apresiasi Hafalan Al-Qur'an"</h3>
                             <p>
-                                Foto ini mengabadikan momen penuh keharuan dan kebanggaan saat santri SDTQ ATTAMAM Garut mengenakan selempang penghargaan <strong>Hafidzah & Hafidz Juz 30</strong> di dampingi oleh Ketua Yayasan Drs. Imam Tamamu Taufiq, M.Pd, dewan guru, dan pengasuh sekolah.
+                                Foto ini mengabadikan momen penuh keharuan dan kebanggaan saat santri SDTQ ATTAMAM Garut mengenakan selempang penghargaan <strong>Hafidzah & Hafidz Juz 30</strong> didampingioleh Ketua Yayasan Drs. Imam Tamamu Taufiq, M.Pd, dewan guru, dan pengasuh sekolah.
                             </p>
                             <p>
                                 Pembimbingan hafalan metode Sima'i dilakukan dalam ruang kelas yang nyaman dan terang, di mana setiap santri mendapatkan perhatian penuh sesuai kecepatan dan potensi terbaik masing-masing.
@@ -332,17 +339,17 @@
                             <div class="galeri-slide">
                                 <div class="slide-split-grid">
                                     <div class="slide-img-left">
-                                        <img src="images/galeri_1.jpg" alt="Foto Penyerahan Selempang Hafiz/Hafizah Santri" class="img-tone-matched" />
+                                        <img src="images/galeri_1.jpg" alt="Foto Penyerahan Selempang Hafiz/Hafizah Santri" class="img-tone-matched" loading="lazy" />
                                     </div>
                                     <div class="slide-story-right">
                                         <span class="eyebrow"><i></i>DOKUMENTASI FOTO 01 &bull; KELAS INKLUSIF</span>
                                         <h3>Apresiasi Hafalan Juz 30 Santri SDTQ ATTAMAM</h3>
                                         <p>
-                                            Momen bahagia penganugerahan dan penyerahan selempang penghargaan <strong>Hafidzah & Hafidz Juz 30</strong> di dampingi langsung oleh Ketua Yayasan Drs. Imam Tamamu Taufiq, M.Pd, Ustadz H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag, dan dewan guru di ruang kelas SDTQ ATTAMAM Garut.
+                                            Momen bahagia penganugerahan dan penyerahan selempang penghargaan <strong>Hafidzah & Hafidz Juz 30</strong> didampingilangsung oleh Ketua Yayasan Drs. Imam Tamamu Taufiq, M.Pd, Ustadz H. Irfan Kasyaf Noerfiqhy, Lc.,M.Ag, dan dewan guru di ruang kelas SDTQ ATTAMAM Garut.
                                         </p>
                                         <div class="story-quote-tag">
                                             <i class="fas fa-quote-left icon-yellow"></i>
-                                            <span>Apriasi tulus dewan guru atas pencapaian hafalan setiap santri.</span>
+                                            <span>Apresiasi tulus dewan guru atas pencapaian hafalan setiap santri.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -352,7 +359,7 @@
                             <div class="galeri-slide">
                                 <div class="slide-split-grid">
                                     <div class="slide-img-left">
-                                        <img src="images/galeri_2.jpg" alt="Foto Perayaan 17 Agustus HUT RI Santri SDTQ ATTAMAM" class="img-tone-matched" />
+                                        <img src="images/galeri_2.jpg" alt="Foto Perayaan 17 Agustus HUT RI Santri SDTQ ATTAMAM" class="img-tone-matched" loading="lazy" />
                                     </div>
                                     <div class="slide-story-right">
                                         <span class="eyebrow"><i></i>DOKUMENTASI FOTO 02 &bull; KEMERDEKAAN RI</span>
@@ -372,7 +379,7 @@
                             <div class="galeri-slide">
                                 <div class="slide-split-grid">
                                     <div class="slide-img-left">
-                                        <img src="images/galeri_3.jpg" alt="Foto Kreasi Seni & Panggung Apresiasi Santri" class="img-tone-matched" />
+                                        <img src="images/galeri_3.jpg" alt="Foto Kreasi Seni & Panggung Apresiasi Santri" class="img-tone-matched" loading="lazy" />
                                     </div>
                                     <div class="slide-story-right">
                                         <span class="eyebrow"><i></i>DOKUMENTASI FOTO 03 &bull; PENTAS BAKAT</span>
@@ -392,7 +399,7 @@
                             <div class="galeri-slide">
                                 <div class="slide-split-grid">
                                     <div class="slide-img-left">
-                                        <img src="images/galeri_4.jpg" alt="Foto Pembiasaan Baris & Olah Raga Santri" class="img-tone-matched" />
+                                        <img src="images/galeri_4.jpg" alt="Foto Pembiasaan Baris & Olah Raga Santri" class="img-tone-matched" loading="lazy" />
                                     </div>
                                     <div class="slide-story-right">
                                         <span class="eyebrow"><i></i>DOKUMENTASI FOTO 04 &bull; KEDISIPLINAN</span>
@@ -412,7 +419,7 @@
                             <div class="galeri-slide">
                                 <div class="slide-split-grid">
                                     <div class="slide-img-left">
-                                        <img src="images/galeri_5.jpg" alt="Foto Santri Belajar Bersama Guru di Halaman" class="img-tone-matched" />
+                                        <img src="images/galeri_5.jpg" alt="Foto Santri Belajar Bersama Guru di Halaman" class="img-tone-matched" loading="lazy" />
                                     </div>
                                     <div class="slide-story-right">
                                         <span class="eyebrow"><i></i>DOKUMENTASI FOTO 05 &bull; ALAM CIPANAS</span>
@@ -432,7 +439,7 @@
                             <div class="galeri-slide">
                                 <div class="slide-split-grid">
                                     <div class="slide-img-left">
-                                        <img src="images/galeri_6.jpg" alt="Foto Santri Menunjukkan Sertifikat & Piagam" class="img-tone-matched" />
+                                        <img src="images/galeri_6.jpg" alt="Foto Santri Menunjukkan Sertifikat & Piagam" class="img-tone-matched" loading="lazy" />
                                     </div>
                                     <div class="slide-story-right">
                                         <span class="eyebrow"><i></i>DOKUMENTASI FOTO 06 &bull; PRESTASI SANTRI</span>
@@ -462,30 +469,30 @@
                             <i class="fas fa-th-large icon-yellow"></i> <span>Koleksi Foto</span>
                         </div>
                         <div class="side-thumb-grid">
-                            <div class="galeri-item" onclick="setGaleriSlide(0)">
-                                <img src="images/galeri_1.jpg" alt="Apresiasi Hafalan" class="img-tone-matched" />
-                                <div class="galeri-overlay"><span>Hafalan</span></div>
-                            </div>
-                            <div class="galeri-item" onclick="setGaleriSlide(1)">
-                                <img src="images/galeri_2.jpg" alt="Perayaan 17 Agustus" class="img-tone-matched" />
-                                <div class="galeri-overlay"><span>17 Agustus</span></div>
-                            </div>
-                            <div class="galeri-item" onclick="setGaleriSlide(2)">
-                                <img src="images/galeri_3.jpg" alt="Kelas Kondusif" class="img-tone-matched" />
-                                <div class="galeri-overlay"><span>Pentas Seni</span></div>
-                            </div>
-                            <div class="galeri-item" onclick="setGaleriSlide(3)">
-                                <img src="images/galeri_4.jpg" alt="Adab & Doa" class="img-tone-matched" />
-                                <div class="galeri-overlay"><span>Baris Pagi</span></div>
-                            </div>
-                            <div class="galeri-item" onclick="setGaleriSlide(4)">
-                                <img src="images/galeri_5.jpg" alt="Al-Qur'an & PAI" class="img-tone-matched" />
-                                <div class="galeri-overlay"><span>Alam Cipanas</span></div>
-                            </div>
-                            <div class="galeri-item" onclick="setGaleriSlide(5)">
-                                <img src="images/galeri_6.jpg" alt="Kebersamaan" class="img-tone-matched" />
-                                <div class="galeri-overlay"><span>Sertifikat</span></div>
-                            </div>
+                            <button type="button" class="galeri-item" onclick="setGaleriSlide(0)">
+                                <img src="images/galeri_1.jpg" alt="" class="img-tone-matched" loading="lazy" />
+                                <span class="galeri-overlay"><span>Hafalan</span></span>
+                            </button>
+                            <button type="button" class="galeri-item" onclick="setGaleriSlide(1)">
+                                <img src="images/galeri_2.jpg" alt="" class="img-tone-matched" loading="lazy" />
+                                <span class="galeri-overlay"><span>17 Agustus</span></span>
+                            </button>
+                            <button type="button" class="galeri-item" onclick="setGaleriSlide(2)">
+                                <img src="images/galeri_3.jpg" alt="" class="img-tone-matched" loading="lazy" />
+                                <span class="galeri-overlay"><span>Pentas Seni</span></span>
+                            </button>
+                            <button type="button" class="galeri-item" onclick="setGaleriSlide(3)">
+                                <img src="images/galeri_4.jpg" alt="" class="img-tone-matched" loading="lazy" />
+                                <span class="galeri-overlay"><span>Baris Pagi</span></span>
+                            </button>
+                            <button type="button" class="galeri-item" onclick="setGaleriSlide(4)">
+                                <img src="images/galeri_5.jpg" alt="" class="img-tone-matched" loading="lazy" />
+                                <span class="galeri-overlay"><span>Alam Cipanas</span></span>
+                            </button>
+                            <button type="button" class="galeri-item" onclick="setGaleriSlide(5)">
+                                <img src="images/galeri_6.jpg" alt="" class="img-tone-matched" loading="lazy" />
+                                <span class="galeri-overlay"><span>Sertifikat</span></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -495,8 +502,8 @@
         <!-- PENGURUS YAYASAN & DEWAN GURU RESMI -->
         <section class="seksi seksi--garis pos-relative" id="tentang">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat4-tentang" src="images/stat/stat_4.png" alt="Stiker 4" />
-                <img class="hero__benda seksi__benda--stat8" src="images/stat/stat_8.png" alt="Stiker 8" />
+                <img class="hero__benda seksi__benda--stat4-tentang" src="images/stat/stat_4.png" alt="" loading="lazy" />
+                <img class="hero__benda seksi__benda--stat8" src="images/stat/stat_8.png" alt="" loading="lazy" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -536,8 +543,8 @@
         <!-- INFORMASI SPMB 2027-2028 & RINCIAN BIAYA RESMI -->
         <section class="seksi seksi--garis seksi--gelap pos-relative" id="spmb">
             <div class="hero__dekor" aria-hidden="true">
-                <img class="hero__benda seksi__benda--stat11" src="images/stat/stat_11.png" alt="Stiker 11" />
-                <img class="hero__benda seksi__benda--stat8-spmb" src="images/stat/stat_8.png" alt="Stiker 8" />
+                <img class="hero__benda seksi__benda--stat11" src="images/stat/stat_11.png" alt="" loading="lazy" />
+                <img class="hero__benda seksi__benda--stat8-spmb" src="images/stat/stat_8.png" alt="" loading="lazy" />
             </div>
             <div class="wrap">
                 <div class="kepala kepala--tengah">
@@ -551,7 +558,7 @@
                         <div class="harga__nm">Jadwal & Syarat Pendaftaran</div>
                         <div class="harga__rp" style="font-size: 1.5rem;">Gelombang 1: 8 Jan – 28 Mar 2027</div>
                         <div class="harga__ket">Daftar ulang: 17–18 April 2027 (Senin–Kamis 08.00–12.00 WIB)</div>
-                        <div class="harga__ket">Gelombang 2: 21 April 2027 – 16 Juni 2028 (Daftar ulang: 19–20 Juni 2027)</div>
+                        <div class="harga__ket">Gelombang 2: 21 April 2027 – 16 Juni 2027 (Daftar ulang: 19–20 Juni 2027)</div>
                         <hr style="border-color: var(--border-navy); margin: 1rem 0;">
                         <h4 style="color: #FFFFFF; font-size: 0.95rem; margin-bottom: 0.5rem;">Persyaratan Berkas:</h4>
                         <ul>
@@ -587,7 +594,7 @@
                                 <span class="item-price">Rp 100.000</span>
                             </li>
                         </ul>
-                        <a class="btn btn--pri btn--lg w-100 text-center" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank">
+                        <a class="btn btn--pri btn--lg w-100 text-center" href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener">
                             <i class="fab fa-whatsapp"></i> Hubungi Panitia SPMB (WhatsApp)
                         </a>
                     </div>
@@ -622,17 +629,18 @@
                         <span class="merek__m"><img src="images/logo.png" alt="Logo"></span>
                         <span class="merek__t">SDTQ <span>ATTAMAM</span></span>
                     </a>
-                    <div class="arabic-footer-sub">مدرسة التمام الإبتدائية لتحفيظ القرأن</div>
+                    <div class="arabic-footer-sub" lang="ar" dir="rtl">مدرسة التمام الإبتدائية لتحفيظ القرأن</div>
                     <p style="font-size:12.5px;color:var(--fg-mute);max-width:280px">
                         Sekolah Dasar Tahfidz Qur'an Garut &bull; Full Day School Terintegrasi Dinas Pendidikan & Tahfidz Al-Qur'an.
                     </p>
                 </div>
                 <div class="kaki__k">
                     <h4>Navigasi Halaman</h4>
-                    <a href="#tentang">Tentang Kami</a>
+                    <a href="#kisah">Liputan Media</a>
                     <a href="#pilar">3 Pilar Utama</a>
                     <a href="#kekhasan">Program Kekhasan & SKL</a>
                     <a href="#kegiatan">Kegiatan Santri</a>
+                    <a href="#tentang">Tentang Kami</a>
                     <a href="#spmb">SPMB 2027-2028</a>
                 </div>
                 <div class="kaki__k">
@@ -643,6 +651,9 @@
                     <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-bottom:8px;">
                         <strong>NPSN:</strong> 70063460<br>
                         <strong>SK Izin Operasional:</strong> 500.16.7.2/1417/023/IPSPD-SD/DPMPTSP/2026
+                    </p>
+                    <p style="font-size:13px;color:rgba(255,255,255,0.85);margin-bottom:8px;">
+                        <i class="fas fa-phone"></i> <a href="tel:+6285323278472" style="color:inherit;display:inline;">0853-2327-8472</a>
                     </p>
                     <p style="font-size:13px;color:var(--yellow-primary);font-weight:700;">
                         <a href="https://wa.me/6285323278472?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20SPMB%20SDTQ%20ATTAMAM" target="_blank" rel="noopener" style="color:var(--yellow-primary);text-decoration:underline;display:inline;"><i class="fab fa-whatsapp"></i> Hubungi Panitia SPMB via WhatsApp</a>
@@ -655,6 +666,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=2.1"></script>
+    <script src="script.js?v=2.2"></script>
 </body>
 </html>
