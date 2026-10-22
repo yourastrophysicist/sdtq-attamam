@@ -110,8 +110,7 @@ a {
 }
 
 /* Emoji asli perangkat (di iPhone tampil sebagai emoji iOS) di tengah kalimat */
-.emo,
-.pita__hati {
+.emo {
     font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -510,10 +509,17 @@ a {
     animation: geser 45s linear infinite;
 }
 
-.pita__hati {
-    font-size: 1.05rem;
+/* tanda rub el hizb (۞) sebagai pemisah, seperti di mushaf */
+.pita__tanda {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
     margin: 0 1.6rem;
-    vertical-align: 0.15em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.12em;
+    font-size: 0; /* karakter ۞ hanya cadangan; bentuknya digambar SVG di bawah */
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23FFC83D'%3E%3Crect x='5' y='5' width='14' height='14'/%3E%3Crect x='5' y='5' width='14' height='14' transform='rotate(45 12 12)'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='3.2' fill='%230B1C38'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 @keyframes geser {
