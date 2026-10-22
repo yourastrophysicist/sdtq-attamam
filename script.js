@@ -1,155 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Navigation Menu Drawer Handler
+    // Menu HP: buka/tutup lewat tombol burger, tutup lagi setelah link dipilih
     const navBurger = document.getElementById('navBurger');
     const navTautan = document.getElementById('navTautan');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!navBurger || !navTautan) return;
 
-    function toggleMobileMenu() {
-        if (navTautan) {
-            navTautan.classList.toggle('nav__tautan--active');
-            if (navBurger) {
-                const expanded = navBurger.getAttribute('aria-expanded') === 'true';
-                navBurger.setAttribute('aria-expanded', !expanded);
-            }
-        }
+    function setMenu(open) {
+        navTautan.classList.toggle('nav__tautan--active', open);
+        navBurger.setAttribute('aria-expanded', open);
     }
 
-    if (navBurger) {
-        navBurger.addEventListener('click', toggleMobileMenu);
-    }
-
-    // Close mobile menu when clicking any nav link
-    document.querySelectorAll('.nav__tautan a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navTautan && navTautan.classList.contains('nav__tautan--active')) {
-                navTautan.classList.remove('nav__tautan--active');
-                if (navBurger) navBurger.setAttribute('aria-expanded', 'false');
-            }
-        });
+    navBurger.addEventListener('click', () => {
+        setMenu(!navTautan.classList.contains('nav__tautan--active'));
     });
 
-    // 2. Smooth scroll ditangani CSS (scroll-behavior + scroll-padding-top di styles.css)
-
-    // 3. Animated Photo Slideshow Gallery Handler (Horizontal Sliding Track)
-    const track = document.getElementById('galeriTrack');
-    const slides = document.querySelectorAll('.galeri-slide');
-    const dotsContainer = document.getElementById('sliderDots');
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-    let currentSlide = 0;
-    let slideInterval;
-
-    function showSlide(index) {
-        if (!slides.length || !track) return;
-        track.style.transform = `translateX(-${index * 100}%)`;
-        const dots = document.querySelectorAll('.slider-dots .dot');
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-        currentSlide = index;
-    }
-
-    window.setGaleriSlide = function(index) {
-        showSlide(index);
-        resetTimer();
-    };
-
-    if (slides.length > 0) {
-        if (dotsContainer) {
-            dotsContainer.innerHTML = '';
-            slides.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => window.setGaleriSlide(i));
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                let prev = (currentSlide - 1 + slides.length) % slides.length;
-                window.setGaleriSlide(prev);
-            });
-        }
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                let next = (currentSlide + 1) % slides.length;
-                window.setGaleriSlide(next);
-            });
-        }
-
-        function startTimer() {
-            if (reduceMotion) return;
-            slideInterval = setInterval(() => {
-                let next = (currentSlide + 1) % slides.length;
-                showSlide(next);
-            }, 3600);
-        }
-
-        function resetTimer() {
-            if (slideInterval) clearInterval(slideInterval);
-            startTimer();
-        }
-
-        startTimer();
-    }
-
-    // 4. Typewriter Effect for Editorial Quote Showcase (DOM Node Revealer - No Empty Highlight Boxes)
-    const quoteElement = document.getElementById('typewriterQuote');
-    if (quoteElement && reduceMotion) {
-        quoteElement.querySelectorAll('.hl-cyan, .hl-gold').forEach(el => el.classList.add('hl-active'));
-    } else if (quoteElement) {
-        // Collect all text nodes in order
-        const textNodes = [];
-        const walk = document.createTreeWalker(quoteElement, NodeFilter.SHOW_TEXT, null, false);
-        let node;
-        while ((node = walk.nextNode())) {
-            textNodes.push({
-                node: node,
-                fullText: node.nodeValue,
-                parent: node.parentElement
-            });
-            node.nodeValue = ''; // Clear text content initially
-        }
-
-        let nodeIndex = 0;
-        let charIndex = 0;
-        let hasTyped = false;
-
-        function typeNextChar() {
-            if (nodeIndex < textNodes.length) {
-                const currentObj = textNodes[nodeIndex];
-
-                // Activate highlight background as soon as text inside highlighted span starts typing
-                if (currentObj.parent && (currentObj.parent.classList.contains('hl-cyan') || currentObj.parent.classList.contains('hl-gold'))) {
-                    currentObj.parent.classList.add('hl-active');
-                }
-
-                currentObj.node.nodeValue += currentObj.fullText.charAt(charIndex);
-                charIndex++;
-
-                if (charIndex >= currentObj.fullText.length) {
-                    nodeIndex++;
-                    charIndex = 0;
-                }
-
-                setTimeout(typeNextChar, 25);
-            }
-        }
-
-        // Trigger typewriter when section enters viewport
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !hasTyped) {
-                    hasTyped = true;
-                    typeNextChar();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15 });
-
-        observer.observe(quoteElement);
-    }
+    navTautan.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenu(false));
+    });
 });
