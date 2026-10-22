@@ -131,7 +131,7 @@ a {
     text-align: center;
 }
 
-.stiker.ej { font-size: var(--w, 90px); width: auto; max-height: none; }
+.stiker.ej { font-size: calc(var(--w, 90px) * var(--skala, 1)); line-height: 1; width: auto; max-height: none; }
 .klip.ej { font-size: 38px; width: auto; }
 .kartu-kertas .ikon.ej { font-size: 56px; width: auto; }
 .buku > .ikon.ej { font-size: 64px; width: auto; }
@@ -153,7 +153,7 @@ a {
     left: var(--l, auto);
     right: var(--ka, auto);
     bottom: var(--b, auto);
-    width: var(--w, 90px);
+    width: calc(var(--w, 90px) * var(--skala, 1)); /* --skala mengecilkan gambar & emoji bersamaan di tablet/HP */
     max-height: 170px; /* pena & penggaris itu tinggi-ramping: batasi tingginya */
     object-fit: contain;
     transform: rotate(var(--r, 0deg));
@@ -1536,6 +1536,18 @@ a {
     .spmb-kisi {
         grid-template-columns: 1fr;
     }
+
+    .stiker {
+        --skala: 0.75;
+    }
+
+    /* satu kolom: gugus stiker jadi hiasan ringkas di tengah, bukan kotak lebar kosong */
+    .gugus {
+        min-height: 320px;
+        max-width: 460px;
+        width: 100%;
+        margin: 0 auto -1.5rem;
+    }
 }
 
 @media (max-width: 680px) {
@@ -1631,13 +1643,11 @@ a {
     /* di HP gugus stiker jadi hiasan kecil di atas kutipan, bukan satu layar penuh */
     .gugus {
         min-height: 220px;
-        max-width: 360px;
-        width: 100%;
-        margin: 0 auto -1.5rem;
+        max-width: 340px;
     }
 
     .gugus .stiker {
-        width: calc(var(--w, 90px) * 0.55);
+        --skala: 0.55;
         max-height: 100px;
     }
 
